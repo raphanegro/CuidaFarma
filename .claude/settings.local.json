@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(cmd /c \"cd /d C:\\\\Projetos\\\\AIOS\\\\CUIDAFARMA && rmdir /s /q node_modules 2>&1 && del package-lock.json 2>&1 && echo Done\" 2>&1)",
+      "Bash(cmd /c \"rmdir /s /q C:\\\\Projetos\\\\AIOS\\\\CUIDAFARMA\\\\node_modules\")",
+      "Bash(echo \"exit: $?\")",
+      "Bash(ls /c/Projetos/AIOS/CUIDAFARMA/app/\\\\\\(app\\\\\\)/)",
+      "Bash(node -e \"const p = require\\(''''./package.json''''\\); console.log\\(''''next:'''', p.dependencies.next, ''''bcryptjs:'''', p.dependencies.bcryptjs\\)\")",
+      "Bash(npm run:*)"
+    ]
+  }
+}

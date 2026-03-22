@@ -1,0 +1,265 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Perfil {
+  FARMACEUTICO
+  ADMINISTRADOR
+}
+
+enum TipoAtendimento {
+  CONSULTA_UBS
+  CONSULTORIO_FARMACEUTICO
+  VISITA_DOMICILIAR
+  TELEATENDIMENTO
+}
+
+enum NivelRisco {
+  BAIXO
+  MODERADO
+  ALTO
+}
+
+model Usuario {
+  id        String   @id @default(cuid())
+  nome      String
+  login     String   @unique
+  senha     String
+  perfil    Perfil
+  ativo     Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  atendimentos    Atendimento[]
+  notificacoes    Notificacao[]
+
+  @@map("usuarios")
+}
+
+model Paciente {
+  id                   String   @id @default(cuid())
+  nome                 String
+  cpf                  String   @unique
+  dataNascimento       DateTime
+  sexo                 String
+  telefone             String
+  endereco             String?
+  unidadeSaude         String?
+  profissionalResponsavel String?
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  atendimentos   Atendimento[]
+  medicamentos   MedicamentoUso[]
+  anexos         Anexo[]
+  historicoClinicos HistoricoClinico[]
+
+  @@map("pacientes")
+}
+
+model Atendimento {
+  id               String          @id @default(cuid())
+  pacienteId       String
+  usuarioId        String
+  tipoAtendimento  TipoAtendimento
+  motivoConsulta   String?
+  detalhesVisita   String?
+  nivelRisco       NivelRisco?
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+
+  paciente         Paciente         @relation(fields: [pacienteId], references: [id])
+  usuario          Usuario          @relation(fields: [usuarioId], references: [id])
+  dadosClinicos    DadosClinicos?
+  exames           ResultadoExame[]
+  analise          AnaliseFarmacoterapeutica?
+  prms             PRM[]
+  intervencoes     IntervencaoFarmaceutica[]
+  evolucaoClinica  EvolucaoClinica?
+  planoAcompanhamento PlanoAcompanhamento?
+  calendarioPosologico CalendarioPosologico?
+
+  @@map("atendimentos")
+}
+
+model HistoricoClinico {
+  id         String   @id @default(cuid())
+  pacienteId String
+  doenca     String
+  descricao  String?
+  createdAt  DateTime @default(now())
+
+  paciente   Paciente @relation(fields: [pacienteId], references: [id])
+
+  @@map("historico_clinicos")
+}
+
+model DadosClinicos {
+  id              String   @id @default(cuid())
+  atendimentoId   String   @unique
+  peso            Float?
+  altura          Float?
+  imc             Float?
+  pressaoArterial String?
+  frequenciaCardiaca Int?
+  glicemiaCapilar Float?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  atendimento     Atendimento @relation(fields: [atendimentoId], references: [id])
+
+  @@map("dados_clinicos")
+}
+
+model ResultadoExame {
+  id              String   @id @default(cuid())
+  atendimentoId   String
+  tipoExame       String
+  valor           String
+  unidade         String?
+  dataExame       DateTime?
+  observacao      String?
+  createdAt       DateTime @default(now())
+
+  atendimento     Atendimento @relation(fields: [atendimentoId], references: [id])
+
+  @@map("resultados_exames")
+}
+
+model MedicamentoUso {
+  id               String   @id @default(cuid())
+  pacienteId       String
+  nomeGenerico     String
+  dose             String
+  formaFarmaceutica String?
+  viaAdministracao String?
+  frequencia       String
+  indicacao        String?
+  origem           String?
+  ativo            Boolean  @default(true)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  paciente         Paciente @relation(fields: [pacienteId], references: [id])
+
+  @@map("medicamentos_uso")
+}
+
+model AnaliseFarmacoterapeutica {
+  id                   String   @id @default(cuid())
+  atendimentoId        String   @unique
+  interacoesMedicamentosas Boolean @default(false)
+  duplicidadeTerapeutica Boolean @default(false)
+  doseInadequada       Boolean @default(false)
+  condicaoClinicaInadequada Boolean @default(false)
+  observacoes          String?
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  atendimento          Atendimento @relation(fields: [atendimentoId], references: [id])
+
+  @@map("analises_farmacoterapeuticas")
+}
+
+model PRM {
+  id              String   @id @default(cuid())
+  atendimentoId   String
+  classificacao   String
+  descricao       String
+  resolvido       Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  atendimento     Atendimento @relation(fields: [atendimentoId], references: [id])
+
+  @@map("prms")
+}
+
+model IntervencaoFarmaceutica {
+  id              String   @id @default(cuid())
+  atendimentoId   String
+  tipoIntervencao String
+  descricao       String
+  resultado       String?
+  createdAt       DateTime @default(now())
+
+  atendimento     Atendimento @relation(fields: [atendimentoId], references: [id])
+
+  @@map("intervencoes_farmaceuticas")
+}
+
+model CalendarioPosologico {
+  id              String   @id @default(cuid())
+  atendimentoId   String   @unique
+  horarios        Json
+  observacoes     String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  atendimento     Atendimento @relation(fields: [atendimentoId], references: [id])
+
+  @@map("calendarios_posologicos")
+}
+
+model PlanoAcompanhamento {
+  id              String   @id @default(cuid())
+  atendimentoId   String   @unique
+  dataRetorno     DateTime?
+  observacoes     String?
+  metas           String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  atendimento     Atendimento @relation(fields: [atendimentoId], references: [id])
+
+  @@map("planos_acompanhamento")
+}
+
+model EvolucaoClinica {
+  id              String   @id @default(cuid())
+  atendimentoId   String   @unique
+  subjetivo       String?
+  objetivo        String?
+  avaliacao       String?
+  plano           String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  atendimento     Atendimento @relation(fields: [atendimentoId], references: [id])
+
+  @@map("evolucoes_clinicas")
+}
+
+model Anexo {
+  id          String   @id @default(cuid())
+  pacienteId  String
+  nomeArquivo String
+  tipoArquivo String
+  url         String
+  tamanho     Int?
+  descricao   String?
+  createdAt   DateTime @default(now())
+
+  paciente    Paciente @relation(fields: [pacienteId], references: [id])
+
+  @@map("anexos")
+}
+
+model Notificacao {
+  id        String   @id @default(cuid())
+  usuarioId String
+  titulo    String
+  mensagem  String
+  lida      Boolean  @default(false)
+  tipo      String
+  createdAt DateTime @default(now())
+
+  usuario   Usuario  @relation(fields: [usuarioId], references: [id])
+
+  @@map("notificacoes")
+}
