@@ -1,0 +1,146 @@
+[
+  {
+    "method": "GET",
+    "path": "/api/analise-farmacoterapeuticas",
+    "description": "List analise farmacoterapeuticas",
+    "module": "Análise Farmacoterapêutica",
+    "flowName": "Análise Farmacoterapêutica",
+    "auth": true
+  },
+  {
+    "method": "POST",
+    "path": "/api/analise-farmacoterapeuticas",
+    "description": "Create analise farmacoterapeuticas",
+    "module": "Análise Farmacoterapêutica",
+    "flowName": "Análise Farmacoterapêutica",
+    "auth": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/cadastro-pacientes",
+    "description": "List cadastro pacientes",
+    "module": "Cadastro de Paciente",
+    "flowName": "Cadastro e edição de paciente",
+    "auth": true
+  },
+  {
+    "method": "POST",
+    "path": "/api/cadastro-pacientes",
+    "description": "Create cadastro pacientes",
+    "module": "Cadastro de Paciente",
+    "flowName": "Cadastro e edição de paciente",
+    "auth": true
+  },
+  {
+    "method": "PUT",
+    "path": "/api/cadastro-pacientes/:id",
+    "description": "Update cadastro pacientes",
+    "module": "Cadastro de Paciente",
+    "flowName": "Cadastro e edição de paciente",
+    "auth": true
+  },
+  {
+    "method": "POST",
+    "path": "/api/calendario-posologicos",
+    "description": "Create calendario posologicos",
+    "module": "Calendário Posológico",
+    "flowName": "Sugestão e Ajuste do Calendário Posológico",
+    "auth": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/calendario-posologicos/:id",
+    "description": "Get calendario posologicos by ID",
+    "module": "Calendário Posológico",
+    "flowName": "Sugestão e Ajuste do Calendário Posológico",
+    "auth": true
+  },
+  {
+    "method": "PUT",
+    "path": "/api/calendario-posologicos/:id",
+    "description": "Update calendario posologicos",
+    "module": "Calendário Posológico",
+    "flowName": "Sugestão e Ajuste do Calendário Posológico",
+    "auth": true
+  },
+  {
+    "method": "POST",
+    "path": "/api/comunicacao-externas",
+    "description": "Create comunicacao externas",
+    "module": "Comunicação Externa",
+    "flowName": "Fluxo de Comunicação Externa",
+    "auth": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/dashboard",
+    "description": "List dashboard",
+    "module": "Dashboard",
+    "flowName": "Visualização do dashboard",
+    "auth": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/dashboard/:id",
+    "description": "Get dashboard by ID",
+    "module": "Dashboard",
+    "flowName": "Visualização do dashboard",
+    "auth": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/medicamentos-usos",
+    "description": "List medicamentos usos",
+    "module": "Medicamentos em Uso",
+    "flowName": "Cadastro de medicamentos em uso",
+    "auth": true
+  },
+  {
+    "method": "POST",
+    "path": "/api/medicamentos-usos",
+    "description": "Create medicamentos usos",
+    "module": "Medicamentos em Uso",
+    "flowName": "Cadastro de medicamentos em uso",
+    "auth": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/medicamentos-usos/:id",
+    "description": "Get medicamentos usos by ID",
+    "module": "Medicamentos em Uso",
+    "flowName": "Cadastro de medicamentos em uso",
+    "auth": true
+  },
+  {
+    "method": "PUT",
+    "path": "/api/medicamentos-usos/:id",
+    "description": "Update medicamentos usos",
+    "module": "Medicamentos em Uso",
+    "flowName": "Cadastro de medicamentos em uso",
+    "auth": true
+  },
+  {
+    "method": "POST",
+    "path": "/api/notifications",
+    "description": "Create notifications",
+    "module": "Notificações",
+    "flowName": "Envio e visualização de notificações",
+    "auth": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/notifications/:id",
+    "description": "Get notifications by ID",
+    "module": "Notificações",
+    "flowName": "Envio e visualização de notificações",
+    "auth": true
+  },
+  {
+    "method": "POST",
+    "path": "/api/tipo-atendimentos",
+    "description": "Create tipo atendimentos",
+    "module": "Tipo de Atendimento",
+    "flowName": "Seleção de tipo de atendimento",
+    "auth": true
+  }
+]

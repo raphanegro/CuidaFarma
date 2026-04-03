@@ -1,0 +1,261 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  PHARMACIST
+}
+
+enum InterventionType {
+  DOSE_ADJUSTMENT
+  FREQUENCY_CHANGE
+  MEDICATION_SUBSTITUTION
+  INTERACTION_WARNING
+  CONTRAINDICATION
+  THERAPEUTIC_MONITORING
+  ADDITIONAL_THERAPY
+}
+
+enum InterventionStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  IMPLEMENTED
+}
+
+// Story 1.2 + 1.3
+enum TipoAtendimento {
+  CONSULTA_UBS
+  CONSULTORIO_FARMACEUTICO
+  VISITA_DOMICILIAR
+  TELEATENDIMENTO
+}
+
+enum MotivoConsulta {
+  INICIO_TRATAMENTO
+  REVISAO_MEDICAMENTOS
+  EFEITO_ADVERSO
+  MONITORAMENTO
+  ADESAO
+  RETORNO
+  OUTROS
+}
+
+enum StatusAtendimento {
+  ABERTO
+  CONCLUIDO
+}
+
+// Story 1.4
+enum StatusCondicao {
+  ATIVA
+  RESOLVIDA
+}
+
+model Usuario {
+  id              String   @id @default(cuid())
+  email           String   @unique
+  senha           String
+  nome            String
+  sobrenome       String
+  cpf             String   @unique
+  role            UserRole @default(PHARMACIST)
+  ativo           Boolean  @default(true)
+  criadoEm        DateTime @default(now())
+  atualizadoEm    DateTime @updatedAt
+  ultimoAcesso    DateTime?
+
+  intervencoes    Intervencao[]
+  pacientes       Paciente[]
+  atendimentos    Atendimento[] // Story 1.2
+
+  @@map("usuarios")
+}
+
+model Paciente {
+  id              String   @id @default(cuid())
+  nome            String
+  sobrenome       String
+  cpf             String   @unique
+  dataNascimento  DateTime
+  genero          String
+  telefone        String?
+  email           String?
+  endereco        String?
+  cidade          String?
+  estado          String?
+  cep             String?
+  condicoes               String[]
+  alergias                String[]
+  medicacoes              String[]
+  notas                   String?
+  // Story 1.1 — campos clínicos adicionais
+  telefoneSecundario      String?
+  unidadeSaude            String?
+  profissionalResponsavel String?
+  ativo                   Boolean  @default(true)
+  criadoEm                DateTime @default(now())
+  atualizadoEm            DateTime @updatedAt
+  usuarioId               String
+  usuario                 Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+
+  analises        AnaliseFarmacoTerapeutica[]
+  intervencoes    Intervencao[]
+  anexos          Anexo[]
+  auditLogs       AuditLog[]
+  atendimentos    Atendimento[]      // Story 1.2
+  historicoClinico HistoricoClinico[] // Story 1.4
+
+  @@map("pacientes")
+}
+
+model Medicamento {
+  id              String   @id @default(cuid())
+  nome            String   @unique
+  principioAtivo  String
+  dosagem         String
+  forma           String
+  fabricante      String?
+  codigoATC       String?
+  criadoEm        DateTime @default(now())
+  atualizadoEm    DateTime @updatedAt
+
+  analises        AnaliseFarmacoTerapeutica[]
+
+  @@map("medicamentos")
+}
+
+model AnaliseFarmacoTerapeutica {
+  id              String   @id @default(cuid())
+  data            DateTime @default(now())
+  tipo            String
+  descricao       String   @db.Text
+  achados         String[]
+  recomendacoes   String[]
+  status          String   @default("pendente")
+  criadoEm        DateTime @default(now())
+  atualizadoEm    DateTime @updatedAt
+
+  pacienteId      String
+  paciente        Paciente @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  medicamentoId   String
+  medicamento     Medicamento @relation(fields: [medicamentoId], references: [id])
+
+  intervencoes    Intervencao[]
+  anexos          Anexo[]
+
+  @@map("analises_farmaco")
+}
+
+model Intervencao {
+  id              String   @id @default(cuid())
+  tipo            InterventionType
+  descricao       String   @db.Text
+  justificativa   String   @db.Text
+  status          InterventionStatus @default(PENDING)
+  dataSugestao    DateTime @default(now())
+  dataImplementacao DateTime?
+  resultado       String?  @db.Text
+  criadoEm        DateTime @default(now())
+  atualizadoEm    DateTime @updatedAt
+
+  pacienteId      String
+  paciente        Paciente @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  usuarioId       String
+  usuario         Usuario  @relation(fields: [usuarioId], references: [id])
+  analiseId       String
+  analise         AnaliseFarmacoTerapeutica @relation(fields: [analiseId], references: [id], onDelete: Cascade)
+
+  @@map("intervencoes")
+}
+
+model Anexo {
+  id              String   @id @default(cuid())
+  nome            String
+  tipo            String
+  url             String
+  tamanho         Int
+  criadoEm        DateTime @default(now())
+
+  pacienteId      String
+  paciente        Paciente @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  analiseId       String?
+  analise         AnaliseFarmacoTerapeutica? @relation(fields: [analiseId], references: [id], onDelete: Cascade)
+
+  @@map("anexos")
+}
+
+model AuditLog {
+  id              String   @id @default(cuid())
+  acao            String
+  entidade        String
+  entityId        String
+  dados           String   @db.Text
+  criadoEm        DateTime @default(now())
+
+  pacienteId      String
+  paciente        Paciente @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+
+  @@map("audit_logs")
+}
+
+// Story 1.2 + 1.3 — Hub central de sessões clínicas
+model Atendimento {
+  id               String            @id @default(cuid())
+  pacienteId       String
+  paciente         Paciente          @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  usuarioId        String
+  usuario          Usuario           @relation(fields: [usuarioId], references: [id])
+  tipo             TipoAtendimento
+  enderecoVisita   String?
+  motivoConsulta   MotivoConsulta[]
+  motivoDescricao  String?           @db.Text
+  dataAtendimento  DateTime          @default(now())
+  status           StatusAtendimento @default(ABERTO)
+  criadoEm         DateTime          @default(now())
+  atualizadoEm     DateTime          @updatedAt
+
+  dadosClinicos    DadosClinicos?    // Story 1.5
+
+  @@map("atendimentos")
+}
+
+// Story 1.4 — Histórico clínico do paciente
+model HistoricoClinico {
+  id              String         @id @default(cuid())
+  pacienteId      String
+  paciente        Paciente       @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  doenca          String
+  cid10           String?
+  dataDiagnostico DateTime?
+  status          StatusCondicao @default(ATIVA)
+  observacoes     String?        @db.Text
+  criadoEm        DateTime       @default(now())
+  atualizadoEm    DateTime       @updatedAt
+
+  @@map("historico_clinico")
+}
+
+// Story 1.5 — Dados clínicos aferidos por atendimento
+model DadosClinicos {
+  id              String      @id @default(cuid())
+  atendimentoId   String      @unique
+  atendimento     Atendimento @relation(fields: [atendimentoId], references: [id], onDelete: Cascade)
+  peso            Decimal?    @db.Decimal(5, 2)
+  altura          Decimal?    @db.Decimal(5, 2)
+  imc             Decimal?    @db.Decimal(5, 2)
+  classificacaoImc String?
+  paSistolica     Int?
+  paDiastolica    Int?
+  freqCardiaca    Int?
+  glicemiaCapilar Decimal?    @db.Decimal(6, 2)
+  registradoEm    DateTime    @default(now())
+
+  @@map("dados_clinicos")
+}

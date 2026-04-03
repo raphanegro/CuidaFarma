@@ -1,0 +1,1289 @@
+{
+  "storyId": "IDEA-993B9D96",
+  "gatheredAt": "2026-03-19T19:10:21.177Z",
+  "source": "idea-pack",
+  "gatheredBy": "@idea-estruturada",
+  "elicitationVersion": "2.0",
+  "projectTitle": "CuidaFarma",
+  "projectId": "993b9d96-8764-4f16-8a2c-c0837e75c054",
+  "functional": [
+    {
+      "id": "FR-1",
+      "description": "Sistema para assessorar farmacêuticos no cuidado clínico ao paciente, facilitando o registro, análise da terapia medicamentosa e exames clínicos/laboratoriais, além de sugerir intervenções.",
+      "priority": "P0",
+      "rationale": "Core product vision",
+      "sourceType": "VISION",
+      "sourceLayer": 1,
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-2",
+      "description": "[Módulo] Cadastro de Paciente: Registro de informações pessoais e de contato do paciente, incluindo dados como nome, CPF, data de nascimento, sexo, telefone, endereço, unidade de saúde e profissional responsável.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Cadastro de Paciente",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-3",
+      "description": "[Módulo] Tipo de Atendimento: Seleção do tipo de atendimento (consulta na UBS, consultório farmacêutico, visita domiciliar, teleatendimento) e registro de detalhes específicos para visita domiciliar.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Tipo de Atendimento",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-4",
+      "description": "[Módulo] Motivo da Consulta: Registro do motivo da consulta com opções pré-definidas e campo livre para descrição detalhada.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Motivo da Consulta",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-5",
+      "description": "[Módulo] Histórico Clínico: Registro das doenças diagnosticadas e outras condições clínicas relevantes para o paciente.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Histórico Clínico",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-6",
+      "description": "[Módulo] Dados Clínicos: Registro de dados clínicos medidos na consulta, como peso, altura, IMC, pressão arterial, frequência cardíaca e glicemia capilar.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Dados Clínicos",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-7",
+      "description": "[Módulo] Resultados de Exames: Registro e anexação de exames laboratoriais, como glicemia de jejum, hemoglobina glicada, colesterol, creatinina e taxa de filtração glomerular.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Resultados de Exames",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-8",
+      "description": "[Módulo] Medicamentos em Uso: Registro detalhado dos medicamentos em uso pelo paciente, incluindo nome, dose, forma farmacêutica, via de administração, frequência, indicação e origem do medicamento.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Medicamentos em Uso",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-9",
+      "description": "[Módulo] Análise Farmacoterapêutica: Avaliação do farmacêutico sobre interações medicamentosas, duplicidade terapêutica, adequação da dose e da condição clínica, com campo para observações.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Análise Farmacoterapêutica",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-10",
+      "description": "[Perfil de Usuário] Farmacêutico: Usuário que realiza atendimento clínico ao paciente, registra informações no prontuário farmacêutico, realiza análise farmacoterapêutica e intervém no tratamento.",
+      "priority": "P0",
+      "rationale": "User profile definition",
+      "sourceType": "PROFILE",
+      "sourceLayer": 1,
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-11",
+      "description": "[Módulo] Anexação de Documentos: Possibilidade de anexar fotos ou PDFs de receitas médicas, exames laboratoriais, diário glicêmico, MRPA, organizador de medicamentos, entre outros.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Anexação de Documentos",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-12",
+      "description": "[Módulo] Registro de Problemas Relacionados a Medicamentos (PRM): Classificação e descrição detalhada dos problemas relacionados a medicamentos, como necessidade, dose inadequada, reações adversas, interações e baixa adesão.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Registro de Problemas Relacionados a Medicamentos (PRM)",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-13",
+      "description": "[Módulo] Sugestões do Assistente Clínico: Alertas automáticos sobre interações, doses inadequadas, riscos e alterações de exames, com sugestões de intervenções.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Sugestões do Assistente Clínico",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-14",
+      "description": "[Módulo] Registro de Intervenção Farmacêutica: Registro das intervenções realizadas, como orientações, ajustes, simplificação do regime, reconciliação medicamentosa e encaminhamentos, com descrição detalhada.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Registro de Intervenção Farmacêutica",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-15",
+      "description": "[Módulo] Calendário Posológico: Geração automática do calendário posológico com base nos medicamentos cadastrados, com opções para editar horários, imprimir e gerar PDF.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Calendário Posológico",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-16",
+      "description": "[Módulo] Estratificação de Risco: Classificação do paciente em baixo, moderado ou alto risco, com base em critérios como polifarmácia, idade, doenças crônicas e adesão.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Estratificação de Risco",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-17",
+      "description": "[Módulo] Plano de Acompanhamento: Registro do plano de acompanhamento do paciente, incluindo retornos, visitas domiciliares, monitoramento de exames e observações.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Plano de Acompanhamento",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-18",
+      "description": "[Módulo] Evolução Clínica: Registro da evolução clínica do paciente nos retornos, com controle de pressão, glicemia, adesão e resolução dos PRM.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Evolução Clínica",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-19",
+      "description": "[Perfil de Usuário] Administrador: Usuário com permissões para gerir o sistema e visualizar relatórios de produção para análise da qualidade do serviço prestado.",
+      "priority": "P0",
+      "rationale": "User profile definition",
+      "sourceType": "PROFILE",
+      "sourceLayer": 1,
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-20",
+      "description": "[Módulo] Anexos de Documentos: Gerenciamento de anexos como receitas, exames laboratoriais e organizadores, com visualização, transcrição e possibilidade de download.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Anexos de Documentos",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-21",
+      "description": "[Módulo] Registro e Classificação dos PRFs: Identificação e detalhamento dos problemas relacionados à farmacoterapia, incluindo classificação e descrição detalhada.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Registro e Classificação dos PRFs",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-22",
+      "description": "[Módulo] Indicadores e Relatórios: Relatórios, dashboards e exportação de dados para avaliação do serviço prestado, incluindo volume de atendimentos, perfil epidemiológico, PRFs e intervenções.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 1,
+      "module": "Indicadores e Relatórios",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-23",
+      "description": "[Regra] Limite de Anexos por Paciente: Limitar a aproximadamente 10 páginas de receita por paciente, considerando cerca de 40 pacientes/mês.",
+      "priority": "P0",
+      "sourceType": "RULE",
+      "sourceLayer": 1,
+      "module": "Anexos de Documentos",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-24",
+      "description": "[Módulo] Comunicação Interna: Permite envio de cartas ao prescritor ou outros profissionais de saúde relacionados ao cuidado do paciente, além de gerenciar uma lista de tarefas para o paciente com texto livre.",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 2,
+      "module": "Comunicação Interna",
+      "classification": "CERTAINTY",
+      "moscow": "SHOULD"
+    },
+    {
+      "id": "FR-25",
+      "description": "[Módulo] Relatórios de Produção: Painel para administradores visualizarem indicadores e métricas da produção do serviço para análise da qualidade.",
+      "priority": "P0",
+      "rationale": "Depende de: Cadastro de Paciente, Registro de Intervenção Farmacêutica, Análise Farmacoterapêutica",
+      "sourceType": "MODULE",
+      "sourceLayer": 2,
+      "module": "Relatórios de Produção",
+      "classification": "CERTAINTY",
+      "moscow": "SHOULD"
+    },
+    {
+      "id": "FR-26",
+      "description": "[Módulo] Agrupamento de Informações: Opção para agrupar informações por patologia, PRF, intervenções realizadas e resultados obtidos",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 3,
+      "module": "Agrupamento de Informações",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-27",
+      "description": "[Módulo] Histórico de Alterações: Opção para visualizar o histórico de alterações nos registros de pacientes e medicamentos",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 3,
+      "module": "Histórico de Alterações",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-28",
+      "description": "[Módulo] Relatório: Opção para imprimir ou exportar os dados dos pacientes e medicamentos",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 3,
+      "module": "Relatório",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-29",
+      "description": "[Módulo] Filtro de Busca: Opção para buscar pacientes e medicamentos por nome do medicamento, CPF do paciente e nome do paciente",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 3,
+      "module": "Filtro de Busca",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-30",
+      "description": "[Módulo] Notificações: Opção para receber notificações por e-mail e dentro do sistema sobre os alertas",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 3,
+      "module": "Notificações",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-31",
+      "description": "[Módulo] Anexos: Opção para anexar documentos ou imagens nos registros de pacientes e medicamentos",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 3,
+      "module": "Anexos",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-32",
+      "description": "[Módulo] Direitos de Acesso: Opção para definir os direitos de acesso para os farmacêuticos e administradores",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 3,
+      "module": "Direitos de Acesso",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-33",
+      "description": "[Módulo] Relatórios para Administrador: Opção para visualizar os relatórios para o administrador",
+      "priority": "P0",
+      "sourceType": "MODULE",
+      "sourceLayer": 3,
+      "module": "Relatórios para Administrador",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-34",
+      "description": "[Regra] Validação de CPF: O CPF informado deve ser válido conforme algoritmo oficial de validação.",
+      "priority": "P0",
+      "sourceType": "RULE",
+      "sourceLayer": 4,
+      "module": "Cadastro de Paciente",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-35",
+      "description": "[Regra] Validação de formato de telefone: O telefone informado deve seguir o formato padrão brasileiro com DDD e número válido.",
+      "priority": "P0",
+      "sourceType": "RULE",
+      "sourceLayer": 4,
+      "module": "Cadastro de Paciente",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-36",
+      "description": "[Regra] Campos de texto estruturados pela metodologia SOAP: Registros textuais devem ser organizados em campos Subjetivo, Objetivo, Avaliação e Plano, sem limite máximo de caracteres.",
+      "priority": "P0",
+      "sourceType": "RULE",
+      "sourceLayer": 4,
+      "module": "Evolução Clínica",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-37",
+      "description": "[Regra] Bloqueio de agendamentos em horários conflitantes: O sistema deve impedir agendamentos em horários já ocupados para o mesmo profissional.",
+      "priority": "P0",
+      "sourceType": "RULE",
+      "sourceLayer": 4,
+      "module": "Plano de Acompanhamento",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-38",
+      "description": "[Comportamento] Notificações instantâneas do assistente clínico: Alertas automáticos como interação medicamentosa ou dose inadequada geram notificações instantâneas para o farmacêutico, exibidas em lista com checklist para confirmação, sem registro no prontuário.",
+      "priority": "P0",
+      "sourceType": "BEHAVIOR",
+      "sourceLayer": 4,
+      "module": "Sugestões do Assistente Clínico",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-39",
+      "description": "[Comportamento] Notificações de conflitos no calendário posológico: Alertas de conflitos de horários ou medicamentos geram notificações que devem ser registradas no prontuário para conferência pelo farmacêutico.",
+      "priority": "P0",
+      "sourceType": "BEHAVIOR",
+      "sourceLayer": 4,
+      "module": "Calendário Posológico",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-40",
+      "description": "[Comportamento] Envio de notificações de lembrete: O sistema envia lembretes via WhatsApp ao paciente e via email ao farmacêutico sobre agendamentos futuros.",
+      "priority": "P0",
+      "sourceType": "BEHAVIOR",
+      "sourceLayer": 4,
+      "module": "Plano de Acompanhamento",
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-41",
+      "description": "[Integração] Integração para envio de notificações via WhatsApp e Email: O sistema deve integrar com serviços externos para envio automático de notificações via WhatsApp para pacientes e email para farmacêuticos, sem necessidade de login externo.",
+      "priority": "P1",
+      "sourceType": "INTEGRATION",
+      "sourceLayer": 4,
+      "module": "Plano de Acompanhamento",
+      "classification": "HYPOTHESIS",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-42",
+      "description": "[Integração] Autenticação Interna: Sistema de cadastro e login com usuário e senha para farmacêuticos e administradores.",
+      "priority": "P0",
+      "sourceType": "INTEGRATION",
+      "sourceLayer": 5,
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-43",
+      "description": "[Integração] SSO do SUS: Autenticação via sistema nacional do SUS para futuros acessos.",
+      "priority": "P1",
+      "sourceType": "INTEGRATION",
+      "sourceLayer": 5,
+      "classification": "HYPOTHESIS",
+      "moscow": "SHOULD"
+    },
+    {
+      "id": "FR-44",
+      "description": "[Integração] Armazenamento e Upload de Anexos JPEG, PNG e PDF: Suporte a anexação de documentos e imagens nos formatos JPEG, PNG e PDF, armazenados em sistema de arquivos ou nuvem.",
+      "priority": "P0",
+      "sourceType": "INTEGRATION",
+      "sourceLayer": 5,
+      "classification": "CERTAINTY",
+      "moscow": "MUST"
+    },
+    {
+      "id": "FR-45",
+      "description": "[Integração] Consulta Base Nacional de Dados de Pacientes e Medicamentos: Integração para consulta e importação de dados do banco nacional para facilitar cadastro e atualização.",
+      "priority": "P1",
+      "sourceType": "INTEGRATION",
+      "sourceLayer": 5,
+      "classification": "HYPOTHESIS",
+      "moscow": "SHOULD"
+    },
+    {
+      "id": "FR-46",
+      "description": "[Integração] Integração com APIs de Calendário (Google Calendar, Microsoft Outlook): Sincronização do calendário posológico e agendamentos com calendários externos.",
+      "priority": "P1",
+      "sourceType": "INTEGRATION",
+      "sourceLayer": 5,
+      "classification": "HYPOTHESIS",
+      "moscow": "SHOULD"
+    }
+  ],
+  "nonFunctional": [
+    {
+      "id": "NFR-1",
+      "category": "usability",
+      "description": "Performance Ágil: Tempo de resposta do sistema deve ser rápido para não impactar o fluxo do atendimento farmacêutico.",
+      "metric": "response_time_p95 < 2000ms"
+    },
+    {
+      "id": "NFR-2",
+      "category": "security",
+      "description": "Criptografia de Dados Sensíveis: Dados pessoais e clínicos devem ser criptografados em repouso (AES-256) e em trânsito (TLS 1.2+).",
+      "metric": "encryption = AES-256 at rest, TLS 1.2+ in transit"
+    },
+    {
+      "id": "NFR-3",
+      "category": "performance",
+      "description": "Autenticação Segura: Política de senha mínima de 8 caracteres e timeout de sessão de no máximo 30 minutos.",
+      "metric": "password_min_length >= 8, session_timeout <= 30min"
+    },
+    {
+      "id": "NFR-4",
+      "category": "performance",
+      "description": "Conformidade com LGPD: Permitir exclusão ou anonimização de dados pessoais a pedido do paciente, conforme legislação.",
+      "metric": "data_deletion_request_fulfilled_within_72h"
+    },
+    {
+      "id": "NFR-5",
+      "category": "reliability",
+      "description": "Backup Automático Diário: Realizar backup automático dos dados diariamente para garantir recuperação em caso de falhas.",
+      "metric": "backup_frequency >= daily"
+    },
+    {
+      "id": "NFR-6",
+      "category": "reliability",
+      "description": "Disponibilidade: Uptime mínimo de 99,5% para garantir acesso contínuo ao sistema.",
+      "metric": "uptime >= 99.5%"
+    },
+    {
+      "id": "NFR-7",
+      "category": "performance",
+      "description": "Performance: Tempo máximo de carregamento das telas principais inferior a 3 segundos",
+      "metric": "page_load_time < 3s"
+    },
+    {
+      "id": "NFR-8",
+      "category": "performance",
+      "description": "Tempo Máximo de Carregamento: Telas principais devem carregar em menos de 3 segundos para manter agilidade.",
+      "metric": "page_load_time < 3s"
+    },
+    {
+      "id": "NFR-9",
+      "category": "performance",
+      "description": "Tempo Máximo de Resposta da API: O sistema deve responder às requisições da API em até 2 segundos na maioria das operações críticas.",
+      "metric": "response_time_p95 < 2000ms"
+    },
+    {
+      "id": "NFR-10",
+      "category": "reliability",
+      "description": "Disponibilidade do Sistema: O sistema deve garantir disponibilidade mínima de 99,5% durante o horário comercial.",
+      "metric": "uptime >= 99.5%"
+    }
+  ],
+  "constraints": [
+    {
+      "id": "CON-1",
+      "type": "technical",
+      "description": "Performance Ágil: Tempo de resposta do sistema deve ser rápido para não impactar o fluxo do atendimento farmacêutico.",
+      "impact": "Métrica: response_time_p95 < 2000ms"
+    },
+    {
+      "id": "CON-2",
+      "type": "technical",
+      "description": "Criptografia de Dados Sensíveis: Dados pessoais e clínicos devem ser criptografados em repouso (AES-256) e em trânsito (TLS 1.2+).",
+      "impact": "Métrica: encryption = AES-256 at rest, TLS 1.2+ in transit"
+    },
+    {
+      "id": "CON-3",
+      "type": "technical",
+      "description": "Controle de Acesso Restrito: Somente farmacêuticos autorizados e administradores podem acessar e editar dados dos pacientes."
+    },
+    {
+      "id": "CON-4",
+      "type": "technical",
+      "description": "Autenticação Segura: Política de senha mínima de 8 caracteres e timeout de sessão de no máximo 30 minutos.",
+      "impact": "Métrica: password_min_length >= 8, session_timeout <= 30min"
+    },
+    {
+      "id": "CON-5",
+      "type": "regulatory",
+      "description": "Conformidade com LGPD: Permitir exclusão ou anonimização de dados pessoais a pedido do paciente, conforme legislação.",
+      "impact": "Métrica: data_deletion_request_fulfilled_within_72h"
+    },
+    {
+      "id": "CON-6",
+      "type": "technical",
+      "description": "Logs de Auditoria: Registrar acessos e alterações nos prontuários para rastreabilidade e segurança."
+    },
+    {
+      "id": "CON-7",
+      "type": "technical",
+      "description": "Backup Automático Diário: Realizar backup automático dos dados diariamente para garantir recuperação em caso de falhas.",
+      "impact": "Métrica: backup_frequency >= daily"
+    },
+    {
+      "id": "CON-8",
+      "type": "technical",
+      "description": "Proteção contra Ataques Web Comuns: Implementar mecanismos para prevenir injeção de SQL, cross-site scripting e outras vulnerabilidades."
+    },
+    {
+      "id": "CON-9",
+      "type": "technical",
+      "description": "Disponibilidade: Uptime mínimo de 99,5% para garantir acesso contínuo ao sistema.",
+      "impact": "Métrica: uptime >= 99.5%"
+    },
+    {
+      "id": "CON-10",
+      "type": "technical",
+      "description": "Performance: Tempo máximo de carregamento das telas principais inferior a 3 segundos",
+      "impact": "Métrica: page_load_time < 3s"
+    },
+    {
+      "id": "CON-11",
+      "type": "technical",
+      "description": "Responsividade Mobile: Sistema responsivo com viewport mínimo de 320px para acesso via dispositivos móveis"
+    },
+    {
+      "id": "CON-12",
+      "type": "technical",
+      "description": "Rate Limiting: Limitar requisições a 100 por minuto por usuário para evitar sobrecarga."
+    },
+    {
+      "id": "CON-13",
+      "type": "business",
+      "description": "Retenção de Dados: Manter histórico dos prontuários por no mínimo 5 anos."
+    },
+    {
+      "id": "CON-14",
+      "type": "technical",
+      "description": "Tempo Máximo de Carregamento: Telas principais devem carregar em menos de 3 segundos para manter agilidade.",
+      "impact": "Métrica: page_load_time < 3s"
+    },
+    {
+      "id": "CON-15",
+      "type": "technical",
+      "description": "Tempo Máximo de Resposta da API: O sistema deve responder às requisições da API em até 2 segundos na maioria das operações críticas.",
+      "impact": "Métrica: response_time_p95 < 2000ms"
+    },
+    {
+      "id": "CON-16",
+      "type": "technical",
+      "description": "Disponibilidade do Sistema: O sistema deve garantir disponibilidade mínima de 99,5% durante o horário comercial.",
+      "impact": "Métrica: uptime >= 99.5%"
+    }
+  ],
+  "assumptions": [
+    {
+      "id": "ASM-1",
+      "description": "Sistema acessado via navegador: Sistema será acessado apenas via navegador web, sem necessidade de aplicativo nativo.",
+      "risk": "medium",
+      "validation_needed": true
+    }
+  ],
+  "domainModel": [
+    {
+      "id": "DM-1",
+      "entity": "Usuário",
+      "description": "Representa um usuário do sistema, que pode ser farmacêutico ou administrador, com controle de acesso e autenticação.",
+      "attributes": [
+        "id: uuid",
+        "nome: text",
+        "login: text",
+        "senha: password",
+        "perfil: enum"
+      ],
+      "relationships": []
+    }
+  ],
+  "interactions": [
+    {
+      "id": "INT-1",
+      "trigger": "Cadastro e edição de paciente",
+      "flow": "Usuário busca paciente cadastrado ou opta por novo cadastro → Preenche ou edita os dados do paciente → Salva os dados → Sistema confirma salvamento e retorna ao dashboard ou ficha do paciente",
+      "description": "Cadastro e edição de paciente",
+      "module": "Cadastro de Paciente"
+    },
+    {
+      "id": "INT-2",
+      "trigger": "Seleção de tipo de atendimento",
+      "flow": "Usuário seleciona o tipo de atendimento → Se escolher visita domiciliar, pode preencher dados complementares → Pode salvar mesmo sem preencher dados adicionais → Sistema confirma salvamento",
+      "description": "Seleção de tipo de atendimento",
+      "module": "Tipo de Atendimento"
+    },
+    {
+      "id": "INT-3",
+      "trigger": "Cadastro de medicamentos em uso",
+      "flow": "Usuário visualiza lista de medicamentos cadastrados para o paciente → Adiciona novo medicamento preenchendo formulário → Salva o medicamento → Medicamento aparece na lista atualizada",
+      "description": "Cadastro de medicamentos em uso",
+      "module": "Medicamentos em Uso"
+    },
+    {
+      "id": "INT-4",
+      "trigger": "Tela: Dashboard",
+      "flow": "Campos: Número de Pacientes (number), Alertas (list), Número de PRFs (number), Intervenções Realizadas (number), Intervenções Bem Sucedidas (number)",
+      "description": "Tela inicial com lista de pacientes recentes, alertas e acesso rápido a funcionalidades",
+      "states": [
+        "Loading: Skeleton/spinner",
+        "Error: Toast de erro",
+        "Empty: Navega para Ficha do Paciente, Lista de Pacientes, Detalhes de PRF"
+      ],
+      "module": "Visão Geral"
+    },
+    {
+      "id": "INT-5",
+      "trigger": "Tela: Ficha do Paciente",
+      "flow": "Campos: dados pessoais (group), agrupamentos (tabs), botão salvar (button)",
+      "description": "Formulário com dados do paciente e agrupamentos de informações clínicas, PRF, intervenções e resultados",
+      "states": [
+        "Loading: Skeleton/spinner",
+        "Error: Toast de erro",
+        "Empty: Navega para Dashboard"
+      ],
+      "module": "Cadastro de Paciente"
+    },
+    {
+      "id": "INT-6",
+      "trigger": "Tela: Cadastro de Paciente",
+      "flow": "Campos: Nome Completo (text), CPF (text), Data de Nascimento (date), Idade (number), Sexo (select), Telefone (phone), Endereço (text), Unidade de Saúde (text), Profissional Responsável (text)",
+      "description": "Formulário para cadastro e edição dos dados pessoais e clínicos do paciente.",
+      "states": [
+        "Loading: Skeleton/spinner",
+        "Error: Toast de erro",
+        "Empty: Navega para Seleção de Tipo de Atendimento, Lista de Pacientes"
+      ],
+      "module": "Cadastro de Paciente"
+    },
+    {
+      "id": "INT-7",
+      "trigger": "Tela: Seleção de Tipo de Atendimento",
+      "flow": "Campos: Tipo de Atendimento (select), Campos adicionais para visita domiciliar (group)",
+      "description": "Tela para selecionar o tipo de atendimento realizado.",
+      "states": [
+        "Loading: Skeleton/spinner",
+        "Error: Toast de erro",
+        "Empty: Navega para Cadastro de Paciente, Cadastro de Medicamentos em Uso"
+      ],
+      "module": "Seleção de Tipo de Atendimento"
+    },
+    {
+      "id": "INT-8",
+      "trigger": "Tela: Cadastro de Medicamentos em Uso",
+      "flow": "Campos: nome_generico (text), dose (text), frequencia (text), tempo_tratamento (text)",
+      "description": "Tela onde o farmacêutico pode adicionar, editar e excluir medicamentos em uso do paciente, com campos para nome genérico, posologia e tempo de tratamento.",
+      "states": [
+        "Loading: Skeleton/spinner",
+        "Error: Toast de erro",
+        "Empty: Navega para Cadastro de Paciente"
+      ],
+      "module": "Cadastro de Medicamentos em Uso"
+    },
+    {
+      "id": "INT-9",
+      "trigger": "Visualização do dashboard",
+      "flow": "Usuário acessa o dashboard ao entrar no sistema → Sistema exibe número de pacientes, alertas em lista, número de PRFs, intervenções realizadas e número de sucesso das intervenções → Usuário pode clicar nos itens para acessar detalhes ou listas específicas",
+      "description": "Visualização do dashboard",
+      "module": "Dashboard"
+    },
+    {
+      "id": "INT-10",
+      "trigger": "Envio e visualização de notificações",
+      "flow": "Sistema envia notificações por e-mail e dentro do sistema para farmacêuticos e administradores → Usuário visualiza notificações no sistema → Usuário pode acessar o conteúdo relacionado à notificação, como novos cadastros ou alertas",
+      "description": "Envio e visualização de notificações",
+      "module": "Notificações"
+    },
+    {
+      "id": "INT-11",
+      "trigger": "Análise Farmacoterapêutica",
+      "flow": "Passo 1: Farmacêutico acessa a tela de Análise Farmacoterapêutica com lista dos medicamentos em uso do paciente → Passo 2: Sistema gera alertas automáticos sobre interações, duplicidades, doses inadequadas e PRFs → Passo 3: Farmacêutico registra observações e conclusões sobre a farmacoterapia e os PRFs → Passo 4: Salva a análise, que fica vinculada ao prontuário do paciente",
+      "description": "Análise Farmacoterapêutica",
+      "module": "Análise Farmacoterapêutica"
+    },
+    {
+      "id": "INT-12",
+      "trigger": "Sugestão e Ajuste do Calendário Posológico",
+      "flow": "Passo 1: Sistema gera automaticamente o calendário posológico com base nos medicamentos cadastrados e suas posologias → Passo 2: Farmacêutico visualiza o calendário e pode editar horários para adaptar à rotina do paciente → Passo 3: Farmacêutico salva o calendário, que pode ser impresso ou exportado em PDF para o paciente → Passo 4: O calendário é atualizado no prontuário e usado para acompanhamento do regime posológico",
+      "description": "Sugestão e Ajuste do Calendário Posológico",
+      "module": "Calendário Posológico"
+    },
+    {
+      "id": "INT-13",
+      "trigger": "Tela: Tela de Análise Farmacoterapêutica",
+      "flow": "Campos: medicamentos_lista (list), alertas (list), observacoes (textarea)",
+      "description": "Tela que apresenta a lista de medicamentos em uso, alertas automáticos sobre interações, duplicidades, doses e PRFs, e permite o registro da análise feita pelo farmacêutico.",
+      "module": "Análise Farmacoterapêutica"
+    },
+    {
+      "id": "INT-14",
+      "trigger": "Tela: Tela do Calendário Posológico",
+      "flow": "Campos: calendario (calendar), editar_horarios (button), exportar_pdf (button)",
+      "description": "Tela que exibe o calendário posológico gerado automaticamente, permite edição dos horários e exportação para impressão ou PDF.",
+      "module": "Calendário Posológico"
+    },
+    {
+      "id": "INT-15",
+      "trigger": "Tela: Tela de Comunicação Externa",
+      "flow": "Campos: Destinatário (select), Tipo de Comunicação (radio), Conteúdo (textarea), Data de Criação (date), Status (select)",
+      "description": "Tela para criar e enviar cartas a prescritores ou profissionais de saúde, e para registrar e visualizar lista de tarefas do paciente.",
+      "module": "Comunicação Externa"
+    },
+    {
+      "id": "INT-16",
+      "trigger": "Fluxo de Comunicação Externa",
+      "flow": "Passo 1: Farmacêutico acessa a tela de comunicação externa do paciente. → Passo 2: Escolhe criar uma carta ou uma tarefa para o paciente. → Passo 3: Preenche o destinatário (prescritor ou profissional de saúde) e o conteúdo da comunicação. → Passo 4: Salva e envia a comunicação, ou salva a tarefa para acompanhamento. → Passo 5: Sistema registra o status e permite acompanhamento posterior.",
+      "description": "Fluxo de Comunicação Externa",
+      "module": "Comunicação Externa"
+    }
+  ],
+  "edgeCases": [
+    {
+      "id": "EC-1",
+      "scenario": "Paciente não encontrado",
+      "handling": "Usuário busca paciente pelo CPF ou nome, mas não encontra registro correspondente.",
+      "severity": "medium"
+    },
+    {
+      "id": "EC-2",
+      "scenario": "Medicamento não cadastrado",
+      "handling": "Usuário tenta adicionar medicamento que não está na base de dados, sem opção de cadastro rápido.",
+      "severity": "low"
+    },
+    {
+      "id": "EC-3",
+      "scenario": "Erro ao salvar registro de paciente",
+      "handling": "O sistema não consegue salvar o registro de paciente devido a um erro de conexão",
+      "severity": "high"
+    },
+    {
+      "id": "EC-4",
+      "scenario": "Paciente recebe múltiplos lembretes para o mesmo agendamento",
+      "handling": "Em caso de falha no sistema de notificações, paciente pode receber lembretes repetidos para um único agendamento, gerando confusão.",
+      "severity": "medium"
+    },
+    {
+      "id": "EC-5",
+      "scenario": "Upload de anexos com extensão incorreta",
+      "handling": "Usuário tenta anexar arquivo com extensão JPG, mas arquivo na verdade está corrompido ou em formato diferente, causando erro no upload.",
+      "severity": "low"
+    },
+    {
+      "id": "EC-6",
+      "scenario": "Agendamento manual fora da disponibilidade do profissional",
+      "handling": "Caso o sistema não bloqueie corretamente, o farmacêutico pode registrar agendamento em horário fora da disponibilidade definida pelo profissional.",
+      "severity": "high"
+    }
+  ],
+  "terminology": [
+    {
+      "term": "PRF",
+      "definition": "Problema Relacionado à Farmacoterapia, situação clínica que demanda avaliação e intervenção farmacêutica.",
+      "aliases": [
+        "Problema Relacionado a Medicamentos (PRM) - termo antigo"
+      ]
+    }
+  ],
+  "acceptanceCriteria": [
+    {
+      "id": "AC-1",
+      "ruleName": "Limite de Anexos por Paciente",
+      "criteria": [
+        "Given o farmacêutico tenta anexar 6º documento, When seleciona arquivo válido, Then o sistema impede o upload e mostra mensagem de limite atingido.",
+        "Given o farmacêutico anexa até 5 documentos, When seleciona arquivos válidos, Then o sistema permite salvar os anexos."
+      ],
+      "module": "Anexos de Documentos"
+    },
+    {
+      "id": "AC-2",
+      "ruleName": "Validação de CPF",
+      "criteria": [
+        "Given o usuário está preenchendo o cadastro, When insere um CPF inválido, Then o sistema exibe erro 'CPF inválido' e não permite salvar.",
+        "Given o usuário está preenchendo o cadastro, When insere um CPF válido, Then o sistema permite salvar o cadastro."
+      ],
+      "module": "Cadastro de Paciente"
+    },
+    {
+      "id": "AC-3",
+      "ruleName": "Validação de formato de telefone",
+      "criteria": [
+        "Given o usuário está preenchendo o cadastro, When insere telefone em formato inválido, Then o sistema exibe erro e não permite salvar.",
+        "Given o usuário está preenchendo o cadastro, When insere telefone em formato válido, Then o sistema permite salvar o cadastro."
+      ],
+      "module": "Cadastro de Paciente"
+    },
+    {
+      "id": "AC-4",
+      "ruleName": "Campos de texto estruturados pela metodologia SOAP",
+      "criteria": [
+        "Given o farmacêutico acessa a evolução clínica, When registra informações, Then o sistema deve permitir entradas separadas para cada componente SOAP."
+      ],
+      "module": "Evolução Clínica"
+    },
+    {
+      "id": "AC-5",
+      "ruleName": "Bloqueio de agendamentos em horários conflitantes",
+      "criteria": [
+        "Given o profissional tem um horário agendado, When tenta agendar outro compromisso no mesmo horário, Then o sistema impede o agendamento e alerta conflito."
+      ],
+      "module": "Plano de Acompanhamento"
+    }
+  ],
+  "openQuestions": [],
+  "schema": "-- ==========================================================\n-- WARNING: Auto-generated schema. Review before using in production.\n-- ==========================================================\n-- Generated by IdeiaEstruturada from Idea Pack\n-- Project: CuidaFarma\n-- Generated at: 2026-03-19T19:10:21.158Z\n-- Entities: 1\n-- ==========================================================\n\n-- Trigger function for updated_at\nCREATE OR REPLACE FUNCTION trigger_set_updated_at()\nRETURNS TRIGGER AS $$\nBEGIN\n  NEW.updated_at = now();\n  RETURN NEW;\nEND;\n$$ LANGUAGE plpgsql;\n\n-- ============================================\n-- Table: usuarios (from Entity: Usuário)\n-- Representa um usuário do sistema, que pode ser farmacêutico ou administrador, com controle de acesso e autenticação.\n-- ============================================\nCREATE TABLE IF NOT EXISTS usuarios (\n  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),\n  nome TEXT NOT NULL,\n  login TEXT NOT NULL,\n  senha TEXT NOT NULL,\n  perfil TEXT NOT NULL,\n  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),\n  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()\n);\n\nCREATE TRIGGER set_usuarios_updated_at\n  BEFORE UPDATE ON usuarios\n  FOR EACH ROW\n  EXECUTE FUNCTION trigger_set_updated_at();\n",
+  "apiRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/analise-farmacoterapeuticas",
+      "description": "List analise farmacoterapeuticas",
+      "module": "Análise Farmacoterapêutica",
+      "flowName": "Análise Farmacoterapêutica",
+      "auth": true
+    },
+    {
+      "method": "POST",
+      "path": "/api/analise-farmacoterapeuticas",
+      "description": "Create analise farmacoterapeuticas",
+      "module": "Análise Farmacoterapêutica",
+      "flowName": "Análise Farmacoterapêutica",
+      "auth": true
+    },
+    {
+      "method": "GET",
+      "path": "/api/cadastro-pacientes",
+      "description": "List cadastro pacientes",
+      "module": "Cadastro de Paciente",
+      "flowName": "Cadastro e edição de paciente",
+      "auth": true
+    },
+    {
+      "method": "POST",
+      "path": "/api/cadastro-pacientes",
+      "description": "Create cadastro pacientes",
+      "module": "Cadastro de Paciente",
+      "flowName": "Cadastro e edição de paciente",
+      "auth": true
+    },
+    {
+      "method": "PUT",
+      "path": "/api/cadastro-pacientes/:id",
+      "description": "Update cadastro pacientes",
+      "module": "Cadastro de Paciente",
+      "flowName": "Cadastro e edição de paciente",
+      "auth": true
+    },
+    {
+      "method": "POST",
+      "path": "/api/calendario-posologicos",
+      "description": "Create calendario posologicos",
+      "module": "Calendário Posológico",
+      "flowName": "Sugestão e Ajuste do Calendário Posológico",
+      "auth": true
+    },
+    {
+      "method": "GET",
+      "path": "/api/calendario-posologicos/:id",
+      "description": "Get calendario posologicos by ID",
+      "module": "Calendário Posológico",
+      "flowName": "Sugestão e Ajuste do Calendário Posológico",
+      "auth": true
+    },
+    {
+      "method": "PUT",
+      "path": "/api/calendario-posologicos/:id",
+      "description": "Update calendario posologicos",
+      "module": "Calendário Posológico",
+      "flowName": "Sugestão e Ajuste do Calendário Posológico",
+      "auth": true
+    },
+    {
+      "method": "POST",
+      "path": "/api/comunicacao-externas",
+      "description": "Create comunicacao externas",
+      "module": "Comunicação Externa",
+      "flowName": "Fluxo de Comunicação Externa",
+      "auth": true
+    },
+    {
+      "method": "GET",
+      "path": "/api/dashboard",
+      "description": "List dashboard",
+      "module": "Dashboard",
+      "flowName": "Visualização do dashboard",
+      "auth": true
+    },
+    {
+      "method": "GET",
+      "path": "/api/dashboard/:id",
+      "description": "Get dashboard by ID",
+      "module": "Dashboard",
+      "flowName": "Visualização do dashboard",
+      "auth": true
+    },
+    {
+      "method": "GET",
+      "path": "/api/medicamentos-usos",
+      "description": "List medicamentos usos",
+      "module": "Medicamentos em Uso",
+      "flowName": "Cadastro de medicamentos em uso",
+      "auth": true
+    },
+    {
+      "method": "POST",
+      "path": "/api/medicamentos-usos",
+      "description": "Create medicamentos usos",
+      "module": "Medicamentos em Uso",
+      "flowName": "Cadastro de medicamentos em uso",
+      "auth": true
+    },
+    {
+      "method": "GET",
+      "path": "/api/medicamentos-usos/:id",
+      "description": "Get medicamentos usos by ID",
+      "module": "Medicamentos em Uso",
+      "flowName": "Cadastro de medicamentos em uso",
+      "auth": true
+    },
+    {
+      "method": "PUT",
+      "path": "/api/medicamentos-usos/:id",
+      "description": "Update medicamentos usos",
+      "module": "Medicamentos em Uso",
+      "flowName": "Cadastro de medicamentos em uso",
+      "auth": true
+    },
+    {
+      "method": "POST",
+      "path": "/api/notifications",
+      "description": "Create notifications",
+      "module": "Notificações",
+      "flowName": "Envio e visualização de notificações",
+      "auth": true
+    },
+    {
+      "method": "GET",
+      "path": "/api/notifications/:id",
+      "description": "Get notifications by ID",
+      "module": "Notificações",
+      "flowName": "Envio e visualização de notificações",
+      "auth": true
+    },
+    {
+      "method": "POST",
+      "path": "/api/tipo-atendimentos",
+      "description": "Create tipo atendimentos",
+      "module": "Tipo de Atendimento",
+      "flowName": "Seleção de tipo de atendimento",
+      "auth": true
+    }
+  ],
+  "apiRoutesText": "# API Routes\n\n> Auto-generated by IdeiaEstruturada at 2026-03-19T19:10:21.177Z\n> WARNING: Review before using in production.\n\nTotal routes: 18\n\n## Análise Farmacoterapêutica\n_Avaliação do farmacêutico sobre interações medicamentosas, duplicidade terapêutica, adequação da dose e da condição clínica, com campo para observações._\n\n| Method | Path | Description | Auth |\n|--------|------|-------------|------|\n| GET    | `/api/analise-farmacoterapeuticas` | List analise farmacoterapeuticas | Yes |\n| POST   | `/api/analise-farmacoterapeuticas` | Create analise farmacoterapeuticas | Yes |\n\n## Cadastro de Paciente\n_Registro de informações pessoais e de contato do paciente, incluindo dados como nome, CPF, data de nascimento, sexo, telefone, endereço, unidade de saúde e profissional responsável._\n\n| Method | Path | Description | Auth |\n|--------|------|-------------|------|\n| GET    | `/api/cadastro-pacientes` | List cadastro pacientes | Yes |\n| POST   | `/api/cadastro-pacientes` | Create cadastro pacientes | Yes |\n| PUT    | `/api/cadastro-pacientes/:id` | Update cadastro pacientes | Yes |\n\n## Calendário Posológico\n_Geração automática do calendário posológico com base nos medicamentos cadastrados, com opções para editar horários, imprimir e gerar PDF._\n\n| Method | Path | Description | Auth |\n|--------|------|-------------|------|\n| POST   | `/api/calendario-posologicos` | Create calendario posologicos | Yes |\n| GET    | `/api/calendario-posologicos/:id` | Get calendario posologicos by ID | Yes |\n| PUT    | `/api/calendario-posologicos/:id` | Update calendario posologicos | Yes |\n\n## Comunicação Externa\n\n| Method | Path | Description | Auth |\n|--------|------|-------------|------|\n| POST   | `/api/comunicacao-externas` | Create comunicacao externas | Yes |\n\n## Dashboard\n\n| Method | Path | Description | Auth |\n|--------|------|-------------|------|\n| GET    | `/api/dashboard` | List dashboard | Yes |\n| GET    | `/api/dashboard/:id` | Get dashboard by ID | Yes |\n\n## Medicamentos em Uso\n_Registro detalhado dos medicamentos em uso pelo paciente, incluindo nome, dose, forma farmacêutica, via de administração, frequência, indicação e origem do medicamento._\n\n| Method | Path | Description | Auth |\n|--------|------|-------------|------|\n| GET    | `/api/medicamentos-usos` | List medicamentos usos | Yes |\n| POST   | `/api/medicamentos-usos` | Create medicamentos usos | Yes |\n| GET    | `/api/medicamentos-usos/:id` | Get medicamentos usos by ID | Yes |\n| PUT    | `/api/medicamentos-usos/:id` | Update medicamentos usos | Yes |\n\n## Notificações\n_Opção para receber notificações por e-mail e dentro do sistema sobre os alertas_\n\n| Method | Path | Description | Auth |\n|--------|------|-------------|------|\n| POST   | `/api/notifications` | Create notifications | Yes |\n| GET    | `/api/notifications/:id` | Get notifications by ID | Yes |\n\n## Tipo de Atendimento\n_Seleção do tipo de atendimento (consulta na UBS, consultório farmacêutico, visita domiciliar, teleatendimento) e registro de detalhes específicos para visita domiciliar._\n\n| Method | Path | Description | Auth |\n|--------|------|-------------|------|\n| POST   | `/api/tipo-atendimentos` | Create tipo atendimentos | Yes |\n",
+  "navigation": {
+    "style": "sidebar",
+    "position": "left",
+    "collapsible": true,
+    "items": [
+      {
+        "label": "Dashboard",
+        "icon": "LayoutDashboard",
+        "path": "/dashboard"
+      },
+      {
+        "label": "Cadastro de Paciente",
+        "icon": "Box",
+        "path": "/cadastro-de-paciente"
+      },
+      {
+        "label": "Tipo de Atendimento",
+        "icon": "Box",
+        "path": "/tipo-de-atendimento"
+      },
+      {
+        "label": "Motivo da Consulta",
+        "icon": "Box",
+        "path": "/motivo-da-consulta"
+      },
+      {
+        "label": "Histórico Clínico",
+        "icon": "Box",
+        "path": "/historico-clinico"
+      },
+      {
+        "label": "Dados Clínicos",
+        "icon": "Box",
+        "path": "/dados-clinicos"
+      },
+      {
+        "label": "Resultados de Exames",
+        "icon": "Box",
+        "path": "/resultados-de-exames"
+      },
+      {
+        "label": "Medicamentos em Uso",
+        "icon": "Box",
+        "path": "/medicamentos-em-uso"
+      },
+      {
+        "label": "Análise Farmacoterapêutica",
+        "icon": "Box",
+        "path": "/analise-farmacoterapeutica"
+      },
+      {
+        "label": "Anexação de Documentos",
+        "icon": "FileText",
+        "path": "/anexacao-de-documentos"
+      },
+      {
+        "label": "Registro de Problemas Relacionados a Medicamentos (PRM)",
+        "icon": "Box",
+        "path": "/registro-de-problemas-relacionados-a-medicamentos-prm"
+      },
+      {
+        "label": "Sugestões do Assistente Clínico",
+        "icon": "Box",
+        "path": "/sugestoes-do-assistente-clinico"
+      },
+      {
+        "label": "Registro de Intervenção Farmacêutica",
+        "icon": "Box",
+        "path": "/registro-de-intervencao-farmaceutica"
+      },
+      {
+        "label": "Calendário Posológico",
+        "icon": "Calendar",
+        "path": "/calendario-posologico"
+      },
+      {
+        "label": "Estratificação de Risco",
+        "icon": "Box",
+        "path": "/estratificacao-de-risco"
+      },
+      {
+        "label": "Plano de Acompanhamento",
+        "icon": "Box",
+        "path": "/plano-de-acompanhamento"
+      },
+      {
+        "label": "Evolução Clínica",
+        "icon": "Box",
+        "path": "/evolucao-clinica"
+      },
+      {
+        "label": "Anexos de Documentos",
+        "icon": "FileText",
+        "path": "/anexos-de-documentos"
+      },
+      {
+        "label": "Registro e Classificação dos PRFs",
+        "icon": "Box",
+        "path": "/registro-e-classificacao-dos-prfs"
+      },
+      {
+        "label": "Indicadores e Relatórios",
+        "icon": "BarChart3",
+        "path": "/indicadores-e-relatorios"
+      },
+      {
+        "label": "Comunicação Interna",
+        "icon": "Box",
+        "path": "/comunicacao-interna"
+      },
+      {
+        "label": "Relatórios de Produção",
+        "icon": "BarChart3",
+        "path": "/relatorios-de-producao"
+      },
+      {
+        "label": "Agrupamento de Informações",
+        "icon": "Box",
+        "path": "/agrupamento-de-informacoes"
+      },
+      {
+        "label": "Histórico de Alterações",
+        "icon": "Box",
+        "path": "/historico-de-alteracoes"
+      },
+      {
+        "label": "Relatório",
+        "icon": "BarChart3",
+        "path": "/relatorio"
+      },
+      {
+        "label": "Filtro de Busca",
+        "icon": "Box",
+        "path": "/filtro-de-busca"
+      },
+      {
+        "label": "Notificações",
+        "icon": "Bell",
+        "path": "/notificacoes"
+      },
+      {
+        "label": "Anexos",
+        "icon": "Paperclip",
+        "path": "/anexos"
+      },
+      {
+        "label": "Direitos de Acesso",
+        "icon": "Key",
+        "path": "/direitos-de-acesso"
+      },
+      {
+        "label": "Relatórios para Administrador",
+        "icon": "BarChart3",
+        "path": "/relatorios-para-administrador"
+      },
+      {
+        "label": "Versões",
+        "icon": "History",
+        "path": "/versoes"
+      }
+    ],
+    "footer": {
+      "showVersion": true,
+      "showUser": true
+    }
+  },
+  "buildSystem": {
+    "versionFormat": "vYYYY.MM.DD-NNNN",
+    "changelog": true,
+    "changelogLocation": "/versoes",
+    "buildBadge": true,
+    "buildBadgeLocation": "sidebar-footer",
+    "changelogSpec": {
+      "description": "Página dedicada de histórico de versões. Cada build gera uma entrada com detalhes de mudanças, testes executados e validações de segurança.",
+      "sidebarMenuItem": true,
+      "features": [
+        "Sidebar menu item \"Versões\" with History icon — always visible",
+        "Header: \"Histórico de atualizações do sistema com detalhes de cada versão, testes executados e validações de segurança\"",
+        "Filter tags: Novo (green), Correção (amber), Melhoria (blue)",
+        "Summary counters: \"N versões\", \"N testes aprovados\"",
+        "Version cards sorted by date (newest first)"
+      ],
+      "versionCard": {
+        "fields": [
+          "version: version number (e.g., v2026.03.15-0001)",
+          "branch: git branch name",
+          "date: formatted date + time",
+          "changeCounts: { new: N, fix: N, improvement: N }",
+          "testCount: total tests passing",
+          "changes[]: array of { type: \"Correção\"|\"Melhoria\"|\"Novo\", description: string }",
+          "tests[]: array of { name: string, description: string, status: \"pass\"|\"fail\" }",
+          "securityTests[]: array of { name: string, description: string, status: \"pass\"|\"fail\" }"
+        ],
+        "tags": [
+          "Novo (bg-green-100 text-green-700)",
+          "Correção (bg-amber-100 text-amber-700)",
+          "Melhoria (bg-blue-100 text-blue-700)"
+        ]
+      },
+      "dbTable": "app_versions (id, version, branch, changes JSONB, tests JSONB, security_tests JSONB, created_at)"
+    }
+  },
+  "uiStandards": {
+    "buttons": {
+      "actionsUseIconsOnly": true,
+      "iconLibrary": "lucide-react",
+      "rules": [
+        "ALL action buttons (edit, delete, view, save, cancel, etc.) MUST use ONLY icons — NO text labels.",
+        "Use self-explanatory icons: Pencil for edit, Trash2 for delete, Eye for view, Save for save, X for cancel/close, Plus for add/create, Check for confirm.",
+        "Tooltips (title attribute) are REQUIRED on every icon button to show the action name on hover.",
+        "Primary actions (create/save): icon + filled background (e.g., bg-primary text-white rounded-lg p-2).",
+        "Destructive actions (delete): icon + red variant (e.g., text-red-500 hover:bg-red-50 rounded-lg p-2).",
+        "Secondary actions (edit/view): icon + ghost style (e.g., text-gray-500 hover:bg-gray-100 rounded-lg p-2).",
+        "In tables: action column with icon buttons grouped horizontally, consistent spacing (gap-1).",
+        "Never mix icon-only and text buttons in the same action group.",
+        "Minimum touch target: 36x36px (p-2 with icon size h-4 w-4 or h-5 w-5)."
+      ]
+    },
+    "general": [
+      "Use Lucide React icons consistently throughout the app.",
+      "All forms must have clear validation feedback (inline errors, red borders).",
+      "Loading states: skeleton or spinner on every async action.",
+      "Empty states: illustration or icon + message + action button.",
+      "Toast notifications for success/error feedback on CRUD operations.",
+      "Consistent border-radius: rounded-lg for cards, rounded-xl for modals, rounded-full for badges.",
+      "Responsive: mobile-first, sidebar collapses on small screens.",
+      "PROFESSIONAL UX DIRECTIVE — The system MUST look and feel like a production SaaS product, NOT a prototype:",
+      "LAYOUT: Clean sidebar (collapsible) + top header with user/org info. Content area with max-width container and generous padding.",
+      "TYPOGRAPHY: Use project font pair from visualIdentity. Headings: bold, tight tracking. Body: regular, relaxed leading. Muted labels: text-xs uppercase tracking-wide text-gray-500.",
+      "COLOR SYSTEM: Use CSS variables from visualIdentity (--color-primary, --color-accent, etc). Consistent color meanings: green=success, red=error/destructive, amber=warning, blue=info.",
+      "SPACING: Consistent spacing scale (p-4 for cards, gap-4 for grids, gap-2 for inline elements). No cramped layouts. Generous whitespace.",
+      "CARDS: bg-white rounded-xl border border-gray-200 shadow-sm p-5. Hover: shadow-md transition. Headers with border-b.",
+      "TABLES: Sticky header, alternating row colors (even:bg-gray-50), hover:bg-gray-100. Sortable columns. Pagination. Search/filter bar above.",
+      "FORMS: Labels above inputs. Input: h-10 rounded-lg border-gray-300 focus:ring-2 focus:ring-primary. Required fields marked with red asterisk. Inline validation errors.",
+      "MODALS: Centered, max-w-md/lg, rounded-2xl, backdrop-blur overlay. Close button top-right. Actions bottom-right (Cancel ghost + Primary filled).",
+      "SIDEBAR: Fixed left, w-64 (collapsible to w-16 icon-only). Logo at top. Nav items with icons + labels. Active item: bg-primary/10 text-primary border-l-2 border-primary. Hover: bg-gray-100. Footer: version badge + user avatar.",
+      "HEADER: h-16, border-b, flex justify-between. Left: breadcrumb or page title. Right: notifications bell, user dropdown.",
+      "DATA VISUALIZATION: Use CSS-only bars/charts (no external chart libraries). Color-coded badges for status. Progress bars for completion.",
+      "ANIMATIONS: Subtle transitions only (duration-200). Hover lifts (shadow). Skeleton loading (animate-pulse). No flashy animations.",
+      "DARK MODE: Not required for v1. Design with light theme only.",
+      "ACCESSIBILITY: Focus rings on all interactive elements. Aria-labels on icon buttons. Keyboard navigation. Sufficient color contrast (4.5:1 minimum).",
+      "ERROR PAGES: Custom 404 and 500 pages with illustration, message, and \"Back to dashboard\" button.",
+      "MOBILE: Stack sidebar into bottom nav or hamburger menu. Tables become cards. Modals become fullscreen sheets.",
+      "MICRO-INTERACTIONS: Toast appears top-right, auto-dismiss 5s. Confirm dialogs for destructive actions. Optimistic UI updates with rollback on error.",
+      "CONSISTENCY: Every page follows the same layout pattern. Every CRUD follows the same flow (list → create/edit modal → delete confirm → toast feedback)."
+    ]
+  },
+  "metadata": {
+    "totalScopeItems": 87,
+    "classificationBreakdown": {
+      "CERTAINTY": 55,
+      "HYPOTHESIS": 32
+    },
+    "layersCovered": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "generatedAt": "2026-03-19T19:10:21.179Z",
+    "locale": "pt-BR",
+    "visualIdentity": null
+  }
+}
