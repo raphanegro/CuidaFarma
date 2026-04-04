@@ -58,6 +58,60 @@ enum StatusCondicao {
   RESOLVIDA
 }
 
+// Story 2.1
+enum TipoExame {
+  GLICEMIA_JEJUM
+  HEMOGLOBINA_GLICADA
+  COLESTEROL_TOTAL
+  LDL
+  HDL
+  TRIGLICERIDEOS
+  CREATININA
+  TFG
+  OUTRO
+}
+
+// Story 2.2
+enum OrigemMedicamento {
+  PRESCRICAO_MEDICA
+  AUTOMEDICACAO
+  FITOTERAPICO
+  SUPLEMENTO
+}
+
+enum StatusMedicamento {
+  EM_USO
+  DESCONTINUADO
+  SUSPENSO
+}
+
+// Story 2.4
+enum CategoriaProblema {
+  NECESSIDADE
+  EFETIVIDADE
+  SEGURANCA
+  ADESAO
+}
+
+enum GravidadeProblema {
+  LEVE
+  MODERADO
+  GRAVE
+}
+
+enum StatusProblema {
+  IDENTIFICADO
+  EM_ACOMPANHAMENTO
+  RESOLVIDO
+}
+
+// Story 2.5
+enum ClassificacaoAdesao {
+  BOA
+  PARCIAL
+  BAIXA
+}
+
 model Usuario {
   id              String   @id @default(cuid())
   email           String   @unique
@@ -105,12 +159,16 @@ model Paciente {
   usuarioId               String
   usuario                 Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
 
-  analises        AnaliseFarmacoTerapeutica[]
-  intervencoes    Intervencao[]
-  anexos          Anexo[]
-  auditLogs       AuditLog[]
-  atendimentos    Atendimento[]      // Story 1.2
-  historicoClinico HistoricoClinico[] // Story 1.4
+  analises         AnaliseFarmacoTerapeutica[]
+  intervencoes     Intervencao[]
+  anexos           Anexo[]
+  auditLogs        AuditLog[]
+  atendimentos     Atendimento[]       // Story 1.2
+  historicoClinico HistoricoClinico[]  // Story 1.4
+  resultadosExame  ResultadoExame[]    // Story 2.1
+  medicamentosEmUso MedicamentoEmUso[] // Story 2.2
+  problemas        ProblemaMedicamento[] // Story 2.4
+  avaliacoesAdesao AvaliacaoAdesao[]   // Story 2.5
 
   @@map("pacientes")
 }
@@ -126,7 +184,8 @@ model Medicamento {
   criadoEm        DateTime @default(now())
   atualizadoEm    DateTime @updatedAt
 
-  analises        AnaliseFarmacoTerapeutica[]
+  analises         AnaliseFarmacoTerapeutica[]
+  medicamentosEmUso MedicamentoEmUso[] // Story 2.2
 
   @@map("medicamentos")
 }
@@ -143,9 +202,12 @@ model AnaliseFarmacoTerapeutica {
   atualizadoEm    DateTime @updatedAt
 
   pacienteId      String
-  paciente        Paciente @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
-  medicamentoId   String
-  medicamento     Medicamento @relation(fields: [medicamentoId], references: [id])
+  paciente        Paciente    @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  medicamentoId   String?
+  medicamento     Medicamento? @relation(fields: [medicamentoId], references: [id])
+  // Story 2.3 — critérios estruturados de análise
+  atendimentoId   String?
+  criteriosJson   Json?       // {interacoes, duplicidade, dose, condicao, adesao} com status+observacao por critério
 
   intervencoes    Intervencao[]
   anexos          Anexo[]
@@ -221,7 +283,9 @@ model Atendimento {
   criadoEm         DateTime          @default(now())
   atualizadoEm     DateTime          @updatedAt
 
-  dadosClinicos    DadosClinicos?    // Story 1.5
+  dadosClinicos    DadosClinicos?      // Story 1.5
+  problemas        ProblemaMedicamento[] // Story 2.4
+  avaliacoesAdesao AvaliacaoAdesao[]   // Story 2.5
 
   @@map("atendimentos")
 }
@@ -240,6 +304,92 @@ model HistoricoClinico {
   atualizadoEm    DateTime       @updatedAt
 
   @@map("historico_clinico")
+}
+
+// Story 2.1 — Resultados de exames laboratoriais
+model ResultadoExame {
+  id              String    @id @default(cuid())
+  pacienteId      String
+  paciente        Paciente  @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  tipo            TipoExame
+  tipoCustom      String?
+  valor           Decimal   @db.Decimal(10, 4)
+  unidade         String
+  dataColeta      DateTime
+  laboratorio     String?
+  refMin          Decimal?  @db.Decimal(10, 4)
+  refMax          Decimal?  @db.Decimal(10, 4)
+  criadoEm        DateTime  @default(now())
+  atualizadoEm    DateTime  @updatedAt
+
+  @@map("resultados_exame")
+}
+
+// Story 2.2 — Medicamentos em uso pelo paciente
+model MedicamentoEmUso {
+  id                String            @id @default(cuid())
+  pacienteId        String
+  paciente          Paciente          @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  medicamentoId     String?
+  medicamento       Medicamento?      @relation(fields: [medicamentoId], references: [id])
+  nomeCustom        String?
+  dose              String?
+  formaFarmaceutica String?
+  viaAdministracao  String?
+  frequencia        String?
+  quantidadePorDose Int               @default(1)
+  horarios          Json?
+  indicacao         String?
+  origem            OrigemMedicamento
+  dataInicio        DateTime
+  dataTermino       DateTime?
+  status            StatusMedicamento @default(EM_USO)
+  criadoEm          DateTime          @default(now())
+  atualizadoEm      DateTime          @updatedAt
+
+  avaliacoesAdesao  AvaliacaoAdesao[]    // Story 2.5
+  problemas         ProblemaMedicamento[] // Story 2.4 (optional ref)
+
+  @@map("medicamentos_em_uso")
+}
+
+// Story 2.4 — Problemas Relacionados a Medicamentos / Farmacoterapia
+model ProblemaMedicamento {
+  id                 String             @id @default(cuid())
+  atendimentoId      String
+  atendimento        Atendimento        @relation(fields: [atendimentoId], references: [id], onDelete: Cascade)
+  pacienteId         String
+  paciente           Paciente           @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  medicamentoEmUsoId String?
+  medicamentoEmUso   MedicamentoEmUso?  @relation(fields: [medicamentoEmUsoId], references: [id])
+  categoria          CategoriaProblema
+  descricao          String             @db.Text
+  gravidade          GravidadeProblema
+  status             StatusProblema     @default(IDENTIFICADO)
+  criadoEm           DateTime           @default(now())
+  atualizadoEm       DateTime           @updatedAt
+
+  @@map("problemas_medicamento")
+}
+
+// Story 2.5 — Avaliação de adesão por contagem de comprimidos
+model AvaliacaoAdesao {
+  id                 String              @id @default(cuid())
+  atendimentoId      String
+  atendimento        Atendimento         @relation(fields: [atendimentoId], references: [id], onDelete: Cascade)
+  pacienteId         String
+  paciente           Paciente            @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  medicamentoEmUsoId String
+  medicamentoEmUso   MedicamentoEmUso    @relation(fields: [medicamentoEmUsoId], references: [id])
+  qtdEsperada        Int
+  qtdContada         Int
+  taxaAdesao         Decimal             @db.Decimal(5, 2)
+  classificacao      ClassificacaoAdesao
+  observacao         String?             @db.Text
+  criadoEm           DateTime            @default(now())
+  atualizadoEm       DateTime            @updatedAt
+
+  @@map("avaliacoes_adesao")
 }
 
 // Story 1.5 — Dados clínicos aferidos por atendimento

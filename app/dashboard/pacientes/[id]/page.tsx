@@ -181,6 +181,19 @@ export default function ProntuarioPacientePage() {
         </div>
       </div>
 
+      {/* Navegação rápida — Epic 2 */}
+      <div className="flex gap-3 flex-wrap">
+        <Link href={`/dashboard/pacientes/${paciente.id}/exames`} className="flex items-center gap-2 px-4 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+          🧪 Exames Laboratoriais
+        </Link>
+        <Link href={`/dashboard/pacientes/${paciente.id}/medicamentos`} className="flex items-center gap-2 px-4 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+          💊 Medicamentos em Uso
+        </Link>
+        <Link href={`/dashboard/pacientes/${paciente.id}/prm`} className="flex items-center gap-2 px-4 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+          ⚠️ PRMs
+        </Link>
+      </div>
+
       <div className="grid grid-cols-3 gap-6">
         {/* Coluna principal */}
         <div className="col-span-2 space-y-6">
