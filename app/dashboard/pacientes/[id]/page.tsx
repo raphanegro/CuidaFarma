@@ -12,6 +12,7 @@ import {
   ChevronRight,
   CheckCircle,
   Clock,
+  Pencil,
 } from 'lucide-react'
 import { formatarCPF } from '@/lib/cpf'
 
@@ -171,6 +172,13 @@ export default function ProntuarioPacientePage() {
           )}
         </div>
         <div className="flex gap-3">
+          <Link
+            href={`/dashboard/pacientes/${paciente.id}/editar`}
+            className="btn-secondary flex items-center gap-2"
+          >
+            <Pencil className="h-4 w-4" />
+            Editar
+          </Link>
           <Link
             href={`/dashboard/atendimentos/novo?pacienteId=${paciente.id}`}
             className="btn-primary flex items-center gap-2"
