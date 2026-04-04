@@ -189,16 +189,31 @@ export default function ProntuarioPacientePage() {
         </div>
       </div>
 
-      {/* Navegação rápida — Epic 2 */}
-      <div className="flex gap-3 flex-wrap">
-        <Link href={`/dashboard/pacientes/${paciente.id}/exames`} className="flex items-center gap-2 px-4 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
-          🧪 Exames Laboratoriais
+      {/* Navegação rápida */}
+      <div className="flex gap-2 flex-wrap">
+        <Link href={`/dashboard/pacientes/${paciente.id}/exames`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+          🧪 Exames
         </Link>
-        <Link href={`/dashboard/pacientes/${paciente.id}/medicamentos`} className="flex items-center gap-2 px-4 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
-          💊 Medicamentos em Uso
+        <Link href={`/dashboard/pacientes/${paciente.id}/medicamentos`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+          💊 Medicamentos
         </Link>
-        <Link href={`/dashboard/pacientes/${paciente.id}/prm`} className="flex items-center gap-2 px-4 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+        <Link href={`/dashboard/pacientes/${paciente.id}/prm`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
           ⚠️ PRMs
+        </Link>
+        <Link href={`/dashboard/pacientes/${paciente.id}/intervencoes`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+          🩺 Intervenções
+        </Link>
+        <Link href={`/dashboard/pacientes/${paciente.id}/calendario`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+          📅 Calendário
+        </Link>
+        <Link href={`/dashboard/pacientes/${paciente.id}/risco`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+          🛡️ Risco
+        </Link>
+        <Link href={`/dashboard/pacientes/${paciente.id}/plano`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+          📋 Plano
+        </Link>
+        <Link href={`/dashboard/pacientes/${paciente.id}/evolucao`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+          📈 Evolução
         </Link>
       </div>
 
