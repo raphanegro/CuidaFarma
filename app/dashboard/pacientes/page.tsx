@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
 import { Plus, Search, Trash2, FileText, Phone, Mail, Building2 } from 'lucide-react'
 import { formatarCPF } from '@/lib/cpf'
+import { formatarTelefone } from '@/lib/masks'
 
 interface Paciente {
   id: string
@@ -169,7 +170,7 @@ export default function PacientesPage() {
                           <div className="flex items-center gap-2">
                             <Phone className="h-3.5 w-3.5 text-gray-400" />
                             <a href={`tel:${paciente.telefone}`} className="text-primary-600 hover:underline">
-                              {paciente.telefone}
+                              {formatarTelefone(paciente.telefone)}
                             </a>
                           </div>
                         )}

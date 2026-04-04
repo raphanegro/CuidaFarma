@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { AlertCircle, Loader2 } from 'lucide-react'
 import Link from 'next/link'
 import { validarCPF, formatarCPF, limparCPF } from '@/lib/cpf'
+import { formatarTelefone, formatarCEP } from '@/lib/masks'
 
 export default function NovoPacientePage() {
   const router = useRouter()
@@ -42,6 +43,16 @@ export default function NovoPacientePage() {
       } else {
         setCpfError('')
       }
+      return
+    }
+
+    if (name === 'telefone' || name === 'telefoneSecundario') {
+      setFormData({ ...formData, [name]: formatarTelefone(value) })
+      return
+    }
+
+    if (name === 'cep') {
+      setFormData({ ...formData, cep: formatarCEP(value) })
       return
     }
 
@@ -143,11 +154,11 @@ export default function NovoPacientePage() {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="label-base">Telefone Principal</label>
-              <input type="tel" name="telefone" value={formData.telefone} onChange={handleChange} className="input-base" placeholder="(00) 00000-0000" disabled={loading} />
+              <input type="tel" name="telefone" value={formData.telefone} onChange={handleChange} className="input-base" placeholder="(00) 00000-0000" maxLength={15} disabled={loading} />
             </div>
             <div>
               <label className="label-base">Telefone Secundário</label>
-              <input type="tel" name="telefoneSecundario" value={formData.telefoneSecundario} onChange={handleChange} className="input-base" placeholder="(00) 00000-0000" disabled={loading} />
+              <input type="tel" name="telefoneSecundario" value={formData.telefoneSecundario} onChange={handleChange} className="input-base" placeholder="(00) 00000-0000" maxLength={15} disabled={loading} />
             </div>
             <div className="col-span-2">
               <label className="label-base">Email</label>
@@ -175,7 +186,7 @@ export default function NovoPacientePage() {
               </div>
               <div>
                 <label className="label-base">CEP</label>
-                <input type="text" name="cep" value={formData.cep} onChange={handleChange} className="input-base" placeholder="00000-000" disabled={loading} />
+                <input type="text" name="cep" value={formData.cep} onChange={handleChange} className="input-base" placeholder="00000-000" maxLength={9} disabled={loading} />
               </div>
             </div>
           </div>
