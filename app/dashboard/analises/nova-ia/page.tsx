@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { AlertCircle, Loader2, Sparkles, ArrowLeft } from 'lucide-react'
+import { AlertCircle, Loader2, Sparkles, ArrowLeft, Settings } from 'lucide-react'
 import Link from 'next/link'
+import { MODEL_OPTIONS } from '@/lib/ai-providers'
 
 interface Paciente {
   id: string
@@ -16,6 +17,13 @@ interface Medicamento {
   nome: string
 }
 
+interface IAConfig {
+  provedorPadrao: string
+  modeloPadrao: string
+  temGroq: boolean
+  temGemini: boolean
+}
+
 export default function NovaAnáliseIAPage() {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
@@ -24,10 +32,14 @@ export default function NovaAnáliseIAPage() {
   const [success, setSuccess] = useState(false)
   const [pacientes, setPacientes] = useState<Paciente[]>([])
   const [medicamentos, setMedicamentos] = useState<Medicamento[]>([])
+  const [iaConfig, setIaConfig] = useState<IAConfig | null>(null)
+
   const [formData, setFormData] = useState({
     pacienteId: '',
     medicamentoId: '',
     tipo: 'Avaliação Farmacoterapêutica Geral',
+    provedor: '',
+    modelo: '',
   })
 
   useEffect(() => {
@@ -37,9 +49,10 @@ export default function NovaAnáliseIAPage() {
   const fetchData = async () => {
     try {
       setLoadingData(true)
-      const [pacientesRes, medicamentosRes] = await Promise.all([
+      const [pacientesRes, medicamentosRes, iaConfigRes] = await Promise.all([
         fetch('/api/pacientes?limit=1000'),
         fetch('/api/medicamentos?limit=1000'),
+        fetch('/api/configuracoes/ia'),
       ])
 
       if (!pacientesRes.ok || !medicamentosRes.ok) {
@@ -49,8 +62,26 @@ export default function NovaAnáliseIAPage() {
       const pacientesData = await pacientesRes.json()
       const medicamentosData = await medicamentosRes.json()
 
-      setPacientes(pacientesData.pacientes)
-      setMedicamentos(medicamentosData.medicamentos)
+      // /api/pacientes retorna array direto ou objeto com .pacientes
+      const pacientesArray = Array.isArray(pacientesData)
+        ? pacientesData
+        : pacientesData.pacientes ?? []
+      const medicamentosArray = Array.isArray(medicamentosData)
+        ? medicamentosData
+        : medicamentosData.medicamentos ?? []
+
+      setPacientes(pacientesArray)
+      setMedicamentos(medicamentosArray)
+
+      if (iaConfigRes.ok) {
+        const cfg = await iaConfigRes.json()
+        setIaConfig(cfg)
+        setFormData((prev) => ({
+          ...prev,
+          provedor: cfg.provedorPadrao ?? 'anthropic',
+          modelo: cfg.modeloPadrao ?? 'claude-sonnet-4-6',
+        }))
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Erro ao carregar dados')
     } finally {
@@ -61,10 +92,17 @@ export default function NovaAnáliseIAPage() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
+    const { name, value } = e.target
+    if (name === 'provedor') {
+      const firstModel = MODEL_OPTIONS.find((m) => m.provider === value)
+      setFormData((prev) => ({
+        ...prev,
+        provedor: value,
+        modelo: firstModel?.model ?? prev.modelo,
+      }))
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }))
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -77,36 +115,39 @@ export default function NovaAnáliseIAPage() {
       const response = await fetch('/api/analises/ia/gerar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          pacienteId: formData.pacienteId,
+          medicamentoId: formData.medicamentoId,
+          tipo: formData.tipo,
+          provedor: formData.provedor || undefined,
+          modelo: formData.modelo || undefined,
+        }),
       })
 
       if (!response.ok) {
         const errorData = await response.json()
-        setError(
-          errorData.error ||
-            'Erro ao gerar análise com inteligência artificial'
-        )
+        setError(errorData.error || 'Erro ao gerar análise com inteligência artificial')
         return
       }
 
       const data = await response.json()
       setSuccess(true)
-      setFormData({
-        pacienteId: '',
-        medicamentoId: '',
-        tipo: 'Avaliação Farmacoterapêutica Geral',
-      })
 
-      // Redirecionar para a análise criada após 2 segundos
       setTimeout(() => {
         router.push(`/dashboard/analises/${data.analise.id}`)
       }, 2000)
-    } catch (err) {
+    } catch {
       setError('Erro ao conectar com o servidor')
     } finally {
       setLoading(false)
     }
   }
+
+  const modelsForProvider = MODEL_OPTIONS.filter((m) => m.provider === formData.provedor)
+
+  const providerNeedsKey =
+    (formData.provedor === 'groq' && iaConfig && !iaConfig.temGroq) ||
+    (formData.provedor === 'gemini' && iaConfig && !iaConfig.temGemini)
 
   if (loadingData) {
     return (
@@ -127,9 +168,7 @@ export default function NovaAnáliseIAPage() {
           Voltar
         </Link>
         <div className="flex items-center gap-3">
-          <h1 className="text-3xl font-bold text-gray-900">
-            Análise com IA
-          </h1>
+          <h1 className="text-3xl font-bold text-gray-900">Análise com IA</h1>
           <Sparkles className="h-8 w-8 text-amber-500" />
         </div>
         <p className="text-gray-600 mt-2">
@@ -148,12 +187,24 @@ export default function NovaAnáliseIAPage() {
         <div className="mb-6 flex gap-3 rounded-lg bg-green-50 p-4 border border-green-200">
           <div className="h-5 w-5 text-green-600 flex-shrink-0">✓</div>
           <div>
-            <p className="text-sm text-green-700 font-medium">
-              Análise gerada com sucesso!
-            </p>
-            <p className="text-sm text-green-600">
-              Redirecionando para a análise criada...
-            </p>
+            <p className="text-sm text-green-700 font-medium">Análise gerada com sucesso!</p>
+            <p className="text-sm text-green-600">Redirecionando para a análise criada...</p>
+          </div>
+        </div>
+      )}
+
+      {providerNeedsKey && (
+        <div className="mb-6 flex gap-3 rounded-lg bg-amber-50 p-4 border border-amber-200">
+          <AlertCircle className="h-5 w-5 text-amber-600 flex-shrink-0" />
+          <div className="text-sm text-amber-700">
+            <p className="font-medium">Chave API não configurada para este provedor.</p>
+            <Link
+              href="/dashboard/configuracoes"
+              className="inline-flex items-center gap-1 mt-1 text-amber-800 underline hover:text-amber-900"
+            >
+              <Settings className="h-3 w-3" />
+              Configurar em Configurações
+            </Link>
           </div>
         </div>
       )}
@@ -162,13 +213,11 @@ export default function NovaAnáliseIAPage() {
         <div className="flex gap-3">
           <Sparkles className="h-6 w-6 text-amber-600 flex-shrink-0 mt-0.5" />
           <div>
-            <h3 className="font-semibold text-gray-900 mb-1">
-              Como Funciona?
-            </h3>
+            <h3 className="font-semibold text-gray-900 mb-1">Como Funciona?</h3>
             <p className="text-sm text-gray-700">
-              Selecione um paciente e medicamento. A IA Claude analisará o perfil
-              clínico do paciente em relação ao medicamento e gerará uma análise
-              farmacoterapêutica completa com achados e recomendações.
+              Selecione um paciente e medicamento. A IA analisará o perfil clínico do paciente em
+              relação ao medicamento e gerará uma análise farmacoterapêutica completa com achados e
+              recomendações.
             </p>
           </div>
         </div>
@@ -176,9 +225,45 @@ export default function NovaAnáliseIAPage() {
 
       <form onSubmit={handleSubmit} className="card space-y-6">
         <div>
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">
-            Informações para Análise
-          </h2>
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">Modelo de IA</h2>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="label-base">Provedor</label>
+              <select
+                name="provedor"
+                value={formData.provedor}
+                onChange={handleChange}
+                className="input-base"
+                disabled={loading || success}
+              >
+                <option value="anthropic">Anthropic (Claude)</option>
+                <option value="groq">Groq</option>
+                <option value="gemini">Google (Gemini / Gemma)</option>
+              </select>
+            </div>
+            <div>
+              <label className="label-base">Modelo</label>
+              <select
+                name="modelo"
+                value={formData.modelo}
+                onChange={handleChange}
+                className="input-base"
+                disabled={loading || success}
+              >
+                {modelsForProvider.map((m) => (
+                  <option key={m.model} value={m.model}>
+                    {m.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <hr className="border-gray-200" />
+
+        <div>
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">Informações para Análise</h2>
           <div className="space-y-4">
             <div>
               <label className="label-base">Selecione o Paciente *</label>
@@ -200,10 +285,7 @@ export default function NovaAnáliseIAPage() {
               {pacientes.length === 0 && (
                 <p className="text-sm text-gray-600 mt-2">
                   Nenhum paciente cadastrado.{' '}
-                  <Link
-                    href="/dashboard/pacientes/novo"
-                    className="text-blue-600 hover:text-blue-700"
-                  >
+                  <Link href="/dashboard/pacientes/novo" className="text-blue-600 hover:text-blue-700">
                     Criar paciente
                   </Link>
                 </p>
@@ -230,10 +312,7 @@ export default function NovaAnáliseIAPage() {
               {medicamentos.length === 0 && (
                 <p className="text-sm text-gray-600 mt-2">
                   Nenhum medicamento cadastrado.{' '}
-                  <Link
-                    href="/dashboard/medicamentos/novo"
-                    className="text-blue-600 hover:text-blue-700"
-                  >
+                  <Link href="/dashboard/medicamentos/novo" className="text-blue-600 hover:text-blue-700">
                     Criar medicamento
                   </Link>
                 </p>
@@ -258,25 +337,25 @@ export default function NovaAnáliseIAPage() {
                 <option value="Avaliação de Contraindicações">
                   Avaliação de Contraindicações
                 </option>
-                <option value="Avaliação de Reações Adversas">
-                  Avaliação de Reações Adversas
-                </option>
+                <option value="Avaliação de Reações Adversas">Avaliação de Reações Adversas</option>
                 <option value="Avaliação de Dosagem Apropriada">
                   Avaliação de Dosagem Apropriada
                 </option>
-                <option value="Monitoramento Terapêutico">
-                  Monitoramento Terapêutico
-                </option>
+                <option value="Monitoramento Terapêutico">Monitoramento Terapêutico</option>
               </select>
             </div>
           </div>
         </div>
 
-        <div className="flex gap-4 pt-6">
+        <div className="flex gap-4 pt-2">
           <button
             type="submit"
             disabled={
-              loading || success || !formData.pacienteId || !formData.medicamentoId
+              loading ||
+              success ||
+              !formData.pacienteId ||
+              !formData.medicamentoId ||
+              !!providerNeedsKey
             }
             className="btn-primary flex items-center gap-2 disabled:opacity-50"
           >
@@ -302,17 +381,17 @@ export default function NovaAnáliseIAPage() {
         <h3 className="font-semibold text-gray-900 mb-2">💡 Dica:</h3>
         <p className="text-sm text-gray-700 mb-2">
           Você também pode{' '}
-          <Link
-            href="/dashboard/analises/nova"
-            className="text-blue-600 hover:text-blue-700 font-medium"
-          >
+          <Link href="/dashboard/analises/nova" className="text-blue-600 hover:text-blue-700 font-medium">
             criar uma análise manualmente
           </Link>
           .
         </p>
         <p className="text-sm text-gray-600">
-          Use a geração automática para análises rápidas e sugestões iniciais, ou
-          crie manualmente para análises mais customizadas.
+          Para usar Groq ou Google Gemini/Gemma, configure suas chaves em{' '}
+          <Link href="/dashboard/configuracoes" className="text-blue-600 hover:text-blue-700 font-medium">
+            Configurações
+          </Link>
+          .
         </p>
       </div>
     </div>

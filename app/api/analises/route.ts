@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { prisma } from '@/lib/prisma'
 import { NextRequest, NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth'
@@ -21,7 +23,9 @@ export async function GET(request: NextRequest) {
     const limit = parseInt(searchParams.get('limit') || '10')
     const skip = (page - 1) * limit
 
-    const where: any = {}
+    const where: Record<string, unknown> = {
+      paciente: { usuarioId: session.user.id },
+    }
 
     if (search) {
       where.OR = [
@@ -31,6 +35,13 @@ export async function GET(request: NextRequest) {
     }
 
     if (pacienteId) {
+      const paciente = await prisma.paciente.findFirst({
+        where: { id: pacienteId, usuarioId: session.user.id },
+        select: { id: true },
+      })
+      if (!paciente) {
+        return NextResponse.json({ error: 'Paciente não encontrado' }, { status: 404 })
+      }
       where.pacienteId = pacienteId
     }
 
@@ -101,9 +112,9 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Verificar se paciente existe
-    const paciente = await prisma.paciente.findUnique({
-      where: { id: pacienteId },
+    // Verificar se paciente existe e pertence ao usuário
+    const paciente = await prisma.paciente.findFirst({
+      where: { id: pacienteId, usuarioId: session.user.id },
     })
 
     if (!paciente) {

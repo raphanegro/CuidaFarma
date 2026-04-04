@@ -51,14 +51,17 @@ export default function PacientesPage() {
   }, [fetchPacientes])
 
   const handleDelete = async (id: string) => {
-    if (confirm('Tem certeza que deseja deletar este paciente?')) {
+    if (confirm('Tem certeza que deseja deletar este paciente? Esta ação não pode ser desfeita.')) {
       try {
         const response = await fetch(`/api/pacientes/${id}`, { method: 'DELETE' })
         if (response.ok) {
           setPacientes(pacientes.filter((p) => p.id !== id))
+        } else {
+          const data = await response.json().catch(() => ({}))
+          alert(data.error || 'Erro ao deletar paciente')
         }
-      } catch (error) {
-        console.error('Erro ao deletar paciente:', error)
+      } catch {
+        alert('Erro de conexão ao deletar paciente')
       }
     }
   }

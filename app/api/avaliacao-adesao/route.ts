@@ -1,7 +1,9 @@
+export const dynamic = 'force-dynamic'
+
 import { NextRequest, NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth'
-import { authOptions } from '@/app/auth'
-import { prisma } from '@/app/lib/prisma'
+import { authOptions } from '@/auth'
+import { prisma } from '@/lib/prisma'
 import { ClassificacaoAdesao } from '@prisma/client'
 
 function calcularAdesao(qtdEsperada: number, qtdContada: number): {
@@ -9,7 +11,7 @@ function calcularAdesao(qtdEsperada: number, qtdContada: number): {
   classificacao: ClassificacaoAdesao
 } {
   const taxa = qtdEsperada > 0
-    ? Math.round(((qtdEsperada - qtdContada) / qtdEsperada) * 100 * 100) / 100
+    ? Math.min(Math.round((qtdContada / qtdEsperada) * 100 * 100) / 100, 100)
     : 0
   const classificacao: ClassificacaoAdesao =
     taxa >= 80 ? 'BOA' : taxa >= 60 ? 'PARCIAL' : 'BAIXA'
@@ -34,7 +36,7 @@ export async function GET(request: NextRequest) {
   const avaliacoes = await prisma.avaliacaoAdesao.findMany({
     where: {
       ...(pacienteId ? { pacienteId, paciente: { usuarioId: session.user.id } } : {}),
-      ...(atendimentoId ? { atendimentoId } : {}),
+      ...(atendimentoId ? { atendimentoId, atendimento: { paciente: { usuarioId: session.user.id } } } : {}),
     },
     include: {
       medicamentoEmUso: {

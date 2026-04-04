@@ -20,6 +20,7 @@ export default function DashboardPage() {
     intervencoesPendentes: 0,
   })
   const [loading, setLoading] = useState(true)
+  const [statsError, setStatsError] = useState(false)
 
   useEffect(() => {
     const fetchStats = async () => {
@@ -28,9 +29,11 @@ export default function DashboardPage() {
         if (response.ok) {
           const data = await response.json()
           setStats(data)
+        } else {
+          setStatsError(true)
         }
-      } catch (error) {
-        console.error('Erro ao carregar estatísticas:', error)
+      } catch {
+        setStatsError(true)
       } finally {
         setLoading(false)
       }
@@ -80,6 +83,12 @@ export default function DashboardPage() {
           Bem-vindo ao painel de controle do CuidaFarma
         </p>
       </div>
+
+      {statsError && (
+        <div className="rounded-lg bg-red-50 border border-red-200 p-4 text-sm text-red-700">
+          Não foi possível carregar as estatísticas. Tente recarregar a página.
+        </div>
+      )}
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

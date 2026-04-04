@@ -13,7 +13,7 @@ import {
   LogOut,
   Menu,
   X,
-  ChevronDown,
+  Settings,
 } from 'lucide-react'
 
 export default function DashboardLayout({
@@ -71,6 +71,11 @@ export default function DashboardLayout({
       icon: FileText,
       label: 'Análises',
       href: '/dashboard/analises',
+    },
+    {
+      icon: Settings,
+      label: 'Configurações',
+      href: '/dashboard/configuracoes',
     },
   ]
 

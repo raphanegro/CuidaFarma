@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma'
+import { validarCPF, limparCPF } from '@/lib/cpf'
 import bcrypt from 'bcryptjs'
 import { NextRequest, NextResponse } from 'next/server'
 
@@ -15,6 +16,20 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      return NextResponse.json({ message: 'Email inválido' }, { status: 400 })
+    }
+
+    if (senha.length < 8) {
+      return NextResponse.json({ message: 'A senha deve ter no mínimo 8 caracteres' }, { status: 400 })
+    }
+
+    const cpfLimpo = limparCPF(cpf)
+    if (!validarCPF(cpfLimpo)) {
+      return NextResponse.json({ message: 'CPF inválido' }, { status: 400 })
+    }
+
     // Verificar se usuário já existe
     const existingUser = await prisma.usuario.findUnique({
       where: { email },
@@ -29,7 +44,7 @@ export async function POST(request: NextRequest) {
 
     // Verificar CPF duplicado
     const existingCPF = await prisma.usuario.findUnique({
-      where: { cpf },
+      where: { cpf: cpfLimpo },
     })
 
     if (existingCPF) {
@@ -48,7 +63,7 @@ export async function POST(request: NextRequest) {
         nome,
         sobrenome,
         email,
-        cpf,
+        cpf: cpfLimpo,
         senha: hashedPassword,
         role: 'PHARMACIST',
       },

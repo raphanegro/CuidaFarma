@@ -2,7 +2,7 @@
 
 import { Plus, Search, Edit2, Trash2, Eye } from 'lucide-react'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 
 interface Medicamento {
@@ -26,11 +26,7 @@ export default function MedicamentosPage() {
   const [total, setTotal] = useState(0)
   const [deleting, setDeleting] = useState<string | null>(null)
 
-  useEffect(() => {
-    fetchMedicamentos()
-  }, [search, page])
-
-  const fetchMedicamentos = async () => {
+  const fetchMedicamentos = useCallback(async () => {
     try {
       setLoading(true)
       setError('')
@@ -51,7 +47,14 @@ export default function MedicamentosPage() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [search, page])
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      fetchMedicamentos()
+    }, 300)
+    return () => clearTimeout(timer)
+  }, [fetchMedicamentos])
 
   const handleDelete = async (id: string) => {
     if (!confirm('Tem certeza que deseja deletar este medicamento?')) return

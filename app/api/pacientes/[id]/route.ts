@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { getServerSession } from 'next-auth/next'
 import { authOptions } from '@/auth'
 import { prisma } from '@/lib/prisma'
@@ -5,7 +7,7 @@ import { validarCPF, limparCPF } from '@/lib/cpf'
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function GET(
-  request: NextRequest,
+  _request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
@@ -116,7 +118,7 @@ export async function PUT(
 }
 
 export async function DELETE(
-  request: NextRequest,
+  _request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {

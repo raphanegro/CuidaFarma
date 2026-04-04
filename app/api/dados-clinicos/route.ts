@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { getServerSession } from 'next-auth/next'
 import { authOptions } from '@/auth'
 import { prisma } from '@/lib/prisma'
@@ -44,6 +46,13 @@ export async function POST(request: NextRequest) {
 
     const peso = body.peso ? parseFloat(body.peso) : undefined
     const altura = body.altura ? parseFloat(body.altura) : undefined
+
+    if (peso !== undefined && (isNaN(peso) || peso <= 0 || peso > 500)) {
+      return NextResponse.json({ error: 'Peso inválido (0–500 kg)' }, { status: 400 })
+    }
+    if (altura !== undefined && (isNaN(altura) || altura <= 0 || altura > 3)) {
+      return NextResponse.json({ error: 'Altura inválida (0–3 m)' }, { status: 400 })
+    }
 
     if (peso && altura && altura > 0) {
       const result = calcularIMC(peso, altura)

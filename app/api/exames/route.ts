@@ -1,7 +1,9 @@
+export const dynamic = 'force-dynamic'
+
 import { NextRequest, NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth'
-import { authOptions } from '@/app/auth'
-import { prisma } from '@/app/lib/prisma'
+import { authOptions } from '@/auth'
+import { prisma } from '@/lib/prisma'
 import { TipoExame } from '@prisma/client'
 
 // GET /api/exames?pacienteId=&tipo=
@@ -53,6 +55,18 @@ export async function POST(request: NextRequest) {
       { error: 'Campos obrigatórios: pacienteId, tipo, valor, unidade, dataColeta' },
       { status: 400 }
     )
+  }
+
+  if (tipo === 'OUTRO' && !tipoCustom?.trim()) {
+    return NextResponse.json(
+      { error: 'Descrição do exame é obrigatória quando tipo é OUTRO' },
+      { status: 400 }
+    )
+  }
+
+  const valorNum = parseFloat(valor)
+  if (isNaN(valorNum)) {
+    return NextResponse.json({ error: 'Valor do exame deve ser numérico' }, { status: 400 })
   }
 
   const paciente = await prisma.paciente.findFirst({

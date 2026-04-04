@@ -1,7 +1,9 @@
+export const dynamic = 'force-dynamic'
+
 import { NextRequest, NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth'
-import { authOptions } from '@/app/auth'
-import { prisma } from '@/app/lib/prisma'
+import { authOptions } from '@/auth'
+import { prisma } from '@/lib/prisma'
 import { StatusMedicamento } from '@prisma/client'
 
 // GET /api/medicamentos-em-uso?pacienteId=&status=
