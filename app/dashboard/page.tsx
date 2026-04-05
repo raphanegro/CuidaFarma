@@ -18,8 +18,8 @@ interface Indicadores {
   atendimentosPorMes: { mes: string; total: number }[]
   distribuicaoRisco: { risco: string; total: number }[]
   topDoencas: { doenca: string; total: number }[]
-  topMedicamentos: { medicamento: string; total: number }[]
-  proximosRetornos: { nome: string; sobrenome: string; id: string; retorno: string }[]
+  topMedicamentos: { nome: string; total: number }[]
+  proximosRetornos: { nome: string; sobrenome: string; id: string; retorno: string | null }[]
 }
 
 const RISCO_COLORS: Record<string, string> = {
@@ -253,7 +253,7 @@ export default function DashboardPage() {
                 return (
                   <li key={i}>
                     <div className="flex justify-between text-xs mb-1">
-                      <span className="text-gray-700 truncate max-w-[70%]">{item.medicamento}</span>
+                      <span className="text-gray-700 truncate max-w-[70%]">{item.nome}</span>
                       <span className="text-gray-500 font-medium">{item.total}</span>
                     </div>
                     <div className="h-1.5 bg-gray-100 rounded-full">
@@ -295,7 +295,7 @@ export default function DashboardPage() {
                       {p.nome} {p.sobrenome}
                     </Link>
                     <span className="text-xs text-gray-500">
-                      {new Date(p.retorno).toLocaleDateString('pt-BR')}
+                      {p.retorno ? new Date(p.retorno).toLocaleDateString('pt-BR') : '—'}
                     </span>
                   </li>
                 ))}

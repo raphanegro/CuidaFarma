@@ -111,8 +111,9 @@ Se nao houver interacoes relevantes, retorne {"interacoes": []}`
           })
         }
       }
-    } catch {
-      // IA indisponivel — continua sem alertas de interacao
+    } catch (err) {
+      // MEDIO-01: logar falha da IA em vez de silenciar
+      console.error('[alertas-clinicos] Erro ao chamar IA para deteccao de interacoes:', err)
     }
   }
 

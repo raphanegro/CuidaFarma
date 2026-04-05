@@ -122,9 +122,12 @@ export default function ProntuarioPacientePage() {
 
     fetchPaciente()
     fetch(`/api/alertas-clinicos?pacienteId=${params.id}`)
-      .then((r) => (r.ok ? r.json() : []))
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
       .then(setAlertas)
-      .catch(() => {})
+      .catch((err: unknown) => {
+        console.error('[prontuario] Erro ao carregar alertas clinicos:', err)
+        setAlertas([])
+      })
   }, [params.id])
 
   const gerarAlertas = async () => {
