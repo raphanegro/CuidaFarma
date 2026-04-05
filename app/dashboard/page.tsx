@@ -1,11 +1,11 @@
 'use client'
 
 import { useSession } from 'next-auth/react'
-import { Users, Activity, AlertTriangle, Calendar, TrendingUp, FileText, Download, Settings } from 'lucide-react'
+import { Users, Activity, AlertTriangle, Calendar, TrendingUp, Download, Settings } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-  PieChart, Pie, Cell, Legend,
+  PieChart, Pie, Cell,
 } from 'recharts'
 import Link from 'next/link'
 
@@ -178,8 +178,8 @@ export default function DashboardPage() {
                   cx="50%"
                   cy="45%"
                   outerRadius={70}
-                  label={({ risco, percent }) =>
-                    `${risco} ${(percent * 100).toFixed(0)}%`
+                  label={({ name, percent }) =>
+                    `${name} ${((percent as number) * 100).toFixed(0)}%`
                   }
                   labelLine={false}
                 >

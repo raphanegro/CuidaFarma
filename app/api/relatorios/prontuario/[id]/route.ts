@@ -20,7 +20,7 @@ export async function GET(
         include: { dadosClinicos: true, problemas: true },
       },
       historicoClinico: true,
-      medicamentosEmUso: { where: { ativo: true }, include: { medicamento: true } },
+      medicamentosEmUso: { where: { status: 'EM_USO' }, include: { medicamento: true } },
       problemas: { include: { intervencoes: true } },
       resultadosExame: { orderBy: { dataColeta: 'desc' }, take: 20 },
       analises: { orderBy: { criadoEm: 'desc' }, take: 5 },
