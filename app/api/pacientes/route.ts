@@ -17,6 +17,10 @@ export async function GET(request: NextRequest) {
     const search = searchParams.get('search') || ''
     const unidadeSaude = searchParams.get('unidadeSaude') || ''
 
+    const doenca = searchParams.get('doenca') || ''
+    const medicamento = searchParams.get('medicamento') || ''
+    const risco = searchParams.get('risco') || ''
+
     const isAdmin = session.user.role === 'ADMIN'
     const where: Record<string, unknown> = isAdmin ? {} : { usuarioId: session.user.id }
 
@@ -30,6 +34,28 @@ export async function GET(request: NextRequest) {
 
     if (unidadeSaude) {
       where.unidadeSaude = { contains: unidadeSaude, mode: 'insensitive' }
+    }
+
+    if (doenca) {
+      where.historicoClinico = {
+        some: { doenca: { contains: doenca, mode: 'insensitive' }, status: 'ATIVA' },
+      }
+    }
+
+    if (medicamento) {
+      where.medicamentosEmUso = {
+        some: {
+          status: 'EM_USO',
+          OR: [
+            { medicamento: { nome: { contains: medicamento, mode: 'insensitive' } } },
+            { nomeCustom: { contains: medicamento, mode: 'insensitive' } },
+          ],
+        },
+      }
+    }
+
+    if (risco) {
+      where.estratificacoesRisco = { some: { nivelRisco: risco } }
     }
 
     const pacientes = await prisma.paciente.findMany({

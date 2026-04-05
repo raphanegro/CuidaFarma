@@ -14,6 +14,7 @@ import {
   X,
   Settings,
 } from 'lucide-react'
+import OmniSearch from './components/OmniSearch'
 
 const menuItems = [
   { icon: LayoutDashboard, label: 'Dashboard',      href: '/dashboard' },
@@ -119,7 +120,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
 
-          <div className="flex-1" />
+          <div className="flex-1 flex justify-center px-4">
+            <OmniSearch />
+          </div>
 
           <div className="hidden md:flex items-center gap-3">
             <div className="text-right">
