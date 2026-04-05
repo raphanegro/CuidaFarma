@@ -71,6 +71,11 @@ export async function GET(request: NextRequest) {
         unidadeSaude: true,
         profissionalResponsavel: true,
         ativo: true,
+        estratificacoesRisco: {
+          orderBy: { calculadoEm: 'desc' },
+          take: 1,
+          select: { nivelRisco: true },
+        },
       },
       orderBy: { criadoEm: 'desc' },
     })

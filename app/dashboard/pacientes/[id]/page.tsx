@@ -102,6 +102,7 @@ export default function ProntuarioPacientePage() {
   const [error, setError] = useState('')
   const [alertas, setAlertas] = useState<AlertaClinico[]>([])
   const [gerandoAlertas, setGerandoAlertas] = useState(false)
+  const [counts, setCounts] = useState<Record<string, number>>({})
 
   useEffect(() => {
     const fetchPaciente = async () => {
@@ -121,6 +122,10 @@ export default function ProntuarioPacientePage() {
     }
 
     fetchPaciente()
+    fetch(`/api/pacientes/${params.id}/counts`)
+      .then((r) => r.ok ? r.json() : {})
+      .then(setCounts)
+      .catch(() => {})
     fetch(`/api/alertas-clinicos?pacienteId=${params.id}`)
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
       .then(setAlertas)
@@ -236,42 +241,37 @@ export default function ProntuarioPacientePage() {
         </div>
       </div>
 
-      {/* Navegação rápida */}
+      {/* Navegação rápida com contadores */}
       <div className="flex gap-2 flex-wrap">
-        <Link href={`/dashboard/pacientes/${paciente.id}/exames`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
-          🧪 Exames
-        </Link>
-        <Link href={`/dashboard/pacientes/${paciente.id}/medicamentos`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
-          💊 Medicamentos
-        </Link>
-        <Link href={`/dashboard/pacientes/${paciente.id}/prm`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
-          ⚠️ PRMs
-        </Link>
-        <Link href={`/dashboard/pacientes/${paciente.id}/intervencoes`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
-          🩺 Intervenções
-        </Link>
-        <Link href={`/dashboard/pacientes/${paciente.id}/calendario`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
-          📅 Calendário
-        </Link>
-        <Link href={`/dashboard/pacientes/${paciente.id}/risco`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
-          🛡️ Risco
-        </Link>
-        <Link href={`/dashboard/pacientes/${paciente.id}/plano`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
-          📋 Plano
-        </Link>
-        <Link href={`/dashboard/pacientes/${paciente.id}/evolucao`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
-          📈 Evolução
-        </Link>
-        <Link href={`/dashboard/pacientes/${paciente.id}/anexos`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
-          📎 Anexos
-        </Link>
-        <Link href={`/dashboard/pacientes/${paciente.id}/comunicacao`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
-          ✉️ Comunicação
-        </Link>
-        <Link href={`/dashboard/pacientes/${paciente.id}/historico`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
-          🕐 Histórico
-        </Link>
-        <a href={`/api/relatorios/prontuario/${paciente.id}`} target="_blank" className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+        {[
+          { href: 'exames',      icon: '🧪', label: 'Exames',      count: counts.exames },
+          { href: 'medicamentos',icon: '💊', label: 'Medicamentos', count: counts.medicamentos },
+          { href: 'prm',         icon: '⚠️', label: 'PRMs',         count: counts.prms,        alert: true },
+          { href: 'intervencoes',icon: '🩺', label: 'Intervenções', count: counts.intervencoes },
+          { href: 'calendario',  icon: '📅', label: 'Calendário',   count: undefined },
+          { href: 'risco',       icon: '🛡️', label: 'Risco',        count: undefined },
+          { href: 'plano',       icon: '📋', label: 'Plano',        count: undefined },
+          { href: 'evolucao',    icon: '📈', label: 'Evolução',     count: undefined },
+          { href: 'anexos',      icon: '📎', label: 'Anexos',       count: counts.anexos },
+          { href: 'comunicacao', icon: '✉️', label: 'Comunicação',  count: (counts.cartas ?? 0) + (counts.tarefas ?? 0) || undefined },
+          { href: 'historico',   icon: '🕐', label: 'Histórico',    count: undefined },
+          { href: 'timeline',    icon: '⏱️', label: 'Linha do Tempo', count: undefined },
+        ].map(({ href, icon, label, count, alert }) => (
+          <Link
+            key={href}
+            href={`/dashboard/pacientes/${paciente.id}/${href}`}
+            className="relative flex items-center gap-1.5 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors"
+          >
+            <span>{icon}</span>
+            <span>{label}</span>
+            {count !== undefined && count > 0 && (
+              <span className={`ml-0.5 text-xs px-1.5 py-0.5 rounded-full font-medium ${alert ? 'bg-orange-100 text-orange-700' : 'bg-blue-100 text-blue-700'}`}>
+                {count}
+              </span>
+            )}
+          </Link>
+        ))}
+        <a href={`/api/relatorios/prontuario/${paciente.id}`} target="_blank" className="flex items-center gap-1.5 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
           🖨️ Imprimir
         </a>
       </div>

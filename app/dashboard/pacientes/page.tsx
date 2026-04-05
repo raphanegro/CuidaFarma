@@ -17,6 +17,14 @@ interface Paciente {
   unidadeSaude?: string
   profissionalResponsavel?: string
   ativo: boolean
+  estratificacoesRisco: { nivelRisco: string }[]
+}
+
+const RISCO_CONFIG: Record<string, { label: string; cls: string }> = {
+  BAIXO:    { label: 'Baixo',    cls: 'bg-green-100 text-green-700 border-green-200' },
+  MODERADO: { label: 'Moderado', cls: 'bg-yellow-100 text-yellow-700 border-yellow-200' },
+  ALTO:     { label: 'Alto',     cls: 'bg-red-100 text-red-700 border-red-200' },
+  CRITICO:  { label: 'Crítico',  cls: 'bg-purple-100 text-purple-700 border-purple-200' },
 }
 
 const RISCO_OPCOES = [
@@ -291,6 +299,7 @@ export default function PacientesPage() {
                 <tr className="border-b border-gray-200">
                   <th className="text-left px-6 py-3 text-sm font-semibold text-gray-700">Nome</th>
                   <th className="text-left px-6 py-3 text-sm font-semibold text-gray-700">CPF</th>
+                  <th className="text-left px-6 py-3 text-sm font-semibold text-gray-700">Risco</th>
                   <th className="text-left px-6 py-3 text-sm font-semibold text-gray-700">Contato</th>
                   <th className="text-left px-6 py-3 text-sm font-semibold text-gray-700">Unidade de Saúde</th>
                   <th className="text-right px-6 py-3 text-sm font-semibold text-gray-700">Ações</th>
@@ -314,6 +323,18 @@ export default function PacientesPage() {
                     </td>
                     <td className="px-6 py-4 text-sm text-gray-600 font-mono">
                       {formatarCPF(paciente.cpf)}
+                    </td>
+                    <td className="px-6 py-4">
+                      {paciente.estratificacoesRisco[0] ? (() => {
+                        const r = RISCO_CONFIG[paciente.estratificacoesRisco[0].nivelRisco]
+                        return r ? (
+                          <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${r.cls}`}>
+                            {r.label}
+                          </span>
+                        ) : null
+                      })() : (
+                        <span className="text-xs text-gray-400">—</span>
+                      )}
                     </td>
                     <td className="px-6 py-4 text-sm text-gray-600">
                       <div className="space-y-1">

@@ -5,6 +5,7 @@ import { getServerSession } from 'next-auth'
 import { authOptions } from '@/auth'
 import { prisma } from '@/lib/prisma'
 import { StatusMedicamento } from '@prisma/client'
+import { gerarAlertasDeterministicos } from '@/lib/alertas'
 
 // GET /api/medicamentos-em-uso?pacienteId=&status=
 export async function GET(request: NextRequest) {
@@ -107,6 +108,9 @@ export async function POST(request: NextRequest) {
     },
     include: { medicamento: { select: { id: true, nome: true } } },
   })
+
+  // Regenerar alertas determinísticos ao salvar medicamento
+  gerarAlertasDeterministicos(pacienteId).catch(() => {/* silently ignore */})
 
   return NextResponse.json(medicamento, { status: 201 })
 }

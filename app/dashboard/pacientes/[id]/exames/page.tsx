@@ -3,6 +3,10 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
+import {
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
+  ResponsiveContainer, ReferenceLine,
+} from 'recharts'
 
 interface Exame {
   id: string
@@ -124,8 +128,23 @@ export default function ExamesPage() {
     buscarExames()
   }
 
-  const examesPorTipo = TIPOS_EXAME
   const tiposPresentes = [...new Set(exames.map((e) => e.tipo))]
+  const [tipoGrafico, setTipoGrafico] = useState('')
+
+  // Dados para o gráfico do tipo selecionado
+  const dadosGrafico = (() => {
+    const tipo = tipoGrafico || tiposPresentes[0]
+    if (!tipo) return { pontos: [], refMin: undefined as number | undefined, refMax: undefined as number | undefined }
+    const filtrados = exames.filter((e) => e.tipo === tipo).slice().reverse()
+    const refPadrao = REFERENCIAS_PADRAO[tipo]
+    const pontos = filtrados.map((e) => ({
+      data: new Date(e.dataColeta).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: '2-digit' }),
+      valor: Number(e.valor),
+    }))
+    const refMin = filtrados[0]?.refMin != null ? Number(filtrados[0].refMin) : refPadrao?.min
+    const refMax = filtrados[0]?.refMax != null ? Number(filtrados[0].refMax) : refPadrao?.max
+    return { pontos, refMin, refMax }
+  })()
 
   return (
     <div className="p-6 max-w-4xl mx-auto">
@@ -144,6 +163,39 @@ export default function ExamesPage() {
         </button>
       </div>
 
+      {/* Gráfico de evolução */}
+      {!loading && tiposPresentes.length > 0 && dadosGrafico.pontos.length >= 2 && (
+        <div className="bg-white border rounded-lg p-4 mb-6">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-sm font-semibold text-gray-700">Evolução ao Longo do Tempo</h2>
+            <select
+              value={tipoGrafico || tiposPresentes[0]}
+              onChange={(e) => setTipoGrafico(e.target.value)}
+              className="border rounded px-2 py-1 text-xs"
+            >
+              {tiposPresentes.map((t) => (
+                <option key={t} value={t}>{TIPOS_EXAME[t] ?? t}</option>
+              ))}
+            </select>
+          </div>
+          <ResponsiveContainer width="100%" height={180}>
+            <LineChart data={dadosGrafico.pontos}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+              <XAxis dataKey="data" tick={{ fontSize: 11 }} />
+              <YAxis tick={{ fontSize: 11 }} domain={['auto', 'auto']} />
+              <Tooltip formatter={(v) => [v, 'Valor']} />
+              {dadosGrafico.refMax !== undefined && (
+                <ReferenceLine y={dadosGrafico.refMax} stroke="#ef4444" strokeDasharray="4 4" label={{ value: `Máx ${dadosGrafico.refMax}`, fill: '#ef4444', fontSize: 10 }} />
+              )}
+              {dadosGrafico.refMin !== undefined && (
+                <ReferenceLine y={dadosGrafico.refMin} stroke="#f59e0b" strokeDasharray="4 4" label={{ value: `Mín ${dadosGrafico.refMin}`, fill: '#f59e0b', fontSize: 10 }} />
+              )}
+              <Line type="monotone" dataKey="valor" stroke="#3b82f6" strokeWidth={2} dot={{ r: 4 }} activeDot={{ r: 6 }} />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+      )}
+
       {/* Filtro por tipo */}
       <div className="mb-4">
         <select
@@ -152,7 +204,7 @@ export default function ExamesPage() {
           className="border rounded-lg px-3 py-2 text-sm"
         >
           <option value="">Todos os tipos</option>
-          {Object.entries(examesPorTipo).map(([key, label]) => (
+          {Object.entries(TIPOS_EXAME).map(([key, label]) => (
             <option key={key} value={key}>{label}</option>
           ))}
         </select>
@@ -171,7 +223,7 @@ export default function ExamesPage() {
                 className="w-full border rounded px-3 py-2 text-sm"
                 required
               >
-                {Object.entries(examesPorTipo).map(([key, label]) => (
+                {Object.entries(TIPOS_EXAME).map(([key, label]) => (
                   <option key={key} value={key}>{label}</option>
                 ))}
               </select>
