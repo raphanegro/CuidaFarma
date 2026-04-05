@@ -13,6 +13,8 @@ import {
   CheckCircle,
   Clock,
   Pencil,
+  Bell,
+  RefreshCw,
 } from 'lucide-react'
 import { formatarCPF } from '@/lib/cpf'
 
@@ -58,6 +60,16 @@ interface DadosClinicos {
   glicemiaCapilar?: number
 }
 
+interface AlertaClinico {
+  id: string
+  tipo: string
+  severidade: string
+  descricao: string
+  medicamentosEnvolvidos?: string
+  sugestaoAcao?: string
+  estado: string
+}
+
 interface HistoricoClinico {
   id: string
   doenca: string
@@ -88,6 +100,8 @@ export default function ProntuarioPacientePage() {
   const [paciente, setPaciente] = useState<Paciente | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
+  const [alertas, setAlertas] = useState<AlertaClinico[]>([])
+  const [gerandoAlertas, setGerandoAlertas] = useState(false)
 
   useEffect(() => {
     const fetchPaciente = async () => {
@@ -107,7 +121,37 @@ export default function ProntuarioPacientePage() {
     }
 
     fetchPaciente()
+    fetch(`/api/alertas-clinicos?pacienteId=${params.id}`)
+      .then((r) => (r.ok ? r.json() : []))
+      .then(setAlertas)
+      .catch(() => {})
   }, [params.id])
+
+  const gerarAlertas = async () => {
+    setGerandoAlertas(true)
+    try {
+      const r = await fetch('/api/alertas-clinicos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ pacienteId: params.id }),
+      })
+      if (r.ok) {
+        const novos = await r.json()
+        setAlertas(novos)
+      }
+    } finally {
+      setGerandoAlertas(false)
+    }
+  }
+
+  const marcarAlerta = async (id: string, estado: string) => {
+    await fetch(`/api/alertas-clinicos/${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ estado }),
+    })
+    setAlertas((prev) => prev.map((a) => a.id === id ? { ...a, estado } : a))
+  }
 
   const handleToggleCondicao = async (historicoId: string, statusAtual: string) => {
     const novoStatus = statusAtual === 'ATIVA' ? 'RESOLVIDA' : 'ATIVA'
@@ -215,7 +259,96 @@ export default function ProntuarioPacientePage() {
         <Link href={`/dashboard/pacientes/${paciente.id}/evolucao`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
           📈 Evolução
         </Link>
+        <Link href={`/dashboard/pacientes/${paciente.id}/anexos`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+          📎 Anexos
+        </Link>
+        <Link href={`/dashboard/pacientes/${paciente.id}/comunicacao`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+          ✉️ Comunicação
+        </Link>
+        <Link href={`/dashboard/pacientes/${paciente.id}/historico`} className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+          🕐 Histórico
+        </Link>
+        <a href={`/api/relatorios/prontuario/${paciente.id}`} target="_blank" className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm text-gray-700 hover:bg-gray-50 hover:border-blue-400 transition-colors">
+          🖨️ Imprimir
+        </a>
       </div>
+
+      {/* Alertas Clinicos */}
+      {(() => {
+        const ativos = alertas.filter((a) => a.estado === 'ATIVO')
+        const criticos = ativos.filter((a) => a.severidade === 'CRITICO')
+        const atencao = ativos.filter((a) => a.severidade === 'ATENCAO')
+        if (ativos.length === 0 && alertas.length === 0) {
+          return (
+            <div className="flex items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3">
+              <div className="flex items-center gap-2 text-sm text-gray-500">
+                <Bell className="h-4 w-4" />
+                <span>Sem alertas clinicos ativos</span>
+              </div>
+              <button
+                onClick={gerarAlertas}
+                disabled={gerandoAlertas}
+                className="flex items-center gap-1.5 text-xs text-blue-600 hover:text-blue-800"
+              >
+                {gerandoAlertas ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <RefreshCw className="h-3.5 w-3.5" />}
+                Analisar
+              </button>
+            </div>
+          )
+        }
+        return (
+          <div className={`rounded-lg border p-4 ${criticos.length > 0 ? 'border-red-300 bg-red-50' : 'border-yellow-200 bg-yellow-50'}`}>
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center gap-2">
+                <Bell className={`h-4 w-4 ${criticos.length > 0 ? 'text-red-600' : 'text-yellow-600'}`} />
+                <span className={`text-sm font-semibold ${criticos.length > 0 ? 'text-red-700' : 'text-yellow-700'}`}>
+                  {ativos.length} Alerta{ativos.length !== 1 ? 's' : ''} Ativo{ativos.length !== 1 ? 's' : ''}
+                  {criticos.length > 0 && ` (${criticos.length} critico${criticos.length !== 1 ? 's' : ''})`}
+                </span>
+              </div>
+              <button
+                onClick={gerarAlertas}
+                disabled={gerandoAlertas}
+                className="flex items-center gap-1.5 text-xs text-gray-600 hover:text-gray-800"
+              >
+                {gerandoAlertas ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <RefreshCw className="h-3.5 w-3.5" />}
+                Reanalisar
+              </button>
+            </div>
+            <div className="space-y-2">
+              {[...criticos, ...atencao].slice(0, 3).map((a) => (
+                <div key={a.id} className={`rounded-lg border p-3 bg-white flex items-start justify-between gap-3 ${
+                  a.severidade === 'CRITICO' ? 'border-red-200' : 'border-yellow-200'
+                }`}>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-gray-800">{a.descricao}</p>
+                    {a.sugestaoAcao && (
+                      <p className="text-xs text-gray-500 mt-0.5">{a.sugestaoAcao}</p>
+                    )}
+                  </div>
+                  <div className="flex gap-1 flex-shrink-0">
+                    <button
+                      onClick={() => marcarAlerta(a.id, 'VISTO')}
+                      className="text-xs text-gray-500 hover:text-gray-700 px-2 py-1 rounded border border-gray-200 hover:bg-gray-50"
+                    >
+                      Visto
+                    </button>
+                    <button
+                      onClick={() => marcarAlerta(a.id, 'IGNORADO')}
+                      className="text-xs text-gray-400 hover:text-gray-600 px-2 py-1 rounded border border-gray-200 hover:bg-gray-50"
+                    >
+                      Ignorar
+                    </button>
+                  </div>
+                </div>
+              ))}
+              {ativos.length > 3 && (
+                <p className="text-xs text-gray-500 text-center">+ {ativos.length - 3} alertas adicionais</p>
+              )}
+            </div>
+          </div>
+        )
+      })()}
 
       <div className="grid grid-cols-3 gap-6">
         {/* Coluna principal */}

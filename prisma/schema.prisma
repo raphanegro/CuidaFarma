@@ -151,6 +151,8 @@ model Usuario {
   pacientes       Paciente[]
   atendimentos    Atendimento[]
   configuracaoIA  ConfiguracaoIA?
+  cartasPrescritor CartaPrescritor[]
+  tarefas         TarefaPaciente[]
 
   @@map("usuarios")
 }
@@ -214,6 +216,11 @@ model Paciente {
   planosAcompanhamento  PlanoAcompanhamento[]
   // Story 3.5
   evolucoesClinicas     EvolucaoClinica[]
+  // Story 4.2
+  alertasClinicos      AlertaClinico[]
+  // Story 5.5
+  cartasPrescritor      CartaPrescritor[]
+  tarefas               TarefaPaciente[]
 
   @@map("pacientes")
 }
@@ -290,6 +297,7 @@ model Anexo {
   tipo            String
   url             String
   tamanho         Int
+  descricao       String?
   criadoEm        DateTime @default(now())
 
   pacienteId      String
@@ -306,12 +314,65 @@ model AuditLog {
   entidade        String
   entityId        String
   dados           String   @db.Text
+  usuarioId       String?
+  usuarioNome     String?
   criadoEm        DateTime @default(now())
 
   pacienteId      String
   paciente        Paciente @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
 
   @@map("audit_logs")
+}
+
+// Story 4.2
+model AlertaClinico {
+  id                   String   @id @default(cuid())
+  tipo                 String   // INTERACAO | POLIFARMACIA | EXAME_FORA_FAIXA | DOSE_INADEQUADA | SEM_INDICACAO
+  severidade           String   // INFORMATIVO | ATENCAO | CRITICO
+  descricao            String   @db.Text
+  medicamentosEnvolvidos String?
+  sugestaoAcao         String?  @db.Text
+  estado               String   @default("ATIVO") // ATIVO | VISTO | IGNORADO
+  justificativaIgnorado String?
+  criadoEm             DateTime @default(now())
+
+  pacienteId           String
+  paciente             Paciente @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+
+  @@map("alertas_clinicos")
+}
+
+// Story 5.5
+model CartaPrescritor {
+  id           String   @id @default(cuid())
+  pacienteId   String
+  usuarioId    String
+  destinatario String
+  assunto      String
+  corpo        String   @db.Text
+  template     String?
+  criadoEm     DateTime @default(now())
+
+  paciente     Paciente @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  usuario      Usuario  @relation(fields: [usuarioId], references: [id])
+
+  @@map("cartas_prescritor")
+}
+
+model TarefaPaciente {
+  id          String    @id @default(cuid())
+  pacienteId  String
+  usuarioId   String
+  descricao   String
+  prioridade  String    @default("MEDIA")
+  prazo       DateTime?
+  concluida   Boolean   @default(false)
+  criadoEm    DateTime  @default(now())
+
+  paciente    Paciente  @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  usuario     Usuario   @relation(fields: [usuarioId], references: [id])
+
+  @@map("tarefas_paciente")
 }
 
 // Story 1.2 + 1.3
