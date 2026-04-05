@@ -22,11 +22,20 @@ const MOTIVOS_CONSULTA = [
   { value: 'OUTROS', label: 'Outros' },
 ]
 
+interface MedEmUso {
+  id: string
+  nome: string
+  dose?: string | null
+  frequencia?: string | null
+  qtdAnterior?: number | null
+}
+
 const PASSOS = [
   { num: 1, label: 'Consulta' },
   { num: 2, label: 'Sinais Vitais' },
-  { num: 3, label: 'Evolução' },
-  { num: 4, label: 'Retorno' },
+  { num: 3, label: 'Adesão' },
+  { num: 4, label: 'Evolução' },
+  { num: 5, label: 'Retorno' },
 ]
 
 function calcularIMC(peso: string, altura: string) {
@@ -52,6 +61,11 @@ export default function NovoAtendimentoPage() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [atendimentoId, setAtendimentoId] = useState('')
+
+  // Passo 3 — Medicamentos em uso para contagem de adesão
+  const [medsEmUso, setMedsEmUso] = useState<MedEmUso[]>([])
+  const [contagens, setContagens] = useState<Record<string, { qtdEsperada: string; qtdContada: string; obs: string }>>({})
+  const [loadingMeds, setLoadingMeds] = useState(false)
 
   // Passo 1 — Consulta
   const [consulta, setConsulta] = useState({
@@ -117,7 +131,7 @@ export default function NovoAtendimentoPage() {
     finally { setLoading(false) }
   }
 
-  // Passo 2 → salva sinais vitais (opcional)
+  // Passo 2 → salva sinais vitais (opcional), carrega meds para passo 3
   async function avancarPasso2(pular = false) {
     setError('')
     if (!pular && (sinais.peso || sinais.altura || sinais.paSistolica || sinais.glicemiaCapilar)) {
@@ -139,11 +153,66 @@ export default function NovoAtendimentoPage() {
       } catch { /* silently continue */ }
       finally { setLoading(false) }
     }
+    // Carrega medicamentos em uso e última contagem para passo 3
+    setLoadingMeds(true)
+    try {
+      const [resMeds, resAnteriores] = await Promise.all([
+        fetch(`/api/medicamentos-em-uso?pacienteId=${pacienteId}&status=EM_USO`),
+        fetch(`/api/avaliacao-adesao/resumo?pacienteId=${pacienteId}`),
+      ])
+      const meds = resMeds.ok ? await resMeds.json() : []
+      const anterioresArr: { medicamentoEmUsoId: string; qtdContada: number }[] = resAnteriores.ok ? await resAnteriores.json() : []
+      const anteriores: Record<string, number> = {}
+      anterioresArr.forEach((a) => { anteriores[a.medicamentoEmUsoId] = a.qtdContada })
+      const lista: MedEmUso[] = meds.map((m: { id: string; nomeCustom?: string; dose?: string; frequencia?: string; medicamento?: { nome: string } }) => ({
+        id: m.id,
+        nome: m.medicamento?.nome ?? m.nomeCustom ?? 'Medicamento',
+        dose: m.dose,
+        frequencia: m.frequencia,
+        qtdAnterior: anteriores[m.id] ?? null,
+      }))
+      setMedsEmUso(lista)
+      const init: Record<string, { qtdEsperada: string; qtdContada: string; obs: string }> = {}
+      lista.forEach((m) => { init[m.id] = { qtdEsperada: '', qtdContada: '', obs: '' } })
+      setContagens(init)
+    } catch { /* silently continue */ }
+    finally { setLoadingMeds(false) }
     setPasso(3)
   }
 
-  // Passo 3 → salva evolução (opcional)
+  // Passo 3 → salva contagens de adesão (opcional por medicamento)
   async function avancarPasso3(pular = false) {
+    setError('')
+    if (!pular) {
+      const linhasPreenchidas = Object.entries(contagens).filter(([, v]) => v.qtdEsperada && v.qtdContada)
+      if (linhasPreenchidas.length > 0) {
+        setLoading(true)
+        try {
+          await Promise.all(
+            linhasPreenchidas.map(([medId, v]) =>
+              fetch('/api/avaliacao-adesao', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  atendimentoId,
+                  pacienteId,
+                  medicamentoEmUsoId: medId,
+                  qtdEsperada: Number(v.qtdEsperada),
+                  qtdContada: Number(v.qtdContada),
+                  observacao: v.obs || undefined,
+                }),
+              })
+            )
+          )
+        } catch { /* silently continue */ }
+        finally { setLoading(false) }
+      }
+    }
+    setPasso(4)
+  }
+
+  // Passo 4 → salva evolução (opcional)
+  async function avancarPasso4(pular = false) {
     setError('')
     if (!pular && evolucao.evolucaoTexto.trim()) {
       setLoading(true)
@@ -162,10 +231,10 @@ export default function NovoAtendimentoPage() {
       } catch { /* silently continue */ }
       finally { setLoading(false) }
     }
-    setPasso(4)
+    setPasso(5)
   }
 
-  // Passo 4 → salva retorno (opcional) e conclui
+  // Passo 5 → salva retorno (opcional) e conclui
   async function concluir(pular = false) {
     setError('')
     if (!pular && retorno.proximoRetorno) {
@@ -398,8 +467,118 @@ export default function NovoAtendimentoPage() {
         </div>
       )}
 
-      {/* ── PASSO 3: EVOLUÇÃO ─────────────────────────────────────────────── */}
+      {/* ── PASSO 3: CONTAGEM DE MEDICAMENTOS (ADESÃO) ───────────────────── */}
       {passo === 3 && (
+        <div className="card space-y-5">
+          <div className="flex items-center justify-between">
+            <h2 className="font-semibold text-gray-800">Contagem de Medicamentos</h2>
+            <span className="text-xs text-gray-400">Opcional</span>
+          </div>
+
+          {loadingMeds ? (
+            <div className="flex items-center gap-2 text-gray-500 text-sm py-4">
+              <Loader2 className="h-4 w-4 animate-spin" /> Carregando medicamentos...
+            </div>
+          ) : medsEmUso.length === 0 ? (
+            <div className="rounded-lg bg-gray-50 border border-gray-200 px-4 py-6 text-center text-sm text-gray-500">
+              <p>Nenhum medicamento em uso cadastrado para este paciente.</p>
+              <p className="mt-1 text-xs">Adicione medicamentos no prontuário antes de realizar a contagem.</p>
+            </div>
+          ) : (
+            <div className="space-y-4">
+              <p className="text-sm text-gray-500">
+                Para cada medicamento, informe a quantidade esperada (desde a última visita) e a quantidade contada. Deixe em branco para pular.
+              </p>
+              {medsEmUso.map((med) => {
+                const c = contagens[med.id] ?? { qtdEsperada: '', qtdContada: '', obs: '' }
+                const preenchido = c.qtdEsperada && c.qtdContada
+                const taxa = preenchido
+                  ? Math.min(Math.round((Number(c.qtdContada) / Number(c.qtdEsperada)) * 100), 100)
+                  : null
+                const cor = taxa === null ? 'gray' : taxa >= 80 ? 'green' : taxa >= 60 ? 'yellow' : 'red'
+                return (
+                  <div key={med.id} className="border rounded-lg p-4 space-y-3">
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <p className="font-medium text-gray-800 text-sm">{med.nome}</p>
+                        {(med.dose || med.frequencia) && (
+                          <p className="text-xs text-gray-500">{[med.dose, med.frequencia].filter(Boolean).join(' — ')}</p>
+                        )}
+                        {med.qtdAnterior !== null && (
+                          <p className="text-xs text-blue-600 mt-0.5">Última visita: {med.qtdAnterior} comprimidos contados</p>
+                        )}
+                      </div>
+                      {taxa !== null && (
+                        <span className={`text-xs font-semibold px-2 py-1 rounded-full ${
+                          cor === 'green' ? 'bg-green-100 text-green-700'
+                          : cor === 'yellow' ? 'bg-yellow-100 text-yellow-700'
+                          : 'bg-red-100 text-red-700'
+                        }`}>
+                          {taxa}% adesão
+                        </span>
+                      )}
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <label className="label-base text-xs">Qtd. Esperada</label>
+                        <input
+                          type="number"
+                          min="0"
+                          value={c.qtdEsperada}
+                          onChange={(e) => setContagens((prev) => ({ ...prev, [med.id]: { ...c, qtdEsperada: e.target.value } }))}
+                          placeholder="ex: 30"
+                          className="input-base"
+                        />
+                      </div>
+                      <div>
+                        <label className="label-base text-xs">Qtd. Contada</label>
+                        <input
+                          type="number"
+                          min="0"
+                          value={c.qtdContada}
+                          onChange={(e) => setContagens((prev) => ({ ...prev, [med.id]: { ...c, qtdContada: e.target.value } }))}
+                          placeholder="ex: 25"
+                          className="input-base"
+                        />
+                      </div>
+                    </div>
+                    {preenchido && (
+                      <div>
+                        <label className="label-base text-xs">Observação (opcional)</label>
+                        <input
+                          type="text"
+                          value={c.obs}
+                          onChange={(e) => setContagens((prev) => ({ ...prev, [med.id]: { ...c, obs: e.target.value } }))}
+                          placeholder="Ex: paciente relatou esquecimentos nos fins de semana"
+                          className="input-base"
+                        />
+                      </div>
+                    )}
+                  </div>
+                )
+              })}
+            </div>
+          )}
+
+          <div className="flex justify-between pt-2">
+            <button onClick={() => setPasso(2)} className="btn-secondary flex items-center gap-2">
+              <ChevronLeft className="h-4 w-4" /> Voltar
+            </button>
+            <div className="flex gap-2">
+              <button onClick={() => avancarPasso3(true)} className="btn-secondary text-sm">
+                Pular
+              </button>
+              <button onClick={() => avancarPasso3(false)} disabled={loading} className="btn-primary flex items-center gap-2">
+                {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
+                Salvar e Continuar <ChevronRight className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── PASSO 4: EVOLUÇÃO ─────────────────────────────────────────────── */}
+      {passo === 4 && (
         <div className="card space-y-5">
           <div className="flex items-center justify-between">
             <h2 className="font-semibold text-gray-800">Evolução Clínica</h2>
@@ -453,14 +632,14 @@ export default function NovoAtendimentoPage() {
           </div>
 
           <div className="flex justify-between pt-2">
-            <button onClick={() => setPasso(2)} className="btn-secondary flex items-center gap-2">
+            <button onClick={() => setPasso(3)} className="btn-secondary flex items-center gap-2">
               <ChevronLeft className="h-4 w-4" /> Voltar
             </button>
             <div className="flex gap-2">
-              <button onClick={() => avancarPasso3(true)} className="btn-secondary text-sm">
+              <button onClick={() => avancarPasso4(true)} className="btn-secondary text-sm">
                 Pular
               </button>
-              <button onClick={() => avancarPasso3(false)} disabled={loading} className="btn-primary flex items-center gap-2">
+              <button onClick={() => avancarPasso4(false)} disabled={loading} className="btn-primary flex items-center gap-2">
                 {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
                 Salvar e Continuar <ChevronRight className="h-4 w-4" />
               </button>
@@ -469,8 +648,8 @@ export default function NovoAtendimentoPage() {
         </div>
       )}
 
-      {/* ── PASSO 4: RETORNO ──────────────────────────────────────────────── */}
-      {passo === 4 && (
+      {/* ── PASSO 5: RETORNO ──────────────────────────────────────────────── */}
+      {passo === 5 && (
         <div className="card space-y-5">
           <div className="flex items-center justify-between">
             <h2 className="font-semibold text-gray-800">Próximo Retorno</h2>
@@ -502,7 +681,7 @@ export default function NovoAtendimentoPage() {
           </div>
 
           <div className="flex justify-between pt-2">
-            <button onClick={() => setPasso(3)} className="btn-secondary flex items-center gap-2">
+            <button onClick={() => setPasso(4)} className="btn-secondary flex items-center gap-2">
               <ChevronLeft className="h-4 w-4" /> Voltar
             </button>
             <div className="flex gap-2">

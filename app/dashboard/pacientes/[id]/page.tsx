@@ -255,6 +255,7 @@ export default function ProntuarioPacientePage() {
           { href: 'anexos',      icon: '📎', label: 'Anexos',       count: counts.anexos },
           { href: 'comunicacao', icon: '✉️', label: 'Comunicação',  count: (counts.cartas ?? 0) + (counts.tarefas ?? 0) || undefined },
           { href: 'historico',   icon: '🕐', label: 'Histórico',    count: undefined },
+          { href: 'adesao',      icon: '📋', label: 'Adesão',         count: undefined },
           { href: 'timeline',    icon: '⏱️', label: 'Linha do Tempo', count: undefined },
         ].map(({ href, icon, label, count, alert }) => (
           <Link
