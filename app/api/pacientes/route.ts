@@ -17,7 +17,8 @@ export async function GET(request: NextRequest) {
     const search = searchParams.get('search') || ''
     const unidadeSaude = searchParams.get('unidadeSaude') || ''
 
-    const where: Record<string, unknown> = { usuarioId: session.user.id }
+    const isAdmin = session.user.role === 'ADMIN'
+    const where: Record<string, unknown> = isAdmin ? {} : { usuarioId: session.user.id }
 
     if (search) {
       where.OR = [
