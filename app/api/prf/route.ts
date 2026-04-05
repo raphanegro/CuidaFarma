@@ -6,7 +6,7 @@ import { authOptions } from '@/auth'
 import { prisma } from '@/lib/prisma'
 import { StatusProblema } from '@prisma/client'
 
-// GET /api/prm?pacienteId=&atendimentoId=&status=
+// GET /api/prf?pacienteId=&atendimentoId=&status=
 export async function GET(request: NextRequest) {
   const session = await getServerSession(authOptions)
   if (!session?.user?.id) {
@@ -37,7 +37,7 @@ export async function GET(request: NextRequest) {
   return NextResponse.json(problemas)
 }
 
-// POST /api/prm
+// POST /api/prf
 export async function POST(request: NextRequest) {
   const session = await getServerSession(authOptions)
   if (!session?.user?.id) {

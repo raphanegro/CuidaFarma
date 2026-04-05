@@ -75,7 +75,7 @@ export default function IntervencoesPage() {
     setLoading(true)
     const [intRes, prmRes] = await Promise.all([
       fetch(`/api/intervencoes?pacienteId=${pacienteId}`),
-      fetch(`/api/prm?pacienteId=${pacienteId}`),
+      fetch(`/api/prf?pacienteId=${pacienteId}`),
     ])
     if (intRes.ok) setIntervencoes(await intRes.json())
     if (prmRes.ok) setPrms(await prmRes.json())
@@ -182,7 +182,7 @@ export default function IntervencoesPage() {
 
           {prms.length > 0 && (
             <div>
-              <label className="label-base">PRM Relacionado (opcional)</label>
+              <label className="label-base">PRF Relacionado (opcional)</label>
               <select value={form.prmId} onChange={e => setForm(f => ({ ...f, prmId: e.target.value }))} className="input-base">
                 <option value="">Nenhum</option>
                 {prms.map(p => <option key={p.id} value={p.id}>{p.descricao.slice(0, 60)} ({p.gravidade})</option>)}
@@ -217,7 +217,7 @@ export default function IntervencoesPage() {
                   <p className="text-sm text-gray-700 mb-1">{i.descricao}</p>
                   <p className="text-xs text-gray-500"><strong>Justificativa:</strong> {i.justificativa}</p>
                   {i.resultadoEsperado && <p className="text-xs text-gray-500 mt-1"><strong>Resultado esperado:</strong> {i.resultadoEsperado}</p>}
-                  {i.prm && <p className="text-xs text-blue-600 mt-1">📎 PRM: {i.prm.descricao.slice(0, 60)}</p>}
+                  {i.prm && <p className="text-xs text-blue-600 mt-1">📎 PRF: {i.prm.descricao.slice(0, 60)}</p>}
                 </div>
                 <div className="flex gap-2 flex-shrink-0">
                   <button onClick={() => handleEdit(i)} className="p-1.5 text-gray-400 hover:text-blue-600 rounded"><Pencil className="h-4 w-4" /></button>

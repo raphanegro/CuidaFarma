@@ -5,7 +5,7 @@ import { getServerSession } from 'next-auth'
 import { authOptions } from '@/auth'
 import { prisma } from '@/lib/prisma'
 
-async function getPrmComPermissao(id: string, usuarioId: string) {
+async function getPrfComPermissao(id: string, usuarioId: string) {
   return prisma.problemaMedicamento.findFirst({
     where: {
       id,
@@ -17,31 +17,31 @@ async function getPrmComPermissao(id: string, usuarioId: string) {
   })
 }
 
-// GET /api/prm/[id]
+// GET /api/prf/[id]
 export async function GET(_request: NextRequest, { params }: { params: { id: string } }) {
   const session = await getServerSession(authOptions)
   if (!session?.user?.id) {
     return NextResponse.json({ error: 'Não autorizado' }, { status: 401 })
   }
 
-  const prm = await getPrmComPermissao(params.id, session.user.id)
-  if (!prm) {
-    return NextResponse.json({ error: 'PRM não encontrado' }, { status: 404 })
+  const prf = await getPrfComPermissao(params.id, session.user.id)
+  if (!prf) {
+    return NextResponse.json({ error: 'PRF não encontrado' }, { status: 404 })
   }
 
-  return NextResponse.json(prm)
+  return NextResponse.json(prf)
 }
 
-// PATCH /api/prm/[id] — atualiza status, gravidade ou descrição
+// PATCH /api/prf/[id] — atualiza status, gravidade ou descrição
 export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
   const session = await getServerSession(authOptions)
   if (!session?.user?.id) {
     return NextResponse.json({ error: 'Não autorizado' }, { status: 401 })
   }
 
-  const prm = await getPrmComPermissao(params.id, session.user.id)
-  if (!prm) {
-    return NextResponse.json({ error: 'PRM não encontrado' }, { status: 404 })
+  const prf = await getPrfComPermissao(params.id, session.user.id)
+  if (!prf) {
+    return NextResponse.json({ error: 'PRF não encontrado' }, { status: 404 })
   }
 
   const body = await request.json()
@@ -49,26 +49,26 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
   const updated = await prisma.problemaMedicamento.update({
     where: { id: params.id },
     data: {
-      status: body.status ?? prm.status,
-      gravidade: body.gravidade ?? prm.gravidade,
-      descricao: body.descricao ?? prm.descricao,
-      medicamentoEmUsoId: body.medicamentoEmUsoId ?? prm.medicamentoEmUsoId,
+      status: body.status ?? prf.status,
+      gravidade: body.gravidade ?? prf.gravidade,
+      descricao: body.descricao ?? prf.descricao,
+      medicamentoEmUsoId: body.medicamentoEmUsoId ?? prf.medicamentoEmUsoId,
     },
   })
 
   return NextResponse.json(updated)
 }
 
-// DELETE /api/prm/[id]
+// DELETE /api/prf/[id]
 export async function DELETE(_request: NextRequest, { params }: { params: { id: string } }) {
   const session = await getServerSession(authOptions)
   if (!session?.user?.id) {
     return NextResponse.json({ error: 'Não autorizado' }, { status: 401 })
   }
 
-  const prm = await getPrmComPermissao(params.id, session.user.id)
-  if (!prm) {
-    return NextResponse.json({ error: 'PRM não encontrado' }, { status: 404 })
+  const prf = await getPrfComPermissao(params.id, session.user.id)
+  if (!prf) {
+    return NextResponse.json({ error: 'PRF não encontrado' }, { status: 404 })
   }
 
   await prisma.problemaMedicamento.delete({ where: { id: params.id } })

@@ -275,8 +275,8 @@ export default function NovoAtendimentoPage() {
           <Link href={`/dashboard/pacientes/${pacienteId}`} className="btn-primary">
             Voltar ao Prontuário
           </Link>
-          <Link href={`/dashboard/pacientes/${pacienteId}/prm`} className="btn-secondary">
-            Registrar PRM
+          <Link href={`/dashboard/pacientes/${pacienteId}/prf`} className="btn-secondary">
+            Registrar PRF
           </Link>
           <Link href={`/dashboard/pacientes/${pacienteId}/intervencoes`} className="btn-secondary">
             Criar Intervenção

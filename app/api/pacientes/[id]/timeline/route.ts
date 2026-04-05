@@ -90,7 +90,7 @@ export async function GET(_req: NextRequest, { params }: { params: { id: string 
     eventos.push({ id: m.id, data: m.dataInicio, tipo: 'medicamento', categoria: 'Medicamento', descricao: nome, detalhe: m.status, cor: m.status === 'EM_USO' ? 'green' : 'gray' })
   }
   for (const p of prms) {
-    eventos.push({ id: p.id, data: p.criadoEm, tipo: 'prm', categoria: 'PRM', descricao: `${p.categoria}: ${p.descricao.slice(0, 60)}`, detalhe: p.gravidade, cor: p.gravidade === 'GRAVE' ? 'red' : 'orange' })
+    eventos.push({ id: p.id, data: p.criadoEm, tipo: 'prm', categoria: 'PRF', descricao: `${p.categoria}: ${p.descricao.slice(0, 60)}`, detalhe: p.gravidade, cor: p.gravidade === 'GRAVE' ? 'red' : 'orange' })
   }
   for (const i of intervencoes) {
     eventos.push({ id: i.id, data: i.dataSugestao, tipo: 'intervencao', categoria: 'Intervenção', descricao: i.descricao.slice(0, 80), detalhe: i.status, cor: 'purple' })

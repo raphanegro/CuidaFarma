@@ -45,7 +45,7 @@ export default function EvolucaoPage() {
     const [evRes, atRes, prmRes] = await Promise.all([
       fetch(`/api/evolucao-clinica?pacienteId=${pacienteId}`),
       fetch(`/api/atendimentos?pacienteId=${pacienteId}`),
-      fetch(`/api/prm?pacienteId=${pacienteId}`),
+      fetch(`/api/prf?pacienteId=${pacienteId}`),
     ])
     if (evRes.ok) setEvolucoes(await evRes.json())
     if (atRes.ok) setAtendimentos(await atRes.json())
@@ -143,7 +143,7 @@ export default function EvolucaoPage() {
 
           {form.resolucaoPrms.length > 0 && (
             <div>
-              <label className="label-base">Status dos PRMs</label>
+              <label className="label-base">Status dos PRFs</label>
               <div className="space-y-2">
                 {form.resolucaoPrms.map((r, i) => (
                   <div key={r.prmId} className="flex items-center gap-3">

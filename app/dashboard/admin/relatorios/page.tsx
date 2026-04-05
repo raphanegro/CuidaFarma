@@ -106,7 +106,7 @@ export default function AdminRelatoriosPage() {
       {dados && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="rounded-lg border border-green-200 bg-green-50 p-5">
-            <p className="text-xs font-medium text-green-700 uppercase tracking-wide">Taxa de Resolucao de PRMs</p>
+            <p className="text-xs font-medium text-green-700 uppercase tracking-wide">Taxa de Resolucao de PRFs</p>
             <p className="mt-2 text-4xl font-bold text-green-800">{dados.taxaResolucao}%</p>
             <p className="text-xs text-green-600 mt-1">dos problemas foram resolvidos</p>
           </div>
@@ -152,7 +152,7 @@ export default function AdminRelatoriosPage() {
 
           {/* PRMs por categoria */}
           <div className="rounded-lg border border-gray-200 bg-white p-5">
-            <h2 className="text-sm font-semibold text-gray-700 mb-4">PRMs por Categoria</h2>
+            <h2 className="text-sm font-semibold text-gray-700 mb-4">PRFs por Categoria</h2>
             {dados.prmsPorCategoria.length > 0 ? (
               <ResponsiveContainer width="100%" height={220}>
                 <PieChart>
@@ -174,7 +174,7 @@ export default function AdminRelatoriosPage() {
               </ResponsiveContainer>
             ) : (
               <div className="h-48 flex items-center justify-center text-sm text-gray-400">
-                Sem PRMs registrados
+                Sem PRFs registrados
               </div>
             )}
           </div>

@@ -18,7 +18,7 @@ const TIPO_LABELS: Record<string, string> = {
   CRIACAO_PACIENTE: 'Cadastro de Paciente',
   EDICAO_PACIENTE: 'Edicao de Paciente',
   NOVO_ATENDIMENTO: 'Novo Atendimento',
-  NOVO_PRM: 'Novo PRM',
+  NOVO_PRM: 'Novo PRF',
   NOVA_INTERVENCAO: 'Nova Intervencao',
   NOVO_EXAME: 'Novo Exame',
   NOVO_MEDICAMENTO: 'Novo Medicamento',

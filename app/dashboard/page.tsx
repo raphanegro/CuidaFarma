@@ -63,7 +63,7 @@ export default function DashboardPage() {
           border: 'border-green-200',
         },
         {
-          label: 'PRMs Abertos',
+          label: 'PRFs Abertos',
           value: dados.prmsAbertos,
           icon: AlertTriangle,
           color: 'bg-orange-50 text-orange-600',

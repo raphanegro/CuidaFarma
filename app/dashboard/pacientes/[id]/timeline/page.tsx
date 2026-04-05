@@ -40,14 +40,14 @@ const ICONE: Record<string, string> = {
   atendimento: '🏥',
   exame:       '🧪',
   medicamento: '💊',
-  prm:         '⚠️',
+  prf:         '⚠️',
   intervencao: '🩺',
   alerta:      '🔔',
   risco:       '🛡️',
   evolucao:    '📈',
 }
 
-const CATEGORIAS = ['Todos', 'Atendimento', 'Exame', 'Medicamento', 'PRM', 'Intervenção', 'Alerta', 'Risco', 'Evolução']
+const CATEGORIAS = ['Todos', 'Atendimento', 'Exame', 'Medicamento', 'PRF', 'Intervenção', 'Alerta', 'Risco', 'Evolução']
 
 export default function TimelinePage() {
   const { id: pacienteId } = useParams<{ id: string }>()

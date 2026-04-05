@@ -246,7 +246,7 @@ export default function ProntuarioPacientePage() {
         {[
           { href: 'exames',      icon: '🧪', label: 'Exames',      count: counts.exames },
           { href: 'medicamentos',icon: '💊', label: 'Medicamentos', count: counts.medicamentos },
-          { href: 'prm',         icon: '⚠️', label: 'PRMs',         count: counts.prms,        alert: true },
+          { href: 'prf',         icon: '⚠️', label: 'PRFs',         count: counts.prms,        alert: true },
           { href: 'intervencoes',icon: '🩺', label: 'Intervenções', count: counts.intervencoes },
           { href: 'calendario',  icon: '📅', label: 'Calendário',   count: undefined },
           { href: 'risco',       icon: '🛡️', label: 'Risco',        count: undefined },
