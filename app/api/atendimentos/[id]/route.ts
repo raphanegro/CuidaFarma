@@ -22,6 +22,7 @@ export async function GET(
           select: { id: true, nome: true, sobrenome: true, cpf: true, dataNascimento: true },
         },
         dadosClinicos: true,
+        evolucaoClinica: true,
       },
     })
 
@@ -62,14 +63,29 @@ export async function PATCH(
       return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
     }
 
+    // Validação de janela de edição: apenas atendimentos criados nos últimos 7 dias
+    const sete_dias_atras = new Date()
+    sete_dias_atras.setDate(sete_dias_atras.getDate() - 7)
+    if (atendimento.criadoEm < sete_dias_atras) {
+      return NextResponse.json(
+        { error: 'Atendimento só pode ser editado nos primeiros 7 dias após o registro.' },
+        { status: 403 }
+      )
+    }
+
     const body = await request.json()
 
     const updated = await prisma.atendimento.update({
       where: { id: params.id },
       data: {
         status: body.status ?? undefined,
+        tipo: body.tipo ?? undefined,
+        dataAtendimento: body.dataAtendimento ? new Date(body.dataAtendimento) : undefined,
+        motivoConsulta: body.motivoConsulta ?? undefined,
         motivoDescricao: body.motivoDescricao ?? undefined,
+        enderecoVisita: body.enderecoVisita ?? undefined,
       },
+      include: { dadosClinicos: true },
     })
 
     return NextResponse.json(updated)

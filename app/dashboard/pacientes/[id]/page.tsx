@@ -46,6 +46,7 @@ interface Atendimento {
   motivoConsulta: string[]
   dataAtendimento: string
   status: string
+  criadoEm: string
   dadosClinicos?: DadosClinicos
 }
 
@@ -370,33 +371,48 @@ export default function ProntuarioPacientePage() {
               <p className="text-sm text-gray-500 text-center py-8">Nenhum atendimento registrado</p>
             ) : (
               <div className="space-y-2">
-                {paciente.atendimentos.map((at) => (
-                  <div
-                    key={at.id}
-                    className="flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:bg-gray-50"
-                  >
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">
-                        {TIPO_LABELS[at.tipo] || at.tipo}
-                      </p>
-                      <p className="text-xs text-gray-500">
-                        {new Date(at.dataAtendimento).toLocaleDateString('pt-BR')}
-                      </p>
+                {paciente.atendimentos.map((at, idx) => {
+                  const dentroJanela = idx === 0 && (() => {
+                    const expira = new Date(at.criadoEm)
+                    expira.setDate(expira.getDate() + 7)
+                    return expira > new Date()
+                  })()
+                  return (
+                    <div
+                      key={at.id}
+                      className="flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:bg-gray-50"
+                    >
+                      <div>
+                        <p className="text-sm font-medium text-gray-900">
+                          {TIPO_LABELS[at.tipo] || at.tipo}
+                        </p>
+                        <p className="text-xs text-gray-500">
+                          {new Date(at.dataAtendimento).toLocaleDateString('pt-BR')}
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        {dentroJanela && (
+                          <Link
+                            href={`/dashboard/atendimentos/${at.id}/editar`}
+                            className="text-xs text-blue-600 hover:underline font-medium"
+                          >
+                            Editar
+                          </Link>
+                        )}
+                        <span
+                          className={`text-xs px-2 py-0.5 rounded-full ${
+                            at.status === 'ABERTO'
+                              ? 'bg-yellow-100 text-yellow-700'
+                              : 'bg-green-100 text-green-700'
+                          }`}
+                        >
+                          {at.status === 'ABERTO' ? 'Aberto' : 'Concluído'}
+                        </span>
+                        <ChevronRight className="h-4 w-4 text-gray-400" />
+                      </div>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <span
-                        className={`text-xs px-2 py-0.5 rounded-full ${
-                          at.status === 'ABERTO'
-                            ? 'bg-yellow-100 text-yellow-700'
-                            : 'bg-green-100 text-green-700'
-                        }`}
-                      >
-                        {at.status === 'ABERTO' ? 'Aberto' : 'Concluído'}
-                      </span>
-                      <ChevronRight className="h-4 w-4 text-gray-400" />
-                    </div>
-                  </div>
-                ))}
+                  )
+                })}
               </div>
             )}
           </div>
