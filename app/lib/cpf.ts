@@ -24,8 +24,11 @@ export function validarCPF(cpf: string): boolean {
 }
 
 export function formatarCPF(cpf: string): string {
-  const cleaned = cpf.replace(/\D/g, '')
-  return cleaned.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4')
+  const c = cpf.replace(/\D/g, '').slice(0, 11)
+  if (c.length <= 3) return c
+  if (c.length <= 6) return `${c.slice(0, 3)}.${c.slice(3)}`
+  if (c.length <= 9) return `${c.slice(0, 3)}.${c.slice(3, 6)}.${c.slice(6)}`
+  return `${c.slice(0, 3)}.${c.slice(3, 6)}.${c.slice(6, 9)}-${c.slice(9)}`
 }
 
 export function limparCPF(cpf: string): string {

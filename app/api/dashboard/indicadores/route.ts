@@ -19,51 +19,51 @@ export async function GET(request: NextRequest) {
   const whereBase = isAdmin ? {} : { usuarioId }
   const wherePaciente = isAdmin ? {} : { paciente: { usuarioId } }
 
-  // CRITICO-01: usar $queryRaw (parametrizado) em vez de $queryRawUnsafe (SQL injection)
-  // Queries separadas por role evitam interpolação de strings
+  // Colunas são camelCase no banco (sem @map nos fields do schema)
+  // Usar $queryRaw com template literals (parametrizado — sem SQL injection)
   const [atendimentosPorMesRaw, distribuicaoRiscoRaw, topDoencasRaw, topMedicamentosRaw] =
     await Promise.all([
       // Atendimentos por mês (últimos 6 meses)
       isAdmin
         ? prisma.$queryRaw<Array<{ mes: string; total: bigint }>>`
-            SELECT TO_CHAR(DATE_TRUNC('month', data_atendimento), 'YYYY-MM') as mes,
+            SELECT TO_CHAR(DATE_TRUNC('month', "dataAtendimento"), 'YYYY-MM') as mes,
                    COUNT(*) as total
             FROM atendimentos
-            WHERE data_atendimento >= NOW() - INTERVAL '6 months'
+            WHERE "dataAtendimento" >= NOW() - INTERVAL '6 months'
             GROUP BY mes ORDER BY mes
           `
         : prisma.$queryRaw<Array<{ mes: string; total: bigint }>>`
-            SELECT TO_CHAR(DATE_TRUNC('month', a.data_atendimento), 'YYYY-MM') as mes,
+            SELECT TO_CHAR(DATE_TRUNC('month', a."dataAtendimento"), 'YYYY-MM') as mes,
                    COUNT(*) as total
             FROM atendimentos a
-            JOIN pacientes p ON a.paciente_id = p.id
-            WHERE p.usuario_id = ${usuarioId}
-              AND a.data_atendimento >= NOW() - INTERVAL '6 months'
+            JOIN pacientes p ON a."pacienteId" = p.id
+            WHERE p."usuarioId" = ${usuarioId}
+              AND a."dataAtendimento" >= NOW() - INTERVAL '6 months'
             GROUP BY mes ORDER BY mes
           `,
 
-      // Distribuição de risco — pega o nível mais recente por paciente, agrupa
+      // Distribuição de risco — nível mais recente por paciente
       isAdmin
         ? prisma.$queryRaw<Array<{ risco: string; total: bigint }>>`
-            SELECT nivel_risco as risco, COUNT(*) as total
+            SELECT "nivelRisco" as risco, COUNT(*) as total
             FROM (
-              SELECT DISTINCT ON (paciente_id) nivel_risco
+              SELECT DISTINCT ON ("pacienteId") "nivelRisco"
               FROM estratificacoes_risco
-              ORDER BY paciente_id, calculado_em DESC
+              ORDER BY "pacienteId", "calculadoEm" DESC
             ) latest
-            GROUP BY nivel_risco
+            GROUP BY "nivelRisco"
             ORDER BY total DESC
           `
         : prisma.$queryRaw<Array<{ risco: string; total: bigint }>>`
-            SELECT nivel_risco as risco, COUNT(*) as total
+            SELECT "nivelRisco" as risco, COUNT(*) as total
             FROM (
-              SELECT DISTINCT ON (er.paciente_id) er.nivel_risco
+              SELECT DISTINCT ON (er."pacienteId") er."nivelRisco"
               FROM estratificacoes_risco er
-              JOIN pacientes p ON er.paciente_id = p.id
-              WHERE p.usuario_id = ${usuarioId}
-              ORDER BY er.paciente_id, er.calculado_em DESC
+              JOIN pacientes p ON er."pacienteId" = p.id
+              WHERE p."usuarioId" = ${usuarioId}
+              ORDER BY er."pacienteId", er."calculadoEm" DESC
             ) latest
-            GROUP BY nivel_risco
+            GROUP BY "nivelRisco"
             ORDER BY total DESC
           `,
 
@@ -78,28 +78,27 @@ export async function GET(request: NextRequest) {
         : prisma.$queryRaw<Array<{ doenca: string; total: bigint }>>`
             SELECT hc.doenca, COUNT(*) as total
             FROM historico_clinico hc
-            JOIN pacientes p ON hc.paciente_id = p.id
-            WHERE p.usuario_id = ${usuarioId}
+            JOIN pacientes p ON hc."pacienteId" = p.id
+            WHERE p."usuarioId" = ${usuarioId}
               AND hc.status = 'ATIVA'
             GROUP BY hc.doenca ORDER BY total DESC LIMIT 5
           `,
 
-      // CRITICO-02: corrigido meu.ativo → meu.status = 'EM_USO'
-      // Top 5 medicamentos em uso
+      // Top 5 medicamentos em uso (status = 'EM_USO')
       isAdmin
         ? prisma.$queryRaw<Array<{ nome: string; total: bigint }>>`
             SELECT m.nome, COUNT(*) as total
             FROM medicamentos_em_uso meu
-            JOIN medicamentos m ON meu.medicamento_id = m.id
+            JOIN medicamentos m ON meu."medicamentoId" = m.id
             WHERE meu.status = 'EM_USO'
             GROUP BY m.nome ORDER BY total DESC LIMIT 5
           `
         : prisma.$queryRaw<Array<{ nome: string; total: bigint }>>`
             SELECT m.nome, COUNT(*) as total
             FROM medicamentos_em_uso meu
-            JOIN medicamentos m ON meu.medicamento_id = m.id
-            JOIN pacientes p ON meu.paciente_id = p.id
-            WHERE p.usuario_id = ${usuarioId}
+            JOIN medicamentos m ON meu."medicamentoId" = m.id
+            JOIN pacientes p ON meu."pacienteId" = p.id
+            WHERE p."usuarioId" = ${usuarioId}
               AND meu.status = 'EM_USO'
             GROUP BY m.nome ORDER BY total DESC LIMIT 5
           `,
@@ -132,7 +131,6 @@ export async function GET(request: NextRequest) {
     prisma.problemaMedicamento.count({
       where: { ...wherePaciente, status: 'RESOLVIDO' },
     }),
-    // Próximos retornos (7 dias) — retorna pacienteId corretamente
     prisma.planoAcompanhamento.findMany({
       where: {
         ...wherePaciente,
@@ -164,7 +162,6 @@ export async function GET(request: NextRequest) {
     })),
     topDoencas: topDoencasRaw.map((r) => ({ doenca: r.doenca, total: Number(r.total) })),
     topMedicamentos: topMedicamentosRaw.map((r) => ({ nome: r.nome, total: Number(r.total) })),
-    // Retorna pacienteId (id) e campos separados para o Link funcionar corretamente
     proximosRetornos: proximosRetornos.map((p) => ({
       id: p.paciente.id,
       nome: p.paciente.nome,
