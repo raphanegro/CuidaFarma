@@ -233,6 +233,7 @@ model Medicamento {
   forma           String
   fabricante      String?
   codigoATC       String?
+  componente      String?  // Básico, Especializado, Estratégico (RENAME)
   criadoEm        DateTime @default(now())
   atualizadoEm    DateTime @updatedAt
 

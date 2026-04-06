@@ -1,0 +1,6393 @@
+[
+  {
+    "dcb": "ácido ursodesoxicólico",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "A05AA02"
+  },
+  {
+    "dcb": "ácido ursodesoxicólico",
+    "concentracao": "150 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "A05AA02"
+  },
+  {
+    "dcb": "ácido ursodesoxicólico",
+    "concentracao": "300 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "A05AA02"
+  },
+  {
+    "dcb": "alfa-agalsidase",
+    "concentracao": "1 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "A16AB03"
+  },
+  {
+    "dcb": "alfa-alglicosidade",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "A16AB07"
+  },
+  {
+    "dcb": "alfacerliponase",
+    "concentracao": "30 mg/mL",
+    "formaFarmaceutica": "solução para infusão",
+    "componente": "Especializado",
+    "codigoAtc": "A16AB17"
+  },
+  {
+    "dcb": "alfaelosulfase",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "A16AB12"
+  },
+  {
+    "dcb": "alfataliglicerase",
+    "concentracao": "200 U",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "A16AB11"
+  },
+  {
+    "dcb": "alfavelaglicerase",
+    "concentracao": "400 U",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "A16AB10"
+  },
+  {
+    "dcb": "alfavestronidase",
+    "concentracao": "2 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "A16AB18"
+  },
+  {
+    "dcb": "beta-agalsidase",
+    "concentracao": "35 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "A16AB04"
+  },
+  {
+    "dcb": "biotina",
+    "concentracao": "2,5 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "A11HA05"
+  },
+  {
+    "dcb": "calcitriol",
+    "concentracao": "0,25 mcg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "A11CC04"
+  },
+  {
+    "dcb": "carbonato de cálcio",
+    "concentracao": "1.250 mg (equivalente a 500 mg de cálcio elementar)",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "A12AA04"
+  },
+  {
+    "dcb": "carbonato de cálcio + colecalciferol",
+    "concentracao": "1.250 mg (equivalente a 500 mg de cálcio elementar) + 200 UI",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "A07BA01"
+  },
+  {
+    "dcb": "cloridrato de metformina",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "A10BA02"
+  },
+  {
+    "dcb": "cloridrato de metformina",
+    "concentracao": "850 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "A10BA02"
+  },
+  {
+    "dcb": "cloridrato de metoclopramida",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "A03FA01"
+  },
+  {
+    "dcb": "cloridrato de metoclopramida",
+    "concentracao": "5 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "A03FA01"
+  },
+  {
+    "dcb": "cloridrato de metoclopramida",
+    "concentracao": "4 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "A03FA01"
+  },
+  {
+    "dcb": "cloridrato de ondansetrona",
+    "concentracao": "4 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "A04AA01"
+  },
+  {
+    "dcb": "cloridrato de ondansetrona",
+    "concentracao": "4 mg",
+    "formaFarmaceutica": "comprimido orodispersível",
+    "componente": "Básico",
+    "codigoAtc": "A04AA01"
+  },
+  {
+    "dcb": "cloridrato de ondansetrona",
+    "concentracao": "8 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "A04AA01"
+  },
+  {
+    "dcb": "cloridrato de ondansetrona",
+    "concentracao": "8 mg",
+    "formaFarmaceutica": "comprimido orodispersível",
+    "componente": "Básico",
+    "codigoAtc": "A04AA01"
+  },
+  {
+    "dcb": "cloridrato de piridoxina",
+    "concentracao": "40 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "A11HA02"
+  },
+  {
+    "dcb": "cloridrato de piridoxina",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "A11HA02"
+  },
+  {
+    "dcb": "cloridrato de piridoxina",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "A11HA02"
+  },
+  {
+    "dcb": "cloridrato de tiamina",
+    "concentracao": "300 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "A11DA01"
+  },
+  {
+    "dcb": "dapagliflozina propanodiol",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "A10BK01"
+  },
+  {
+    "dcb": "dicloridrato de sapropterina",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "A16AX07"
+  },
+  {
+    "dcb": "dicloridrato de trientina",
+    "concentracao": "250 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "A16AX12"
+  },
+  {
+    "dcb": "digliconato de clorexidina",
+    "concentracao": "0,12%",
+    "formaFarmaceutica": "solução",
+    "componente": "Básico",
+    "codigoAtc": "A01AB03"
+  },
+  {
+    "dcb": "fosfato de cálcio tribásico + colecalciferol",
+    "concentracao": "1661,616 mg (600 mg de cálcio) + 400 UI",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "A16AB08"
+  },
+  {
+    "dcb": "glibenclamida",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "A10BB01"
+  },
+  {
+    "dcb": "glicerol",
+    "concentracao": "120 mg/mL",
+    "formaFarmaceutica": "solução",
+    "componente": "Básico",
+    "codigoAtc": "A06AG04"
+  },
+  {
+    "dcb": "glicerol",
+    "concentracao": "72 mg",
+    "formaFarmaceutica": "supositório",
+    "componente": "Básico",
+    "codigoAtc": "A06AG04"
+  },
+  {
+    "dcb": "gliclazida",
+    "concentracao": "30 mg",
+    "formaFarmaceutica": "comprimido de liberação prolongada",
+    "componente": "Básico",
+    "codigoAtc": "A10BB09"
+  },
+  {
+    "dcb": "gliclazida",
+    "concentracao": "60 mg",
+    "formaFarmaceutica": "comprimido de liberação prolongada",
+    "componente": "Básico",
+    "codigoAtc": "A10BB09"
+  },
+  {
+    "dcb": "gliclazida",
+    "concentracao": "80 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "A10BB09"
+  },
+  {
+    "dcb": "hidróxido de alumínio",
+    "concentracao": "230 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "A02AB01"
+  },
+  {
+    "dcb": "hidróxido de alumínio",
+    "concentracao": "60 mg/mL",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "A02AB01"
+  },
+  {
+    "dcb": "idursulfase",
+    "concentracao": "2 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "A16AB09"
+  },
+  {
+    "dcb": "imiglucerase",
+    "concentracao": "400 U",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "A16AB02"
+  },
+  {
+    "dcb": "insulina análoga de ação prolongada",
+    "concentracao": "100 UI/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "A10AC01"
+  },
+  {
+    "dcb": "insulina humana regular",
+    "concentracao": "100 UI/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "A10AB01"
+  },
+  {
+    "dcb": "lactulose",
+    "concentracao": "667 mg/mL",
+    "formaFarmaceutica": "xarope",
+    "componente": "Básico",
+    "codigoAtc": "A06AD11"
+  },
+  {
+    "dcb": "laronidase",
+    "concentracao": "0,58 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "A16AB05"
+  },
+  {
+    "dcb": "mesalazina",
+    "concentracao": "400 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "A07EC02"
+  },
+  {
+    "dcb": "mesalazina",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "comprimido de liberação prolongada",
+    "componente": "Especializado",
+    "codigoAtc": "A07EC02"
+  },
+  {
+    "dcb": "mesalazina",
+    "concentracao": "800 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "A07EC02"
+  },
+  {
+    "dcb": "mesalazina",
+    "concentracao": "250 mg",
+    "formaFarmaceutica": "supositório",
+    "componente": "Especializado",
+    "codigoAtc": "A07EC02"
+  },
+  {
+    "dcb": "mesalazina",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "supositório",
+    "componente": "Especializado",
+    "codigoAtc": "A07EC02"
+  },
+  {
+    "dcb": "mesalazina",
+    "concentracao": "1.000 mg",
+    "formaFarmaceutica": "supositório",
+    "componente": "Especializado",
+    "codigoAtc": "A07EC02"
+  },
+  {
+    "dcb": "mesalazina",
+    "concentracao": "10 mg/mL enema",
+    "formaFarmaceutica": "-",
+    "componente": "Especializado",
+    "codigoAtc": "A07EC02"
+  },
+  {
+    "dcb": "mesalazina",
+    "concentracao": "2 g",
+    "formaFarmaceutica": "granulado",
+    "componente": "Especializado",
+    "codigoAtc": "A07EC02"
+  },
+  {
+    "dcb": "miglustate",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "A16AX06"
+  },
+  {
+    "dcb": "nistatina",
+    "concentracao": "100.000 UI/mL",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "A07AA02"
+  },
+  {
+    "dcb": "nitrato de miconazol",
+    "concentracao": "2% (20 mg/g)",
+    "formaFarmaceutica": "gel",
+    "componente": "Básico",
+    "codigoAtc": "A01AB09"
+  },
+  {
+    "dcb": "óleo mineral - óleo para uso oral",
+    "concentracao": "-",
+    "formaFarmaceutica": "-",
+    "componente": "Básico",
+    "codigoAtc": "A06AA01"
+  },
+  {
+    "dcb": "omeprazol",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "A02BC01"
+  },
+  {
+    "dcb": "omeprazol",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "A02BC01"
+  },
+  {
+    "dcb": "palmitato de retinol",
+    "concentracao": "100.000 UI",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "A11CA01"
+  },
+  {
+    "dcb": "palmitato de retinol",
+    "concentracao": "200.000 UI",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "A11CA01"
+  },
+  {
+    "dcb": "palmitato de retinol",
+    "concentracao": "150.000 UI/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "A11CA01"
+  },
+  {
+    "dcb": "pancreatina",
+    "concentracao": "10.000 UI",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "A09AA02"
+  },
+  {
+    "dcb": "pancreatina",
+    "concentracao": "25.000 UI",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "A09AA02"
+  },
+  {
+    "dcb": "sais para reidratação oral cloreto de sódio, glicose anidra, cloreto de potássio, citrato de sódio diidratado",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução",
+    "componente": "Especializado",
+    "codigoAtc": "A07EC01"
+  },
+  {
+    "dcb": "sulfato de atropina",
+    "concentracao": "0,25 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "A03BA01"
+  },
+  {
+    "dcb": "sulfato de magnésio -",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução",
+    "componente": "Básico",
+    "codigoAtc": "A06AD04"
+  },
+  {
+    "dcb": "sulfato de magnésio -",
+    "concentracao": "10% (0,81 mEq/mL Mg++)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "A12CC02"
+  },
+  {
+    "dcb": "sulfato de magnésio -",
+    "concentracao": "50% (4,05 mEq/mL Mg++)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "A12CC02"
+  },
+  {
+    "dcb": "sulfato de zinco",
+    "concentracao": "200 mcg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "A12CB01"
+  },
+  {
+    "dcb": "sulfato de zinco",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "A12CB01"
+  },
+  {
+    "dcb": "equivalente a",
+    "concentracao": "4 mg/mL de zinco elementar",
+    "formaFarmaceutica": "xarope",
+    "componente": "Básico",
+    "codigoAtc": "A12CB01"
+  },
+  {
+    "dcb": "conclusão abciximabe",
+    "concentracao": "2 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "B01AC13"
+  },
+  {
+    "dcb": "acetato de sódio",
+    "concentracao": "2 mEq/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "B05XA08"
+  },
+  {
+    "dcb": "ácido acetilsalicílico",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "B01AC06"
+  },
+  {
+    "dcb": "ácido fólico",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "B03BB01"
+  },
+  {
+    "dcb": "ácido fólico",
+    "concentracao": "0,2 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "B03BB01"
+  },
+  {
+    "dcb": "ácido tranexâmico",
+    "concentracao": "250 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "B02AA02"
+  },
+  {
+    "dcb": "albumina humana",
+    "concentracao": "0,2 g/mL (20%)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "B05AA01"
+  },
+  {
+    "dcb": "alfaepoetina",
+    "concentracao": "1.000 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "B03XA01"
+  },
+  {
+    "dcb": "alfaepoetina",
+    "concentracao": "1.000 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "B03XA01"
+  },
+  {
+    "dcb": "alfaepoetina",
+    "concentracao": "2.000 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "B03XA01"
+  },
+  {
+    "dcb": "alfaepoetina",
+    "concentracao": "2.000 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "B03XA01"
+  },
+  {
+    "dcb": "alfaepoetina",
+    "concentracao": "3.000 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "B03XA01"
+  },
+  {
+    "dcb": "alfaepoetina",
+    "concentracao": "3.000 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "B03XA01"
+  },
+  {
+    "dcb": "alfaepoetina",
+    "concentracao": "4.000 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "B03XA01"
+  },
+  {
+    "dcb": "alfaepoetina",
+    "concentracao": "4.000 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "B03XA01"
+  },
+  {
+    "dcb": "alfaepoetina",
+    "concentracao": "10.000 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "B03XA01"
+  },
+  {
+    "dcb": "alfaepoetina",
+    "concentracao": "10.000 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "B03XA01"
+  },
+  {
+    "dcb": "alteplase",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "B01AD02"
+  },
+  {
+    "dcb": "alteplase",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "B01AD02"
+  },
+  {
+    "dcb": "alteplase",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "B01AD02"
+  },
+  {
+    "dcb": "bicarbonato de sódio",
+    "concentracao": "84 mg/mL (8,4%) equivalente a 1 mEq/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "B05XA02"
+  },
+  {
+    "dcb": "bissulfato de clopidogrel",
+    "concentracao": "75 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "B01AC04"
+  },
+  {
+    "dcb": "cianocobalamina",
+    "concentracao": "500 mcg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "B03BA01"
+  },
+  {
+    "dcb": "cloreto de potássio",
+    "concentracao": "191 mg/mL (19,1%) equivalente a 2,56 mEq/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "B05XA01"
+  },
+  {
+    "dcb": "cloreto de sódio",
+    "concentracao": "200 mg/mL (20%) equivalente a 3,4 mEq/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "B05XA03"
+  },
+  {
+    "dcb": "cloreto de sódio",
+    "concentracao": "9 mg/mL (0,9%) equivalente a 0,154 mEq/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "B05XA03"
+  },
+  {
+    "dcb": "cloridrato de tirofibana",
+    "concentracao": "0,25 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "B01AC17"
+  },
+  {
+    "dcb": "complexo protrombínico humano",
+    "concentracao": "500 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD01"
+  },
+  {
+    "dcb": "complexo protrombínico humano",
+    "concentracao": "600 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD01"
+  },
+  {
+    "dcb": "complexo protrombínico parcialmente ativado",
+    "concentracao": "500 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD03"
+  },
+  {
+    "dcb": "complexo protrombínico parcialmente ativado",
+    "concentracao": "1.000UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD03"
+  },
+  {
+    "dcb": "complexo protrombínico parcialmente ativado",
+    "concentracao": "2.500UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD03"
+  },
+  {
+    "dcb": "eltrombopague olamina",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "B02BX05"
+  },
+  {
+    "dcb": "eltrombopague olamina",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "B02BX05"
+  },
+  {
+    "dcb": "emicizumabe",
+    "concentracao": "30 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BX06"
+  },
+  {
+    "dcb": "emicizumabe",
+    "concentracao": "150 mg /mL (apresentações de 0,4 ml , 0,7 ml e 1 ml)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BX06"
+  },
+  {
+    "dcb": "enoxaparina sódica",
+    "concentracao": "40 mg/0,4 mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "B01AB05"
+  },
+  {
+    "dcb": "enoxaparina sódica",
+    "concentracao": "60 mg/0,6 mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "B01AB05"
+  },
+  {
+    "dcb": "estreptoquinase",
+    "concentracao": "250.000 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "B01AD01"
+  },
+  {
+    "dcb": "fator IX de coagulação 200 UI",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD04"
+  },
+  {
+    "dcb": "fator IX de coagulação 200 UI",
+    "concentracao": "250 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD04"
+  },
+  {
+    "dcb": "fator IX de coagulação 200 UI",
+    "concentracao": "500 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD04"
+  },
+  {
+    "dcb": "fator IX de coagulação 200 UI",
+    "concentracao": "600 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD04"
+  },
+  {
+    "dcb": "fator IX de coagulação 200 UI",
+    "concentracao": "1.000 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD04"
+  },
+  {
+    "dcb": "fator IX de coagulação 200 UI",
+    "concentracao": "1.200 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD04"
+  },
+  {
+    "dcb": "fator VII de coagulação ativado recombinante 1 mg (50.000 UI)",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD05"
+  },
+  {
+    "dcb": "fator VII de coagulação ativado recombinante 1 mg (50.000 UI)",
+    "concentracao": "2 mg (100.000 UI)",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD05"
+  },
+  {
+    "dcb": "fator VII de coagulação ativado recombinante 1 mg (50.000 UI)",
+    "concentracao": "5 mg (250.000 UI)",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD05"
+  },
+  {
+    "dcb": "fator VIII de coagulação 250 UI",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD02"
+  },
+  {
+    "dcb": "fator VIII de coagulação 250 UI",
+    "concentracao": "500 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD02"
+  },
+  {
+    "dcb": "fator VIII de coagulação 250 UI",
+    "concentracao": "1.000 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD02"
+  },
+  {
+    "dcb": "fator VIII de coagulação contendo fator de von Willebrand 250 UI",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD06"
+  },
+  {
+    "dcb": "fator VIII de coagulação contendo fator de von Willebrand 250 UI",
+    "concentracao": "500 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD06"
+  },
+  {
+    "dcb": "fator VIII de coagulação contendo fator de von Willebrand 250 UI",
+    "concentracao": "1.000 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD06"
+  },
+  {
+    "dcb": "fator VIII de coagulação recombinante 250 UI",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD02"
+  },
+  {
+    "dcb": "fator VIII de coagulação recombinante 250 UI",
+    "concentracao": "500 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD02"
+  },
+  {
+    "dcb": "fator VIII de coagulação recombinante 250 UI",
+    "concentracao": "1.000 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD02"
+  },
+  {
+    "dcb": "fator VIII de coagulação recombinante 250 UI",
+    "concentracao": "1.500 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD02"
+  },
+  {
+    "dcb": "fator XIII de coagulação 250 UI",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BD07"
+  },
+  {
+    "dcb": "ferripolimaltose",
+    "concentracao": "50 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "B03AB05"
+  },
+  {
+    "dcb": "ferripolimaltose",
+    "concentracao": "10 mg/mL",
+    "formaFarmaceutica": "xarope",
+    "componente": "Básico",
+    "codigoAtc": "B03AB05"
+  },
+  {
+    "dcb": "ferripolimaltose",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "B03AB05"
+  },
+  {
+    "dcb": "fibrinogênio",
+    "concentracao": "1 g",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "B02BB01"
+  },
+  {
+    "dcb": "fosfato de potássio monobásico + fosfato de potássio dibásico",
+    "concentracao": "0,03 g/mL + 0,1567 g/mL (equivalente a 2 mEq/mL)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "B05XA06"
+  },
+  {
+    "dcb": "heparina sódica",
+    "concentracao": "5.000 UI/0,25 mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "B01AB01"
+  },
+  {
+    "dcb": "iloprosta",
+    "concentracao": "10 mcg/mL",
+    "formaFarmaceutica": "solução",
+    "componente": "Especializado",
+    "codigoAtc": "B01AC11"
+  },
+  {
+    "dcb": "sacarato de hidróxido férrico",
+    "concentracao": "20 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "B03AB02"
+  },
+  {
+    "dcb": "selexipague",
+    "concentracao": "200 mcg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "B01AC27"
+  },
+  {
+    "dcb": "selexipague",
+    "concentracao": "400 mcg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "B01AC27"
+  },
+  {
+    "dcb": "selexipague",
+    "concentracao": "600 mcg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "B01AC27"
+  },
+  {
+    "dcb": "selexipague",
+    "concentracao": "800 mcg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "B01AC27"
+  },
+  {
+    "dcb": "selexipague",
+    "concentracao": "1.000 mcg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "B01AC27"
+  },
+  {
+    "dcb": "selexipague",
+    "concentracao": "1.200 mcg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "B01AC27"
+  },
+  {
+    "dcb": "selexipague",
+    "concentracao": "1.400 mcg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "B01AC27"
+  },
+  {
+    "dcb": "selexipague",
+    "concentracao": "1.600 mcg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "B01AC27"
+  },
+  {
+    "dcb": "selexipague",
+    "concentracao": "-",
+    "formaFarmaceutica": "solução",
+    "componente": "Básico",
+    "codigoAtc": "B05BB01"
+  },
+  {
+    "dcb": "sulfato ferroso Equivalente a 5 mg/mL de ferro elementar",
+    "concentracao": "-",
+    "formaFarmaceutica": "xarope",
+    "componente": "Básico",
+    "codigoAtc": "B03AA07"
+  },
+  {
+    "dcb": "Equivalente a 25 mg/mL de ferro elementar",
+    "concentracao": "-",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "B03AA07"
+  },
+  {
+    "dcb": "Equivalente a 40 mg de ferro elementar",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "B03AA07"
+  },
+  {
+    "dcb": "tenecteplase",
+    "concentracao": "40 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "B01AD11"
+  },
+  {
+    "dcb": "tenecteplase",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "B01AD11"
+  },
+  {
+    "dcb": "varfarina sódica",
+    "concentracao": "1 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "B01AA03"
+  },
+  {
+    "dcb": "varfarina sódica",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "B01AA03"
+  },
+  {
+    "dcb": "conclusão ácido nicotínico",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "comprimido de liberação prolongada",
+    "componente": "Especializado",
+    "codigoAtc": "C10AD02"
+  },
+  {
+    "dcb": "ambrisentana",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C02KX02"
+  },
+  {
+    "dcb": "ambrisentana",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C02KX02"
+  },
+  {
+    "dcb": "atenolol",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C07AB03"
+  },
+  {
+    "dcb": "atenolol",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C07AB03"
+  },
+  {
+    "dcb": "atorvastatina cálcica",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C10AA05"
+  },
+  {
+    "dcb": "atorvastatina cálcica",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C10AA05"
+  },
+  {
+    "dcb": "atorvastatina cálcica",
+    "concentracao": "40 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C10AA05"
+  },
+  {
+    "dcb": "atorvastatina cálcica",
+    "concentracao": "80 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C10AA05"
+  },
+  {
+    "dcb": "besilato de anlodipino",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C08CA01"
+  },
+  {
+    "dcb": "besilato de anlodipino",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C08CA01"
+  },
+  {
+    "dcb": "bezafibrato",
+    "concentracao": "200 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C10AB02"
+  },
+  {
+    "dcb": "bezafibrato",
+    "concentracao": "400 mg",
+    "formaFarmaceutica": "comprimido de liberação prolongada",
+    "componente": "Especializado",
+    "codigoAtc": "C10AB02"
+  },
+  {
+    "dcb": "bosentana",
+    "concentracao": "62,5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C02KX01"
+  },
+  {
+    "dcb": "bosentana",
+    "concentracao": "125 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C02KX01"
+  },
+  {
+    "dcb": "captopril",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C09AA01"
+  },
+  {
+    "dcb": "carvedilol",
+    "concentracao": "3,125 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C07AG02"
+  },
+  {
+    "dcb": "carvedilol",
+    "concentracao": "6,25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C07AG02"
+  },
+  {
+    "dcb": "carvedilol",
+    "concentracao": "12,5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C07AG02"
+  },
+  {
+    "dcb": "carvedilol",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C07AG02"
+  },
+  {
+    "dcb": "ciprofibrato",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C10AB08"
+  },
+  {
+    "dcb": "cloridrato de amiodarona",
+    "concentracao": "50 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "C01BD01"
+  },
+  {
+    "dcb": "cloridrato de amiodarona",
+    "concentracao": "200 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C01BD01"
+  },
+  {
+    "dcb": "cloridrato de dobutamina",
+    "concentracao": "12,5 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "C01CA07"
+  },
+  {
+    "dcb": "cloridrato de dopamina",
+    "concentracao": "5 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "C01CA04"
+  },
+  {
+    "dcb": "cloridrato de hidralazina",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C02DB02"
+  },
+  {
+    "dcb": "cloridrato de hidralazina",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C02DB02"
+  },
+  {
+    "dcb": "cloridrato de lidocaína",
+    "concentracao": "10 mg/mL (1%)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "C01BB01"
+  },
+  {
+    "dcb": "cloridrato de lidocaína",
+    "concentracao": "20 mg/mL (2%)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "C01BB01"
+  },
+  {
+    "dcb": "cloridrato de propafenona",
+    "concentracao": "300 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C01BC03"
+  },
+  {
+    "dcb": "cloridrato de propafenona",
+    "concentracao": "150 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C01BC03"
+  },
+  {
+    "dcb": "cloridrato de propranolol",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C07AA05"
+  },
+  {
+    "dcb": "cloridrato de propranolol",
+    "concentracao": "40 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C07AA05"
+  },
+  {
+    "dcb": "citrato de sildenafila",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C08DA01"
+  },
+  {
+    "dcb": "citrato de sildenafila",
+    "concentracao": "2,5 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "C08DA01"
+  },
+  {
+    "dcb": "citrato de sildenafila",
+    "concentracao": "120 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C08DA01"
+  },
+  {
+    "dcb": "digoxina",
+    "concentracao": "0,25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C01AA05"
+  },
+  {
+    "dcb": "digoxina",
+    "concentracao": "0,05 mg/mL",
+    "formaFarmaceutica": "elixir",
+    "componente": "Básico",
+    "codigoAtc": "C01AA05"
+  },
+  {
+    "dcb": "dinitrato de isossorbida",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C01DA08"
+  },
+  {
+    "dcb": "epinefrina",
+    "concentracao": "1 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "C01CA24"
+  },
+  {
+    "dcb": "espironolactona",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C03DA01"
+  },
+  {
+    "dcb": "espironolactona",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C03DA01"
+  },
+  {
+    "dcb": "etofibrato",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "C10AB09"
+  },
+  {
+    "dcb": "fenofibrato",
+    "concentracao": "200 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "C10AB05"
+  },
+  {
+    "dcb": "fenofibrato",
+    "concentracao": "250 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "C10AB05"
+  },
+  {
+    "dcb": "conclusão furosemida",
+    "concentracao": "40 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C03CA01"
+  },
+  {
+    "dcb": "conclusão furosemida",
+    "concentracao": "10 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "C03CA01"
+  },
+  {
+    "dcb": "genfibrozila",
+    "concentracao": "600 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C10AB04"
+  },
+  {
+    "dcb": "genfibrozila",
+    "concentracao": "900 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C10AB04"
+  },
+  {
+    "dcb": "hemitartarato de norepinefrina",
+    "concentracao": "2 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "C01CA03"
+  },
+  {
+    "dcb": "hidroclorotiazida",
+    "concentracao": "12,5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C03AA03"
+  },
+  {
+    "dcb": "hidroclorotiazida",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C03AA03"
+  },
+  {
+    "dcb": "losartana potássica",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C09CA01"
+  },
+  {
+    "dcb": "maleato de enalapril",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C09AA02"
+  },
+  {
+    "dcb": "maleato de enalapril",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C09AA02"
+  },
+  {
+    "dcb": "maleato de enalapril",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C09AA02"
+  },
+  {
+    "dcb": "mesilato de doxazosina",
+    "concentracao": "2 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C02CA04"
+  },
+  {
+    "dcb": "mesilato de doxazosina",
+    "concentracao": "4 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C02CA04"
+  },
+  {
+    "dcb": "metildopa",
+    "concentracao": "250 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C02AB01"
+  },
+  {
+    "dcb": "mononitrato de isossorbida",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C01DA14"
+  },
+  {
+    "dcb": "mononitrato de isossorbida",
+    "concentracao": "40 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C01DA14"
+  },
+  {
+    "dcb": "nifedipino",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "C08CA05"
+  },
+  {
+    "dcb": "nifedipino",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C08CA05"
+  },
+  {
+    "dcb": "pentoxifilina",
+    "concentracao": "400 mg",
+    "formaFarmaceutica": "comprimido de liberação prolongada",
+    "componente": "Estratégico",
+    "codigoAtc": "C04AD03"
+  },
+  {
+    "dcb": "pravastatina sódica",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C10AA03"
+  },
+  {
+    "dcb": "pravastatina sódica",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C10AA03"
+  },
+  {
+    "dcb": "pravastatina sódica",
+    "concentracao": "40 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C10AA03"
+  },
+  {
+    "dcb": "sacubitril valsartana sódica hidratada",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C09DX04"
+  },
+  {
+    "dcb": "sacubitril valsartana sódica hidratada",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C09DX04"
+  },
+  {
+    "dcb": "sacubitril valsartana sódica hidratada",
+    "concentracao": "200 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "C09DX04"
+  },
+  {
+    "dcb": "sinvastatina",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C10AA01"
+  },
+  {
+    "dcb": "sinvastatina",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C10AA01"
+  },
+  {
+    "dcb": "sinvastatina",
+    "concentracao": "40 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C10AA01"
+  },
+  {
+    "dcb": "succinato de metoprolol",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido de liberação prolongada",
+    "componente": "Básico",
+    "codigoAtc": "C07AB02"
+  },
+  {
+    "dcb": "succinato de metoprolol",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "comprimido de liberação prolongada",
+    "componente": "Básico",
+    "codigoAtc": "C07AB02"
+  },
+  {
+    "dcb": "succinato de metoprolol",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido de liberação prolongada",
+    "componente": "Básico",
+    "codigoAtc": "C07AB02"
+  },
+  {
+    "dcb": "tartarato de metoprolol",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "C07AB02"
+  },
+  {
+    "dcb": "conclusão acetato de hidrocortisona",
+    "concentracao": "10 mg/g (1%)",
+    "formaFarmaceutica": "creme",
+    "componente": "Básico",
+    "codigoAtc": "D07AA02"
+  },
+  {
+    "dcb": "aciclovir",
+    "concentracao": "50 mg/g (5%)",
+    "formaFarmaceutica": "creme",
+    "componente": "Básico",
+    "codigoAtc": "D06BB03"
+  },
+  {
+    "dcb": "ácido salicílico (FN) 50 mg/g (5%)",
+    "concentracao": "-",
+    "formaFarmaceutica": "pomada",
+    "componente": "Especializado",
+    "codigoAtc": "D05BB02"
+  },
+  {
+    "dcb": "ácido salicílico (FN) 50 mg/g (5%)",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "D05BB02"
+  },
+  {
+    "dcb": "alcatrão mineral (FN) 10 mg/g (1%)",
+    "concentracao": "-",
+    "formaFarmaceutica": "pomada",
+    "componente": "Insumos",
+    "codigoAtc": "D08AX08"
+  },
+  {
+    "dcb": "alcatrão mineral (FN) 10 mg/g (1%)",
+    "concentracao": "70%",
+    "formaFarmaceutica": "gel",
+    "componente": "Insumos",
+    "codigoAtc": "D08AX08"
+  },
+  {
+    "dcb": "calcipotriol",
+    "concentracao": "50 mcg/g (0,005%)",
+    "formaFarmaceutica": "pomada",
+    "componente": "Especializado",
+    "codigoAtc": "D05AX02"
+  },
+  {
+    "dcb": "cetoconazol",
+    "concentracao": "20 mg/mL (2%) xampu",
+    "formaFarmaceutica": "-",
+    "componente": "Básico",
+    "codigoAtc": "D01AC08"
+  },
+  {
+    "dcb": "cloridrato de lidocaína",
+    "concentracao": "20 mg/g (2%)",
+    "formaFarmaceutica": "gel",
+    "componente": "Básico",
+    "codigoAtc": "D04AB01"
+  },
+  {
+    "dcb": "dexametasona",
+    "concentracao": "1 mg/g (0,1%)",
+    "formaFarmaceutica": "creme",
+    "componente": "Básico",
+    "codigoAtc": "D07AB19"
+  },
+  {
+    "dcb": "digliconato de clorexidina",
+    "concentracao": "2% a 4%",
+    "formaFarmaceutica": "solução",
+    "componente": "Básico",
+    "codigoAtc": "D08AC02"
+  },
+  {
+    "dcb": "fosfato de clindamicina",
+    "concentracao": "10 mg/g",
+    "formaFarmaceutica": "solução",
+    "componente": "Básico",
+    "codigoAtc": "D10AF01"
+  },
+  {
+    "dcb": "fosfato de clindamicina",
+    "concentracao": "10 mg/g",
+    "formaFarmaceutica": "gel",
+    "componente": "Básico",
+    "codigoAtc": "D10AF01"
+  },
+  {
+    "dcb": "imiquimode",
+    "concentracao": "50 mg/g",
+    "formaFarmaceutica": "creme",
+    "componente": "Básico",
+    "codigoAtc": "D06BB10"
+  },
+  {
+    "dcb": "isotretinoína",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "D10BA01"
+  },
+  {
+    "dcb": "isotretinoína",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "D10BA01"
+  },
+  {
+    "dcb": "nitrato de miconazol",
+    "concentracao": "2% (20 mg/g) loção",
+    "formaFarmaceutica": "-",
+    "componente": "Básico",
+    "codigoAtc": "D01AC02"
+  },
+  {
+    "dcb": "nitrato de miconazol",
+    "concentracao": "2% (20 mg/g) pó",
+    "formaFarmaceutica": "-",
+    "componente": "Básico",
+    "codigoAtc": "D01AC02"
+  },
+  {
+    "dcb": "nitrato de miconazol",
+    "concentracao": "2% (20 mg/g)",
+    "formaFarmaceutica": "creme",
+    "componente": "Básico",
+    "codigoAtc": "D01AC02"
+  },
+  {
+    "dcb": "pasta de óxido de zinco (FN) 250 mg/g (25%) pasta Básico D02AB permanganato de potássio 100 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "D08AX06"
+  },
+  {
+    "dcb": "pasta de óxido de zinco (FN) 250 mg/g (25%) pasta Básico D02AB permanganato de potássio 100 mg",
+    "concentracao": "100 mg (FN) pó",
+    "formaFarmaceutica": "-",
+    "componente": "Básico",
+    "codigoAtc": "D08AX06"
+  },
+  {
+    "dcb": "peróxido de benzoíla (FN) 25 mg/g (2,5%)",
+    "concentracao": "-",
+    "formaFarmaceutica": "gel",
+    "componente": "Básico",
+    "codigoAtc": "D10AE01"
+  },
+  {
+    "dcb": "peróxido de benzoíla (FN) 25 mg/g (2,5%)",
+    "concentracao": "50 mg/g (5%)",
+    "formaFarmaceutica": "gel",
+    "componente": "Básico",
+    "codigoAtc": "D10AE01"
+  },
+  {
+    "dcb": "podofilina (FN) 100 mg/mL (10%) a 250 mg/mL (25%)",
+    "concentracao": "-",
+    "formaFarmaceutica": "solução",
+    "componente": "Básico",
+    "codigoAtc": "D06BB04"
+  },
+  {
+    "dcb": "propionato de clobetasol",
+    "concentracao": "0,5 mg/g",
+    "formaFarmaceutica": "creme",
+    "componente": "Especializado",
+    "codigoAtc": "D07AD01"
+  },
+  {
+    "dcb": "propionato de clobetasol",
+    "concentracao": "0,5 mg/g",
+    "formaFarmaceutica": "solução",
+    "componente": "Especializado",
+    "codigoAtc": "D07AD01"
+  },
+  {
+    "dcb": "sulfadiazina de prata",
+    "concentracao": "10 mg/g (1%)",
+    "formaFarmaceutica": "creme",
+    "componente": "Básico",
+    "codigoAtc": "D06BA01"
+  },
+  {
+    "dcb": "conclusão acetato de medroxiprogesterona",
+    "concentracao": "50 mg/mL",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Básico",
+    "codigoAtc": "G03AC06"
+  },
+  {
+    "dcb": "conclusão acetato de medroxiprogesterona",
+    "concentracao": "150 mg/mL",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Básico",
+    "codigoAtc": "G03AC06"
+  },
+  {
+    "dcb": "conclusão acetato de medroxiprogesterona",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "G03DA02"
+  },
+  {
+    "dcb": "acetato de medroxiprogesterona + cipionato de estradiol",
+    "concentracao": "25 mg/0,5 mL + 5 mg/ 0,5 mL",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Básico",
+    "codigoAtc": "G03AA17"
+  },
+  {
+    "dcb": "acetato de ciproterona",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "G03HA01"
+  },
+  {
+    "dcb": "algestona acetofenida + enantato de estradiol",
+    "concentracao": "150 mg/mL + 10 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "G02CB03"
+  },
+  {
+    "dcb": "cloridrato de raloxifeno",
+    "concentracao": "60 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "G03XC01"
+  },
+  {
+    "dcb": "danazol",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "G03XA01"
+  },
+  {
+    "dcb": "danazol",
+    "concentracao": "200 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "G03XA01"
+  },
+  {
+    "dcb": "dispositivo intrauterino plástico com cobre (DIU) - modelo T 380 mm2",
+    "concentracao": "-",
+    "formaFarmaceutica": "-",
+    "componente": "Insumos",
+    "codigoAtc": "G02BA02"
+  },
+  {
+    "dcb": "enantato de noretisterona + valerato de estradiol",
+    "concentracao": "50 mg/mL + 5 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "G03FA01"
+  },
+  {
+    "dcb": "estriol",
+    "concentracao": "1 mg/g",
+    "formaFarmaceutica": "creme",
+    "componente": "Básico",
+    "codigoAtc": "G03CA04"
+  },
+  {
+    "dcb": "estrogênios conjugados",
+    "concentracao": "0,625 mg/g",
+    "formaFarmaceutica": "creme",
+    "componente": "Básico",
+    "codigoAtc": "G03CA57"
+  },
+  {
+    "dcb": "estrogênios conjugados",
+    "concentracao": "0,3 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "G03CA57"
+  },
+  {
+    "dcb": "estrogênios conjugados",
+    "concentracao": "0,625 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "G03CA57"
+  },
+  {
+    "dcb": "etinilestradiol + levonorgestrel",
+    "concentracao": "0,03 mg + 0,15 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "G03AA07"
+  },
+  {
+    "dcb": "finasterida",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "G04CB01"
+  },
+  {
+    "dcb": "levonorgestrel",
+    "concentracao": "0,75 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "G03AC03"
+  },
+  {
+    "dcb": "levonorgestrel",
+    "concentracao": "1,5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "G03AC03"
+  },
+  {
+    "dcb": "mesilato de bromocriptina",
+    "concentracao": "2,5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "G02CB01"
+  },
+  {
+    "dcb": "metronidazol",
+    "concentracao": "100 mg/g (10%)",
+    "formaFarmaceutica": "gel",
+    "componente": "Básico",
+    "codigoAtc": "G01AF01"
+  },
+  {
+    "dcb": "misoprostol",
+    "concentracao": "25 mcg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "G02AD06"
+  },
+  {
+    "dcb": "misoprostol",
+    "concentracao": "200 mcg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "G02AD06"
+  },
+  {
+    "dcb": "nitrato de miconazol",
+    "concentracao": "2% (20 mg/g)",
+    "formaFarmaceutica": "creme",
+    "componente": "Básico",
+    "codigoAtc": "G01AF04"
+  },
+  {
+    "dcb": "noretisterona",
+    "concentracao": "0,35 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "G03AC01"
+  },
+  {
+    "dcb": "conclusão , excluindo hormônios sexuais e insulinas acetato de betametasona + fosfato dissódico de betametasona",
+    "concentracao": "3 mg/mL + 3 mg/mL",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Básico",
+    "codigoAtc": "H02AB01"
+  },
+  {
+    "dcb": "acetato de desmopressina",
+    "concentracao": "0,1 mg/mL",
+    "formaFarmaceutica": "solução",
+    "componente": "Especializado",
+    "codigoAtc": "H01BA02"
+  },
+  {
+    "dcb": "acetato de desmopressina",
+    "concentracao": "4 mcg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "H01BA02"
+  },
+  {
+    "dcb": "acetato de desmopressina",
+    "concentracao": "15 mcg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "H01BA02"
+  },
+  {
+    "dcb": "acetato de desmopressina",
+    "concentracao": "0,1 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "H01BA02"
+  },
+  {
+    "dcb": "acetato de desmopressina",
+    "concentracao": "0,2 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "H01BA02"
+  },
+  {
+    "dcb": "acetato de fludrocortisona",
+    "concentracao": "0,1 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "H02AA02"
+  },
+  {
+    "dcb": "acetato de lanreotida",
+    "concentracao": "60 mg",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01CB03"
+  },
+  {
+    "dcb": "acetato de lanreotida",
+    "concentracao": "90 mg",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01CB03"
+  },
+  {
+    "dcb": "acetato de lanreotida",
+    "concentracao": "120 mg",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01CB03"
+  },
+  {
+    "dcb": "acetato de octreotida",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01CB02"
+  },
+  {
+    "dcb": "acetato de octreotida",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01CB02"
+  },
+  {
+    "dcb": "acetato de octreotida",
+    "concentracao": "30 mg",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01CB02"
+  },
+  {
+    "dcb": "acetato de octreotida",
+    "concentracao": "0,1 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01CB02"
+  },
+  {
+    "dcb": "calcitonina",
+    "concentracao": "200 UI/dose",
+    "formaFarmaceutica": "solução",
+    "componente": "Especializado",
+    "codigoAtc": "H05BA01"
+  },
+  {
+    "dcb": "dexametasona",
+    "concentracao": "4 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "H02AB02"
+  },
+  {
+    "dcb": "dexametasona",
+    "concentracao": "0,1 mg/mL",
+    "formaFarmaceutica": "elixir",
+    "componente": "Básico",
+    "codigoAtc": "H02AB02"
+  },
+  {
+    "dcb": "dexametasona",
+    "concentracao": "4 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "H02AB02"
+  },
+  {
+    "dcb": "cloridrato de cinacalcete",
+    "concentracao": "30 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "H05BX01"
+  },
+  {
+    "dcb": "cloridrato de cinacalcete",
+    "concentracao": "60 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "H05BX01"
+  },
+  {
+    "dcb": "fosfato sódico de prednisolona",
+    "concentracao": "1 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "H02AB06"
+  },
+  {
+    "dcb": "fosfato sódico de prednisolona",
+    "concentracao": "3 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "H02AB06"
+  },
+  {
+    "dcb": "iodo + iodeto de potássio",
+    "concentracao": "20 mg/mL + 40 mg/mL",
+    "formaFarmaceutica": "solução",
+    "componente": "Insumos",
+    "codigoAtc": "H03AA01"
+  },
+  {
+    "dcb": "iodo + iodeto de potássio",
+    "concentracao": "25 mcg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "H03AA01"
+  },
+  {
+    "dcb": "iodo + iodeto de potássio",
+    "concentracao": "37,5 mcg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "H03AA01"
+  },
+  {
+    "dcb": "iodo + iodeto de potássio",
+    "concentracao": "50 mcg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "H03AA01"
+  },
+  {
+    "dcb": "iodo + iodeto de potássio",
+    "concentracao": "100 mcg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "H03AA01"
+  },
+  {
+    "dcb": "pamoato de pasireotida",
+    "concentracao": "40 mg",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01CB05"
+  },
+  {
+    "dcb": "pamoato de pasireotida",
+    "concentracao": "60 mg",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01CB05"
+  },
+  {
+    "dcb": "paricalcitol",
+    "concentracao": "5 mcg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H05BX02"
+  },
+  {
+    "dcb": "prednisona",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "H02AB07"
+  },
+  {
+    "dcb": "prednisona",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "H02AB07"
+  },
+  {
+    "dcb": "propiltiouracila",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "H03BA02"
+  },
+  {
+    "dcb": "somatropina",
+    "concentracao": "4 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01AC01"
+  },
+  {
+    "dcb": "somatropina",
+    "concentracao": "4 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01AC01"
+  },
+  {
+    "dcb": "somatropina",
+    "concentracao": "12 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01AC01"
+  },
+  {
+    "dcb": "somatropina",
+    "concentracao": "12 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01AC01"
+  },
+  {
+    "dcb": "somatropina",
+    "concentracao": "15 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01AC01"
+  },
+  {
+    "dcb": "somatropina",
+    "concentracao": "15 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01AC01"
+  },
+  {
+    "dcb": "somatropina",
+    "concentracao": "16 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01AC01"
+  },
+  {
+    "dcb": "somatropina",
+    "concentracao": "16 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01AC01"
+  },
+  {
+    "dcb": "somatropina",
+    "concentracao": "18 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01AC01"
+  },
+  {
+    "dcb": "somatropina",
+    "concentracao": "18 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01AC01"
+  },
+  {
+    "dcb": "somatropina",
+    "concentracao": "24 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01AC01"
+  },
+  {
+    "dcb": "somatropina",
+    "concentracao": "24 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01AC01"
+  },
+  {
+    "dcb": "somatropina",
+    "concentracao": "30 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01AC01"
+  },
+  {
+    "dcb": "somatropina",
+    "concentracao": "30 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "H01AC01"
+  },
+  {
+    "dcb": "succinato sódico de metilprednisolona",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "H02AB04"
+  },
+  {
+    "dcb": "succinato sódico de hidrocortisona",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "H02AB09"
+  },
+  {
+    "dcb": "succinato sódico de hidrocortisona",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "H02AB09"
+  },
+  {
+    "dcb": "tiamazol",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "H03BB02"
+  },
+  {
+    "dcb": "tiamazol",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "H03BB02"
+  },
+  {
+    "dcb": "conclusão Classificação AWaRe aciclovir 200 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "J05AB01"
+  },
+  {
+    "dcb": "conclusão Classificação AWaRe aciclovir 200 mg",
+    "concentracao": "- 250 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "J05AB01"
+  },
+  {
+    "dcb": "conclusão Classificação AWaRe aciclovir 200 mg",
+    "concentracao": "- ácido paraminossalicílico 4 g",
+    "formaFarmaceutica": "granulado",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AA01"
+  },
+  {
+    "dcb": "conclusão Classificação AWaRe aciclovir 200 mg",
+    "concentracao": "- amoxicilina 50 mg/mL",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "J01CA04"
+  },
+  {
+    "dcb": "Acesso 500 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "J01CA04"
+  },
+  {
+    "dcb": "Acesso 500 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "J01CA04"
+  },
+  {
+    "dcb": "Acesso amoxicilina + clavulanato de potássio 50 mg/mL + 12,5 mg/mL",
+    "concentracao": "-",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "J01CR02"
+  },
+  {
+    "dcb": "Acesso 500 mg + 125 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "J01CR02"
+  },
+  {
+    "dcb": "Acesso anfotericina B (complexo lipídico) 5 mg/mL",
+    "concentracao": "-",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J02AA01"
+  },
+  {
+    "dcb": "Acesso anfotericina B (complexo lipídico) 5 mg/mL",
+    "concentracao": "- anfotericina B (desoxicolato) 50 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J02AA01"
+  },
+  {
+    "dcb": "Acesso anfotericina B (complexo lipídico) 5 mg/mL",
+    "concentracao": "- Classificação AWaRe anfotericina B (lipossomal) 50 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J02AA01"
+  },
+  {
+    "dcb": "Acesso anfotericina B (complexo lipídico) 5 mg/mL",
+    "concentracao": "- anidulafungina 100 mg pó liofilizado para",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J02AX06"
+  },
+  {
+    "dcb": "Acesso anfotericina B (complexo lipídico) 5 mg/mL",
+    "concentracao": "- azitromicina 250 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J01FA10"
+  },
+  {
+    "dcb": "Alerta 500 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J01FA10"
+  },
+  {
+    "dcb": "Alerta 40 mg/mL",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para suspensão oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J01FA10"
+  },
+  {
+    "dcb": "Alerta bedaquilina 100 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AK05"
+  },
+  {
+    "dcb": "Alerta bedaquilina 100 mg",
+    "concentracao": "- benzilpenicilina benzatina 600.000 UI",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Básico",
+    "codigoAtc": "J01CE08"
+  },
+  {
+    "dcb": "Acesso 600.000 UI",
+    "concentracao": "-",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Básico",
+    "codigoAtc": "J01CE08"
+  },
+  {
+    "dcb": "Acesso 1.200.000 UI",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J01CE08"
+  },
+  {
+    "dcb": "Acesso 1.200.000 UI",
+    "concentracao": "-",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J01CE08"
+  },
+  {
+    "dcb": "Acesso Classificação AWaRe benzilpenicilina potássica 5.000.000 UI",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J01CE01"
+  },
+  {
+    "dcb": "Acesso benzilpenicilina procaína + benzilpenicilina potássica 300.000 UI + 100.000 UI",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Básico",
+    "codigoAtc": "J01CE30"
+  },
+  {
+    "dcb": "Acesso capreomicina 1 g",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AB30"
+  },
+  {
+    "dcb": "Acesso capreomicina 1 g",
+    "concentracao": "- cefalexina 500 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "J01DB01"
+  },
+  {
+    "dcb": "Acesso 500 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "J01DB01"
+  },
+  {
+    "dcb": "Acesso 50 mg/mL",
+    "concentracao": "-",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "J01DB01"
+  },
+  {
+    "dcb": "Acesso cefotaxima sódica 500 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "J01DD01"
+  },
+  {
+    "dcb": "Alerta ceftriaxona 250 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "J01DD04"
+  },
+  {
+    "dcb": "Alerta 500 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "J01DD04"
+  },
+  {
+    "dcb": "Alerta Classificação AWaRe ceftriaxona 1 g",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "J01DD04"
+  },
+  {
+    "dcb": "Alerta ciprofloxacino 250 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "J01MA02"
+  },
+  {
+    "dcb": "Alerta 500 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "J01MA02"
+  },
+  {
+    "dcb": "Alerta claritromicina 50 mg/mL grânulo para",
+    "concentracao": "-",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "J01FA09"
+  },
+  {
+    "dcb": "Alerta 500 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J01FA09"
+  },
+  {
+    "dcb": "Alerta 250 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "J01FA09"
+  },
+  {
+    "dcb": "Alerta 500 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J01FA09"
+  },
+  {
+    "dcb": "Alerta clofazimina 50 mg*",
+    "concentracao": "-",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J04BA01"
+  },
+  {
+    "dcb": "Alerta clofazimina 50 mg*",
+    "concentracao": "- 100 mg*",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J04BA01"
+  },
+  {
+    "dcb": "Alerta clofazimina 50 mg*",
+    "concentracao": "- Classificação AWaRe cloranfenicol 250 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "J01BA01"
+  },
+  {
+    "dcb": "Acesso 250 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "J01BA01"
+  },
+  {
+    "dcb": "Acesso 25 mg/mL",
+    "concentracao": "-",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J01BA01"
+  },
+  {
+    "dcb": "Acesso cloridrato de clindamicina 150 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "J01FF01"
+  },
+  {
+    "dcb": "Acesso 300 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "J01FF01"
+  },
+  {
+    "dcb": "Acesso cloridrato de etambutol 400 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AK02"
+  },
+  {
+    "dcb": "Acesso cloridrato de etambutol 400 mg",
+    "concentracao": "- cloridrato de minociclina 100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J01AA08"
+  },
+  {
+    "dcb": "Alerta cloridrato de moxifloxacino 400 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J01MA14"
+  },
+  {
+    "dcb": "Alerta cloridrato de tetraciclina 500 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "J01AA07"
+  },
+  {
+    "dcb": "Acesso colistimetato de sódio 1.000.000 UI (80 mg)",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução para infusão",
+    "componente": "Especializado",
+    "codigoAtc": "J01XB01"
+  },
+  {
+    "dcb": "Reservado Classificação AWaRe colistimetato de sódio 2.000.000 UI (160 mg)",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução para infusão",
+    "componente": "Especializado",
+    "codigoAtc": "J01XB01"
+  },
+  {
+    "dcb": "Reservado daclatasvir 30 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AP07"
+  },
+  {
+    "dcb": "Reservado daclatasvir 30 mg",
+    "concentracao": "- 60 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AP07"
+  },
+  {
+    "dcb": "Reservado daclatasvir 30 mg",
+    "concentracao": "- dapsona* 50 mg*",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04BA02"
+  },
+  {
+    "dcb": "Reservado daclatasvir 30 mg",
+    "concentracao": "- 100 mg*",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04BA02"
+  },
+  {
+    "dcb": "Reservado daclatasvir 30 mg",
+    "concentracao": "- darunavir 75 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AE10"
+  },
+  {
+    "dcb": "Reservado daclatasvir 30 mg",
+    "concentracao": "- 150 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AE10"
+  },
+  {
+    "dcb": "Reservado daclatasvir 30 mg",
+    "concentracao": "- 600 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AE10"
+  },
+  {
+    "dcb": "Reservado daclatasvir 30 mg",
+    "concentracao": "- 800 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AE10"
+  },
+  {
+    "dcb": "Reservado daclatasvir 30 mg",
+    "concentracao": "- delamanida 50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AK06"
+  },
+  {
+    "dcb": "Reservado daclatasvir 30 mg",
+    "concentracao": "- Classificação AWaRe dolutegravir sódico 5mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AJ03"
+  },
+  {
+    "dcb": "Reservado daclatasvir 30 mg",
+    "concentracao": "- 50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AJ03"
+  },
+  {
+    "dcb": "Reservado daclatasvir 30 mg",
+    "concentracao": "- dolutegravir sódico + lamivudina 50 mg + 300 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AR25"
+  },
+  {
+    "dcb": "Reservado daclatasvir 30 mg",
+    "concentracao": "- doxiciclina 100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J01AA02"
+  },
+  {
+    "dcb": "Acesso 100 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J01AA02"
+  },
+  {
+    "dcb": "Acesso 100 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J01AA02"
+  },
+  {
+    "dcb": "Acesso efavirenz 600 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AG03"
+  },
+  {
+    "dcb": "Acesso efavirenz 600 mg",
+    "concentracao": "- 200 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AG03"
+  },
+  {
+    "dcb": "Acesso efavirenz 600 mg",
+    "concentracao": "- 30 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AG03"
+  },
+  {
+    "dcb": "Acesso efavirenz 600 mg",
+    "concentracao": "- elbasvir + grazoprevir monidratado 50 mg + 100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AP54"
+  },
+  {
+    "dcb": "Acesso efavirenz 600 mg",
+    "concentracao": "- Classificação AWaRe enfuvirtida 108 mg (90 mg/mL após reconstituição)",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AX07"
+  },
+  {
+    "dcb": "Acesso efavirenz 600 mg",
+    "concentracao": "- entecavir 0,5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AF10"
+  },
+  {
+    "dcb": "Acesso efavirenz 600 mg",
+    "concentracao": "- 1 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AF10"
+  },
+  {
+    "dcb": "Acesso efavirenz 600 mg",
+    "concentracao": "- espiramicina 1.500.000 UI",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J01FA02"
+  },
+  {
+    "dcb": "Alerta estolato de eritromicina 25 mg/mL",
+    "concentracao": "-",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "J01FA01"
+  },
+  {
+    "dcb": "Alerta 500 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J01FA01"
+  },
+  {
+    "dcb": "Alerta 50 mg/mL",
+    "concentracao": "-",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J01FA01"
+  },
+  {
+    "dcb": "Alerta etionamida 250 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AD03"
+  },
+  {
+    "dcb": "Alerta etionamida 250 mg",
+    "concentracao": "- etravirina 100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AG04"
+  },
+  {
+    "dcb": "Alerta etionamida 250 mg",
+    "concentracao": "- 200 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AG04"
+  },
+  {
+    "dcb": "Alerta etionamida 250 mg",
+    "concentracao": "- fenoximetilpenicili- na potássica 80.000 UI/mL",
+    "formaFarmaceutica": "pó para solução",
+    "componente": "Estratégico",
+    "codigoAtc": "J01CE02"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J02AX01"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- Classificação AWaRe fluconazol 150 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "J02AC01"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 10 mg/mL",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "J02AC01"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 100 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "J02AC01"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 2 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J02AC01"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- fosamprenavir 50 mg/mL",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AE07"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- fosfato de oseltamivir 30 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AH02"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 45 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AH02"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 75 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AH02"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- fostensavir trometamol 600 mg",
+    "formaFarmaceutica": "comprimido de liberação prolongada",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AX29"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- fumarato de tenofovir desoproxila 300 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AF07"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- fumarato de tenofovir desoproxila + entricitabina 300 mg + 200 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AR03"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- Classificação AWaRe fumarato de tenofovir desoproxila + lamivudina 300 mg + 300 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AR12"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- fumarato de tenofovir desoproxila + lamivudina + efavirenz 300 mg + 300 mg + 600 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AR11"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- glecaprevir + pibrentasvir 100 mg + 40 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AP57"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- hemifumarato de tenofovir alafenamida 25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AF13"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- imunoglobulina anti-Rho (D) -",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "J06BB01"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- imunoglobulina antitetânica 250 UI/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06BB02"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- Classificação AWaRe imunoglobulina humana 0,5 g",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "J06BA02"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 0,5 g",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "J06BA02"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 2,5 g",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "J06BA02"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 2,5 g",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "J06BA02"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 5 g",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "J06BA02"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 5g",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "J06BA02"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 1 g",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "J06BA02"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 1 g",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "J06BA02"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- Denominação Comum Brasileira (DCB) Concentração/ Composição Forma Farmacêutica Componente de Financiamento da Assistência Farmacêutica Código ATC Classificação AWaRe imunoglobulina humana anti- -hepatite B 100 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06BB04"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 180 - 200 UI/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06BB04"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 500 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06BB04"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 600 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06BB04"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 1.000 UI",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06BB04"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- imunoglobulina humana antirrábica 150 UI/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06BB05"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- imunoglobulina humana antivaricela zoster 125 UI/2,5 mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06BB03"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- isoniazida 100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AC01"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 300 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AC01"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- itraconazol 10 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "J02AC02"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 100 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J02AC02"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- Classificação AWaRe lamivudina 10 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AF05"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- 150 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AF05"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- ledipasvir + sofosbovir 90 mg + 400 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AP51"
+  },
+  {
+    "dcb": "Acesso flucitosina 500 mg",
+    "concentracao": "- levofloxacino 250 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J01MA12"
+  },
+  {
+    "dcb": "Alerta 500 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J01MA12"
+  },
+  {
+    "dcb": "Alerta linezolida 600 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J01XX08"
+  },
+  {
+    "dcb": "Reservado 2 mg/mL",
+    "concentracao": "-",
+    "formaFarmaceutica": "solução para infusão",
+    "componente": "Estratégico",
+    "codigoAtc": "J01XX08"
+  },
+  {
+    "dcb": "Reservado lopinavir + ritonavir 200 mg + 50 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AR10"
+  },
+  {
+    "dcb": "Reservado lopinavir + ritonavir 200 mg + 50 mg",
+    "concentracao": "- lopinavir + ritonavir 80 mg/mL + 20 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AR10"
+  },
+  {
+    "dcb": "Reservado lopinavir + ritonavir 200 mg + 50 mg",
+    "concentracao": "- 100 mg + 25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AR10"
+  },
+  {
+    "dcb": "Reservado lopinavir + ritonavir 200 mg + 50 mg",
+    "concentracao": "- maraviroque 150 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AX09"
+  },
+  {
+    "dcb": "Reservado lopinavir + ritonavir 200 mg + 50 mg",
+    "concentracao": "- metronidazol 250 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "J01XD01"
+  },
+  {
+    "dcb": "Acesso 400 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "J01XD01"
+  },
+  {
+    "dcb": "Acesso Classificação AWaRe nevirapina 200 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AG01"
+  },
+  {
+    "dcb": "Acesso Classificação AWaRe nevirapina 200 mg",
+    "concentracao": "- 10 mg/mL",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AG01"
+  },
+  {
+    "dcb": "Acesso Classificação AWaRe nevirapina 200 mg",
+    "concentracao": "- nirmatrelvir + ritonavir 150 mg + 100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AE30"
+  },
+  {
+    "dcb": "Acesso Classificação AWaRe nevirapina 200 mg",
+    "concentracao": "- nitrofurantoína 100 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "J01XE01"
+  },
+  {
+    "dcb": "Acesso 5 mg/mL",
+    "concentracao": "-",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "J01XE01"
+  },
+  {
+    "dcb": "Acesso ofloxacino 400 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J01MA01"
+  },
+  {
+    "dcb": "Alerta palivizumabe 100 mg/mL (frasco de 0,5 mL e 1 mL)",
+    "concentracao": "-",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06BD01"
+  },
+  {
+    "dcb": "Alerta palivizumabe 100 mg/mL (frasco de 0,5 mL e 1 mL)",
+    "concentracao": "- pirazinamida 500 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AK01"
+  },
+  {
+    "dcb": "Alerta palivizumabe 100 mg/mL (frasco de 0,5 mL e 1 mL)",
+    "concentracao": "- 30 mg/mL (3%)",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AK01"
+  },
+  {
+    "dcb": "Alerta palivizumabe 100 mg/mL (frasco de 0,5 mL e 1 mL)",
+    "concentracao": "- 150 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AK01"
+  },
+  {
+    "dcb": "Alerta palivizumabe 100 mg/mL (frasco de 0,5 mL e 1 mL)",
+    "concentracao": "- pretomanida 200 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AK08"
+  },
+  {
+    "dcb": "Alerta palivizumabe 100 mg/mL (frasco de 0,5 mL e 1 mL)",
+    "concentracao": "- Classificação AWaRe raltegravir potássico 100 mg",
+    "formaFarmaceutica": "granulado",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AJ01"
+  },
+  {
+    "dcb": "Alerta palivizumabe 100 mg/mL (frasco de 0,5 mL e 1 mL)",
+    "concentracao": "- 100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AJ01"
+  },
+  {
+    "dcb": "Alerta palivizumabe 100 mg/mL (frasco de 0,5 mL e 1 mL)",
+    "concentracao": "- 400 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AJ01"
+  },
+  {
+    "dcb": "Alerta palivizumabe 100 mg/mL (frasco de 0,5 mL e 1 mL)",
+    "concentracao": "- ribavirina 250 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AP01"
+  },
+  {
+    "dcb": "Alerta palivizumabe 100 mg/mL (frasco de 0,5 mL e 1 mL)",
+    "concentracao": "- rifabutina 150 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AB04"
+  },
+  {
+    "dcb": "Alerta rifampicina* 300 mg*",
+    "concentracao": "-",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AB02"
+  },
+  {
+    "dcb": "Alerta 150 mg*",
+    "concentracao": "-",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AB02"
+  },
+  {
+    "dcb": "Alerta 20mg/mL",
+    "concentracao": "-",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AB02"
+  },
+  {
+    "dcb": "Alerta rifampicina + isoniazida 150 mg + 75 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AM02"
+  },
+  {
+    "dcb": "Alerta 300 mg + 150 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AM02"
+  },
+  {
+    "dcb": "Alerta 75 mg + 50 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AM02"
+  },
+  {
+    "dcb": "Alerta Classificação AWaRe rifampicina + isoniazida + pirazinamida 75 mg + 50 mg + 150 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AM05"
+  },
+  {
+    "dcb": "Alerta rifampicina + isoniazida + pirazinamida + cloridrato de etambutol 150 mg + 75 mg + 400 mg + 275 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AM06"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AB05"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "- rifapentina + isoniazida 300 mg + 300 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AB05"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "- ritonavir 100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AE03"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "- sofosbuvir 400 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AP08"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "- sofosbuvir + velpatasvir 400 mg + 100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AP55"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "- sofosbuvir + velpatasvir + voxilaprevir 400 mg + 100 mg + 100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AP56"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "- Classificação AWaRe soro antiaracnídico ( Loxosceles, Phoneutria e Tityus ) cada mL contém imunoglobulinas que neutralizam, no mínimo, 1,5 Dose Mínima Mortal (DMM) de veneno de Tityus serrulatus (1,5 DMM/ mL), 1,5 DMM de veneno de Phoneutria nigriventer (1,5 DMM/mL) e 15 DMN (Dose Mínima Necrosante) de veneno de Loxosceles gaucho (15 DMN/mL)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06AA03"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "- Classificação AWaRe soro antibotrópico (pentavalente) e anticrotálico cada mL contém imunoglobulinas que neutralizam, no mínimo, 5 mg de veneno de Bothrops jararaca e a 1,5 mg de veneno de Crotalus durissus terrifcus (5 mg/ mL e 1,5 mg/mL)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06AA03"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "- soro antibotrópico (pentavalente) e antilaquético cada mL contém imunoglobulinas que neutralizam, no mínimo, 5 mg de veneno de Bothrops jararaca e 3 mg de veneno de Lachesis muta (5 mg/mL e 3 mg/mL)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06AA03"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "- Classificação AWaRe soro antibotulínico AB (bivalente) cada mL contém imunoglobulinas que neutralizam, no mínimo, 375 UI de toxina botulínica tipo A e 275 UI de toxina botulínica tipo B (375 UI/mL e 275 UI/mL)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06AA04"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "- soro anticrotálico cada mL contém imunoglobulinas que neutralizam, no mínimo, 1,5 mg de veneno Crotalus durissus terrificus (1,5 mg/mL)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06AA03"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "- soro antidiftérico cada mL contém imunoglobulinas que neutralizam, no mínimo, 1.000 UI de toxina diftérica (1.000 UI/mL)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06AA01"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "- Classificação AWaRe soro antielapídico (bivalente) cada mL contém imunoglobulinas que neutralizam, no mínimo, 1,5 mg de veneno de Micrurus frontalis (1,5 mg/mL)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06AA03"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "- soro antiescorpiônico cada mL contém imunoglobulinas que neutralizam, no mínimo 1,5 DMM (Dose Mínima Mortal) de veneno de Tityus serrulatus (1,5 DMM/mL)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06AA06"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "- soro antitetânico cada mL contém imunoglobulinas que neutralizam, no mínimo, 1.000 UI de toxina tetânica",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J06AA02"
+  },
+  {
+    "dcb": "Alerta rifapentina 150 mg",
+    "concentracao": "- sulfadiazina 500 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J01EC02"
+  },
+  {
+    "dcb": "Acesso Classificação AWaRe sulfametoxazol + trimetoprima 40 mg/mL + 8 mg/mL",
+    "concentracao": "-",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "J01EE01"
+  },
+  {
+    "dcb": "Acesso 80 mg/mL + 16 mg/mL",
+    "concentracao": "-",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "J01EE01"
+  },
+  {
+    "dcb": "Acesso 400 mg + 80 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "J01EE01"
+  },
+  {
+    "dcb": "Acesso sulfato de abacavir 20 mg/mL",
+    "concentracao": "-",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AF06"
+  },
+  {
+    "dcb": "Acesso sulfato de abacavir 20 mg/mL",
+    "concentracao": "- 300 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AF06"
+  },
+  {
+    "dcb": "Acesso sulfato de abacavir 20 mg/mL",
+    "concentracao": "- sulfato de amicacina 250 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J01GB06"
+  },
+  {
+    "dcb": "Acesso sulfato de atazanavir 300 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AE08"
+  },
+  {
+    "dcb": "Acesso sulfato de atazanavir 300 mg",
+    "concentracao": "- sulfato de estreptomicina 1 g",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J01GA01"
+  },
+  {
+    "dcb": "Alerta sulfato de gentamicina 40 mg/mL",
+    "concentracao": "-",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J01GB03"
+  },
+  {
+    "dcb": "Acesso sulfato de Isavuconazônio 100 mg",
+    "concentracao": "-",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J02AC05"
+  },
+  {
+    "dcb": "Acesso sulfato de Isavuconazônio 100 mg",
+    "concentracao": "- 200 mg pó liofilizado para",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J02AC05"
+  },
+  {
+    "dcb": "Acesso sulfato de Isavuconazônio 100 mg",
+    "concentracao": "- Classificação AWaRe terizidona 250 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J04AK03"
+  },
+  {
+    "dcb": "Acesso sulfato de Isavuconazônio 100 mg",
+    "concentracao": "- tipranavir 250 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AE09"
+  },
+  {
+    "dcb": "Acesso sulfato de Isavuconazônio 100 mg",
+    "concentracao": "- 100 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AE09"
+  },
+  {
+    "dcb": "Acesso sulfato de Isavuconazônio 100 mg",
+    "concentracao": "- tobramicina 300 mg",
+    "formaFarmaceutica": "solução",
+    "componente": "Especializado",
+    "codigoAtc": "J01GB01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "-",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07AM51"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina adsorvida difteria e tétano infantil -",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07AM51"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina adsorvida difteria, tétano e pertussis -",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07AJ51"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina adsorvida difteria, tétano e pertussis (acelular) adulto -",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07AJ51"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- Classificação AWaRe vacina adsorvida difteria, tétano e pertussis (acelular) infantil -",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07AJ51"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina adsorvida difteria, tétano, pertussis, hepatite B (recombinante) e Haemophilus influenzae B (conjugada) -",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07CA11"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina adsorvida hepatite A (inativada) adulto -",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07BC02"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina adsorvida hepatite A (inativada) infantil -",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07BC02"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina BCG -",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07AN01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- Classificação AWaRe vacina cólera (inativada) -",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J07AE01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina febre amarela (atenuada) -",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07BL01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina febre tifoide (polissacarídica) -",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07AP03"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina Haemophilus influenzae B (conjugada) -",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07AG01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina hepatite B (recombinante) -",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07BC01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina influenza trivalente (fragmentada, inativada) -",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07BB02"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina meningocócica ACWY (conjugada) -",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07AH08"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- Classificação AWaRe vacina meningocócica C (conjugada) -",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07AH07"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina papilomavírus humano 6, 11, 16 e 18 (recombinante) -",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07BM01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina pneumocócica 10-valente (conjugada) -",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07AL02"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina pneumocócica 13-valente (conjugada) -",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07AL02"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina pneumocócica 23-valente (polissacarídica) -",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07AL01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- Classificação AWaRe vacina poliomielite 1 e 3 (atenuada) -",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J07BF02"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina poliomielite 1, 2 e 3 (inativada) -",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07BF03"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina raiva (inativada) -",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07BG01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina rotavírus humano G1P [8] (atenuada) -",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J07BH01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina sarampo, caxumba, rubéola -",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07BD52"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina sarampo, caxumba, rubéola e varicela (atenuada) -",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07BD54"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- vacina varicela (atenuada) -",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J07BK01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- Classificação AWaRe voriconazol 200 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J02AC03"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- 200 mg pó liófilizado para injetável",
+    "formaFarmaceutica": "-",
+    "componente": "Estratégico",
+    "codigoAtc": "J02AC03"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- zanamivir 5 mg pó para inalação oral",
+    "formaFarmaceutica": "-",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AH01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- zidovudina 100 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AF01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- 10 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AF01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- 10 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AF01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- zidovudina + lamivudina 300 mg + 150 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "J05AR01"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "- * Disponível apenas no blíster da Poliquimioterapia Única (PQT-U), com outros medicamentos, para o esquema de tratamento da hanseníase. conclusão abatacepte 250 mg",
+    "formaFarmaceutica": "pó para solução para infusão",
+    "componente": "Especializado",
+    "codigoAtc": "L04AA24"
+  },
+  {
+    "dcb": "Alerta vacina adsorvida difteria e tétano adulto -",
+    "concentracao": "125 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L04AA24"
+  },
+  {
+    "dcb": "acetato de glatirâmer",
+    "concentracao": "20 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L03AX13"
+  },
+  {
+    "dcb": "acetato de glatirâmer",
+    "concentracao": "40 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L03AX13"
+  },
+  {
+    "dcb": "acetato de gosserrelina",
+    "concentracao": "3,6 mg",
+    "formaFarmaceutica": "implante",
+    "componente": "Especializado",
+    "codigoAtc": "L02AE03"
+  },
+  {
+    "dcb": "acetato de gosserrelina",
+    "concentracao": "10,8 mg",
+    "formaFarmaceutica": "implante",
+    "componente": "Especializado",
+    "codigoAtc": "L02AE03"
+  },
+  {
+    "dcb": "acetato de leuprorrelina",
+    "concentracao": "3,75 mg",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L02AE02"
+  },
+  {
+    "dcb": "acetato de leuprorrelina",
+    "concentracao": "11,25 mg",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L02AE02"
+  },
+  {
+    "dcb": "acetato de leuprorrelina",
+    "concentracao": "45 mg",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L02AE02"
+  },
+  {
+    "dcb": "adalimumabe",
+    "concentracao": "40 mg",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L04AB04"
+  },
+  {
+    "dcb": "alentuzumabe",
+    "concentracao": "10 mg/mL",
+    "formaFarmaceutica": "solução",
+    "componente": "Especializado",
+    "codigoAtc": "L04AG06"
+  },
+  {
+    "dcb": "alfainterferona",
+    "concentracao": "2b 3.000.000 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L03AB05"
+  },
+  {
+    "dcb": "alfainterferona",
+    "concentracao": "5.000.000 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L03AB05"
+  },
+  {
+    "dcb": "alfainterferona",
+    "concentracao": "10.000.000 UI",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L03AB05"
+  },
+  {
+    "dcb": "alfapeginterferona",
+    "concentracao": "2a 180 mcg",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "L03AB11"
+  },
+  {
+    "dcb": "alfapeginterferona",
+    "concentracao": "2b 118,4 microgramas (80 microgramas/ 0,5 mL após reconstituição)",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "L03AB10"
+  },
+  {
+    "dcb": "alfapeginterferona",
+    "concentracao": "148 microgramas (100 microgramas/ 0,5 mL após reconstituição)",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "L03AB10"
+  },
+  {
+    "dcb": "alfapeginterferona",
+    "concentracao": "177,6 microgramas (120 microgramas/ 0,5 mL após reconstituição)",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "L03AB10"
+  },
+  {
+    "dcb": "azatioprina",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "L04AX01"
+  },
+  {
+    "dcb": "baricitinibe",
+    "concentracao": "2 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "L04AF02"
+  },
+  {
+    "dcb": "baricitinibe",
+    "concentracao": "4 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "L04AF02"
+  },
+  {
+    "dcb": "basiliximabe",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "L04AC02"
+  },
+  {
+    "dcb": "betainterferona",
+    "concentracao": "1a 22 mcg (6.000.000 UI)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L03AB07"
+  },
+  {
+    "dcb": "betainterferona",
+    "concentracao": "30 mcg (6.000.000 UI)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L03AB07"
+  },
+  {
+    "dcb": "betainterferona",
+    "concentracao": "44 mcg (12.000.000 UI)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L03AB07"
+  },
+  {
+    "dcb": "betainterferona",
+    "concentracao": "1b 300 mcg (9.600.000 UI)",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L03AB08"
+  },
+  {
+    "dcb": "certolizumabe pegol",
+    "concentracao": "200 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L04AB05"
+  },
+  {
+    "dcb": "ciclofosfamida",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "L01AA01"
+  },
+  {
+    "dcb": "ciclosporina",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "L04AD01"
+  },
+  {
+    "dcb": "ciclosporina",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "L04AD01"
+  },
+  {
+    "dcb": "ciclosporina",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "L04AD01"
+  },
+  {
+    "dcb": "ciclosporina",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "L04AD01"
+  },
+  {
+    "dcb": "ciclosporina",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "L04AD01"
+  },
+  {
+    "dcb": "ciclosporina",
+    "concentracao": "100 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "L04AD01"
+  },
+  {
+    "dcb": "cladribina",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "L04AA40"
+  },
+  {
+    "dcb": "cloridrato de fingolimode",
+    "concentracao": "0,5 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "L04AE01"
+  },
+  {
+    "dcb": "daclizumabe",
+    "concentracao": "5 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "L04AC01"
+  },
+  {
+    "dcb": "eculizumabe",
+    "concentracao": "10 mg/mL",
+    "formaFarmaceutica": "solução",
+    "componente": "Especializado",
+    "codigoAtc": "L04AJ01"
+  },
+  {
+    "dcb": "embonato de triptorrelina",
+    "concentracao": "11,25 mg",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L02AE04"
+  },
+  {
+    "dcb": "embonato de triptorrelina",
+    "concentracao": "22,5 mg",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L02AE04"
+  },
+  {
+    "dcb": "etanercepte",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L04AB01"
+  },
+  {
+    "dcb": "etanercepte",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L04AB01"
+  },
+  {
+    "dcb": "everolimo",
+    "concentracao": "0,5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "L04AH02"
+  },
+  {
+    "dcb": "everolimo",
+    "concentracao": "0,75 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "L04AH02"
+  },
+  {
+    "dcb": "everolimo",
+    "concentracao": "1 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "L04AH02"
+  },
+  {
+    "dcb": "filgrastim",
+    "concentracao": "300 mcg",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L03AA02"
+  },
+  {
+    "dcb": "fumarato de dimetila",
+    "concentracao": "120 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "L04AX07"
+  },
+  {
+    "dcb": "fumarato de dimetila",
+    "concentracao": "240 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "L04AX07"
+  },
+  {
+    "dcb": "golimumabe",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L04AB06"
+  },
+  {
+    "dcb": "hidroxiureia",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "L01XX05"
+  },
+  {
+    "dcb": "hidroxiureia",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "L01XX05"
+  },
+  {
+    "dcb": "imunoglobulina antitimócitos humanos (coelho)",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "L04AA04"
+  },
+  {
+    "dcb": "infliximabe",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L04AB02"
+  },
+  {
+    "dcb": "leflunomida",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "L04AK01"
+  },
+  {
+    "dcb": "metotrexato",
+    "concentracao": "2,5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "L04AX03"
+  },
+  {
+    "dcb": "metotrexato",
+    "concentracao": "25 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L04AX03"
+  },
+  {
+    "dcb": "micofenolato de mofetila",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "L04AA06"
+  },
+  {
+    "dcb": "micofenolato de sódio",
+    "concentracao": "180 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "L04AA06"
+  },
+  {
+    "dcb": "micofenolato de sódio",
+    "concentracao": "360 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "L04AA06"
+  },
+  {
+    "dcb": "natalizumabe",
+    "concentracao": "20 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L04AG03"
+  },
+  {
+    "dcb": "ravulizumabe",
+    "concentracao": "100 mg/mL",
+    "formaFarmaceutica": "solução",
+    "componente": "Especializado",
+    "codigoAtc": "L04AJ02"
+  },
+  {
+    "dcb": "risanquizumabe",
+    "concentracao": "75 mg/ 0,83 mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L04AC18"
+  },
+  {
+    "dcb": "rituximabe",
+    "concentracao": "10 mg/mL",
+    "formaFarmaceutica": "solução",
+    "componente": "Especializado",
+    "codigoAtc": "L01FA01"
+  },
+  {
+    "dcb": "secuquinumabe",
+    "concentracao": "150 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L04AC10"
+  },
+  {
+    "dcb": "sirolimo",
+    "concentracao": "1 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "L04AH01"
+  },
+  {
+    "dcb": "sirolimo",
+    "concentracao": "1 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Hospitalar",
+    "codigoAtc": "L04AH01"
+  },
+  {
+    "dcb": "sirolimo",
+    "concentracao": "2 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "L04AH01"
+  },
+  {
+    "dcb": "tacrolimo",
+    "concentracao": "1 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "L04AD02"
+  },
+  {
+    "dcb": "tacrolimo",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado e Procedimento Hospitalar",
+    "codigoAtc": "L04AD02"
+  },
+  {
+    "dcb": "tacrolimo",
+    "concentracao": "5 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "L04AD02"
+  },
+  {
+    "dcb": "talidomida",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "L04AX02"
+  },
+  {
+    "dcb": "teriflunomida",
+    "concentracao": "14 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "L04AK02"
+  },
+  {
+    "dcb": "tocilizumabe",
+    "concentracao": "20 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L04AC07"
+  },
+  {
+    "dcb": "tofacitinibe",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "L04AF01"
+  },
+  {
+    "dcb": "triptorrelina",
+    "concentracao": "3,75 mg",
+    "formaFarmaceutica": "pó para suspensão injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L02AE04"
+  },
+  {
+    "dcb": "upadacitinibe",
+    "concentracao": "15 mg",
+    "formaFarmaceutica": "comprimido de liberação prolongada",
+    "componente": "Especializado",
+    "codigoAtc": "L04AF03"
+  },
+  {
+    "dcb": "ustequinumabe",
+    "concentracao": "45 mg",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L04AC05"
+  },
+  {
+    "dcb": "ustequinumabe",
+    "concentracao": "130 mg",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L04AC05"
+  },
+  {
+    "dcb": "vedolizumabe",
+    "concentracao": "300 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "L04AG05"
+  },
+  {
+    "dcb": "conclusão ácido zoledrônico",
+    "concentracao": "0,05 mg/mL",
+    "formaFarmaceutica": "solução para infusão",
+    "componente": "Especializado",
+    "codigoAtc": "M05BA08"
+  },
+  {
+    "dcb": "alendronato de sódio",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "M05BA04"
+  },
+  {
+    "dcb": "alendronato de sódio",
+    "concentracao": "70 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "M05BA04"
+  },
+  {
+    "dcb": "alopurinol",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "M04AA01"
+  },
+  {
+    "dcb": "alopurinol",
+    "concentracao": "300 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "M04AA01"
+  },
+  {
+    "dcb": "burosumabe",
+    "concentracao": "10 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "M05BX05"
+  },
+  {
+    "dcb": "burosumabe",
+    "concentracao": "20 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "M05BX05"
+  },
+  {
+    "dcb": "burosumabe",
+    "concentracao": "30 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "M05BX05"
+  },
+  {
+    "dcb": "ibuprofeno",
+    "concentracao": "200 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "M01AE01"
+  },
+  {
+    "dcb": "ibuprofeno",
+    "concentracao": "300 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "M01AE01"
+  },
+  {
+    "dcb": "ibuprofeno",
+    "concentracao": "600 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "M01AE01"
+  },
+  {
+    "dcb": "ibuprofeno",
+    "concentracao": "600 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "M01AE01"
+  },
+  {
+    "dcb": "ibuprofeno",
+    "concentracao": "50 mg/mL",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "M01AE01"
+  },
+  {
+    "dcb": "naproxeno",
+    "concentracao": "250 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "M01AE02"
+  },
+  {
+    "dcb": "naproxeno",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "M01AE02"
+  },
+  {
+    "dcb": "nusinersena",
+    "concentracao": "2,4 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "M09AX07"
+  },
+  {
+    "dcb": "onasemnogeno abeparvoveque",
+    "concentracao": "2,0 x 10 13 gv/mL",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Especializado",
+    "codigoAtc": "M09AX09"
+  },
+  {
+    "dcb": "pamidronato dissódico",
+    "concentracao": "60 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "M05BA03"
+  },
+  {
+    "dcb": "penicilamina",
+    "concentracao": "250 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "M01CC01"
+  },
+  {
+    "dcb": "risdiplam",
+    "concentracao": "0,75 mg/mL",
+    "formaFarmaceutica": "pó para solução",
+    "componente": "Especializado",
+    "codigoAtc": "M09AX10"
+  },
+  {
+    "dcb": "risedronato sódico",
+    "concentracao": "35 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "M05BA07"
+  },
+  {
+    "dcb": "romosozumabe",
+    "concentracao": "90 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "M05BX06"
+  },
+  {
+    "dcb": "toxina botulínica A 100 U",
+    "concentracao": "-",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "M03AX01"
+  },
+  {
+    "dcb": "toxina botulínica A 100 U",
+    "concentracao": "500 U",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "M03AX01"
+  },
+  {
+    "dcb": "conclusão ácido acetilsalicílico",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N02BA01"
+  },
+  {
+    "dcb": "ácido valproico",
+    "concentracao": "250 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "N03AG01"
+  },
+  {
+    "dcb": "ácido valproico",
+    "concentracao": "250 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N03AG01"
+  },
+  {
+    "dcb": "ácido valproico",
+    "concentracao": "300 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N03AG01"
+  },
+  {
+    "dcb": "ácido valproico",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N03AG01"
+  },
+  {
+    "dcb": "ácido valproico",
+    "concentracao": "50 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "N03AG01"
+  },
+  {
+    "dcb": "ácido valproico",
+    "concentracao": "50 mg/mL",
+    "formaFarmaceutica": "xarope",
+    "componente": "Básico",
+    "codigoAtc": "N03AG01"
+  },
+  {
+    "dcb": "brometo de piridostigmina",
+    "concentracao": "60 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N07AA02"
+  },
+  {
+    "dcb": "bromidrato de galantamina",
+    "concentracao": "8 mg",
+    "formaFarmaceutica": "cápsula de liberação prolongada",
+    "componente": "Especializado",
+    "codigoAtc": "N06DA04"
+  },
+  {
+    "dcb": "bromidrato de galantamina",
+    "concentracao": "16 mg",
+    "formaFarmaceutica": "cápsula de liberação prolongada",
+    "componente": "Especializado",
+    "codigoAtc": "N06DA04"
+  },
+  {
+    "dcb": "bromidrato de galantamina",
+    "concentracao": "24 mg",
+    "formaFarmaceutica": "cápsula de liberação prolongada",
+    "componente": "Especializado",
+    "codigoAtc": "N06DA04"
+  },
+  {
+    "dcb": "carbamazepina",
+    "concentracao": "200 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N03AF01"
+  },
+  {
+    "dcb": "carbamazepina",
+    "concentracao": "400 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N03AF01"
+  },
+  {
+    "dcb": "carbamazepina",
+    "concentracao": "20 mg/mL",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "N03AF01"
+  },
+  {
+    "dcb": "carbonato de lítio",
+    "concentracao": "300 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N05AN01"
+  },
+  {
+    "dcb": "clobazam",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N05BA09"
+  },
+  {
+    "dcb": "clobazam",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N05BA09"
+  },
+  {
+    "dcb": "clonazepam",
+    "concentracao": "2,5 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "N03AE01"
+  },
+  {
+    "dcb": "cloridrato de amantadina",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N04BB01"
+  },
+  {
+    "dcb": "cloridrato de amitriptilina",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N06AA09"
+  },
+  {
+    "dcb": "cloridrato de amitriptilina",
+    "concentracao": "75 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N06AA09"
+  },
+  {
+    "dcb": "cloridrato de biperideno",
+    "concentracao": "4 mg",
+    "formaFarmaceutica": "comprimido de liberação prolongada",
+    "componente": "Básico",
+    "codigoAtc": "N04AA02"
+  },
+  {
+    "dcb": "cloridrato de biperideno",
+    "concentracao": "2 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N04AA02"
+  },
+  {
+    "dcb": "cloridrato de bupivacaína",
+    "concentracao": "2,5 mg/mL (0,25%)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "N01BB01"
+  },
+  {
+    "dcb": "cloridrato de bupivacaína",
+    "concentracao": "5 mg/mL (0,50%)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "N01BB01"
+  },
+  {
+    "dcb": "cloridrato de bupropiona",
+    "concentracao": "150 mg",
+    "formaFarmaceutica": "comprimido de liberação prolongada",
+    "componente": "Estratégico",
+    "codigoAtc": "N06AX12"
+  },
+  {
+    "dcb": "cloridrato de clomipramina",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N06AA04"
+  },
+  {
+    "dcb": "cloridrato de clomipramina",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N06AA04"
+  },
+  {
+    "dcb": "cloridrato de clorpromazina",
+    "concentracao": "5 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "N05AA01"
+  },
+  {
+    "dcb": "cloridrato de clorpromazina",
+    "concentracao": "40 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "N05AA01"
+  },
+  {
+    "dcb": "cloridrato de clorpromazina",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N05AA01"
+  },
+  {
+    "dcb": "cloridrato de clorpromazina",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N05AA01"
+  },
+  {
+    "dcb": "cloridrato de donepezila",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N06DA02"
+  },
+  {
+    "dcb": "cloridrato de donepezila",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N06DA02"
+  },
+  {
+    "dcb": "cloridrato de fluoxetina",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "N06AB03"
+  },
+  {
+    "dcb": "cloridrato de fluoxetina",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N06AB03"
+  },
+  {
+    "dcb": "cloridrato de lidocaína",
+    "concentracao": "100 mg/mL (10%)",
+    "formaFarmaceutica": "solução",
+    "componente": "Básico",
+    "codigoAtc": "N01BB02"
+  },
+  {
+    "dcb": "cloridrato de lidocaína + glicose",
+    "concentracao": "50 mg/mL + 75 mg/mL (5% + 7,5%)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "N01BB52"
+  },
+  {
+    "dcb": "cloridrato de lidocaína + hemitartarato de epinefrina",
+    "concentracao": "2% + 1:200.000 (20 mg + 20 mcg/mL)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "N01BB52"
+  },
+  {
+    "dcb": "cloridrato de lidocaína + hemitartarato de epinefrina",
+    "concentracao": "2% + 1:80.000 (20 mg + 12,5 mcg/mL)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "N01BB52"
+  },
+  {
+    "dcb": "cloridrato de lidocaína + hemitartarato de epinefrina",
+    "concentracao": "1% + 1:200.000 (10 mg + 20 mcg/mL)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "N01BB52"
+  },
+  {
+    "dcb": "cloridrato de memantina",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N06DX01"
+  },
+  {
+    "dcb": "cloridrato de metadona",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N07BC02"
+  },
+  {
+    "dcb": "cloridrato de metadona",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N07BC02"
+  },
+  {
+    "dcb": "cloridrato de metadona",
+    "concentracao": "10 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "N07BC02"
+  },
+  {
+    "dcb": "cloridrato de nortriptilina",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "N06AA10"
+  },
+  {
+    "dcb": "cloridrato de nortriptilina",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "N06AA10"
+  },
+  {
+    "dcb": "cloridrato de nortriptilina",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "N06AA10"
+  },
+  {
+    "dcb": "cloridrato de nortriptilina",
+    "concentracao": "75 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "N06AA10"
+  },
+  {
+    "dcb": "cloridrato de prilocaína + felipressina",
+    "concentracao": "30 mg/mL (3%) + 0,03 UI/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "N01BB54"
+  },
+  {
+    "dcb": "cloridrato de selegilina",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N04BD01"
+  },
+  {
+    "dcb": "cloridrato de triexifenidil",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N04AA01"
+  },
+  {
+    "dcb": "cloridrato de ziprasidona",
+    "concentracao": "40 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "N05AE04"
+  },
+  {
+    "dcb": "cloridrato de ziprasidona",
+    "concentracao": "80 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "N05AE04"
+  },
+  {
+    "dcb": "clozapina",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N05AH02"
+  },
+  {
+    "dcb": "clozapina",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N05AH02"
+  },
+  {
+    "dcb": "diazepam",
+    "concentracao": "5 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "N05BA01"
+  },
+  {
+    "dcb": "diazepam",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N05BA01"
+  },
+  {
+    "dcb": "diazepam",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N05BA01"
+  },
+  {
+    "dcb": "dicloridrato de pramipexol",
+    "concentracao": "0,125 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N04BC05"
+  },
+  {
+    "dcb": "dicloridrato de pramipexol",
+    "concentracao": "0,25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N04BC05"
+  },
+  {
+    "dcb": "dicloridrato de pramipexol",
+    "concentracao": "1 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N04BC05"
+  },
+  {
+    "dcb": "dipirona",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N02BB02"
+  },
+  {
+    "dcb": "dipirona",
+    "concentracao": "500 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "N02BB02"
+  },
+  {
+    "dcb": "dipirona",
+    "concentracao": "500 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "N02BB02"
+  },
+  {
+    "dcb": "entacapona",
+    "concentracao": "200 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N04BX02"
+  },
+  {
+    "dcb": "etossuximida",
+    "concentracao": "50 mg/mL",
+    "formaFarmaceutica": "xarope",
+    "componente": "Especializado",
+    "codigoAtc": "N03AD01"
+  },
+  {
+    "dcb": "fenitoína",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N03AB02"
+  },
+  {
+    "dcb": "fenitoína",
+    "concentracao": "20 mg/mL",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "N03AB02"
+  },
+  {
+    "dcb": "fenitoína",
+    "concentracao": "50 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "N03AB02"
+  },
+  {
+    "dcb": "fenobarbital",
+    "concentracao": "100 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "N03AA02"
+  },
+  {
+    "dcb": "fenobarbital",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N03AA02"
+  },
+  {
+    "dcb": "fenobarbital",
+    "concentracao": "40 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "N03AA02"
+  },
+  {
+    "dcb": "gabapentina",
+    "concentracao": "300 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "N02BF01"
+  },
+  {
+    "dcb": "gabapentina",
+    "concentracao": "400 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "N02BF01"
+  },
+  {
+    "dcb": "haloperidol",
+    "concentracao": "1 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N05AD01"
+  },
+  {
+    "dcb": "haloperidol",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N05AD01"
+  },
+  {
+    "dcb": "haloperidol",
+    "concentracao": "50 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "N05AD01"
+  },
+  {
+    "dcb": "haloperidol",
+    "concentracao": "2 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "N05AD01"
+  },
+  {
+    "dcb": "haloperidol",
+    "concentracao": "5 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "N05AD01"
+  },
+  {
+    "dcb": "hemifumarato de quetiapina",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N05AH04"
+  },
+  {
+    "dcb": "hemifumarato de quetiapina",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N05AH04"
+  },
+  {
+    "dcb": "hemifumarato de quetiapina",
+    "concentracao": "200 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N05AH04"
+  },
+  {
+    "dcb": "hemifumarato de quetiapina",
+    "concentracao": "300 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N05AH04"
+  },
+  {
+    "dcb": "lactato de biperideno",
+    "concentracao": "5 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "N04AA02"
+  },
+  {
+    "dcb": "lamotrigina",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N03AX09"
+  },
+  {
+    "dcb": "lamotrigina",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N03AX09"
+  },
+  {
+    "dcb": "lamotrigina",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N03AX09"
+  },
+  {
+    "dcb": "levetiracetam",
+    "concentracao": "250 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N03AX14"
+  },
+  {
+    "dcb": "levetiracetam",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N03AX14"
+  },
+  {
+    "dcb": "levetiracetam",
+    "concentracao": "750 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N03AX14"
+  },
+  {
+    "dcb": "levetiracetam",
+    "concentracao": "1.000 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N03AX14"
+  },
+  {
+    "dcb": "levetiracetam",
+    "concentracao": "100 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Especializado",
+    "codigoAtc": "N03AX14"
+  },
+  {
+    "dcb": "levodopa + benserazida",
+    "concentracao": "100 mg + 25 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "N04BA02"
+  },
+  {
+    "dcb": "levodopa + benserazida",
+    "concentracao": "100 mg + 25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N04BA02"
+  },
+  {
+    "dcb": "levodopa + benserazida",
+    "concentracao": "200 mg + 50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N04BA02"
+  },
+  {
+    "dcb": "levodopa + carbidopa",
+    "concentracao": "200 mg + 50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N04BA02"
+  },
+  {
+    "dcb": "levodopa + carbidopa",
+    "concentracao": "250 mg + 25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N04BA02"
+  },
+  {
+    "dcb": "mesilato de rasagilina",
+    "concentracao": "1 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N04BD02"
+  },
+  {
+    "dcb": "midazolam",
+    "concentracao": "2 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "N05CD08"
+  },
+  {
+    "dcb": "nicotina",
+    "concentracao": "7 mg",
+    "formaFarmaceutica": "adesivo transdérmico",
+    "componente": "Estratégico",
+    "codigoAtc": "N07BA01"
+  },
+  {
+    "dcb": "nicotina",
+    "concentracao": "14 mg",
+    "formaFarmaceutica": "adesivo transdérmico",
+    "componente": "Estratégico",
+    "codigoAtc": "N07BA01"
+  },
+  {
+    "dcb": "nicotina",
+    "concentracao": "21 mg",
+    "formaFarmaceutica": "adesivo transdérmico",
+    "componente": "Estratégico",
+    "codigoAtc": "N07BA01"
+  },
+  {
+    "dcb": "nicotina",
+    "concentracao": "2 mg goma de mascar",
+    "formaFarmaceutica": "-",
+    "componente": "Estratégico",
+    "codigoAtc": "N07BA01"
+  },
+  {
+    "dcb": "nicotina",
+    "concentracao": "2 mg pastilha",
+    "formaFarmaceutica": "-",
+    "componente": "Estratégico",
+    "codigoAtc": "N07BA01"
+  },
+  {
+    "dcb": "olanzapina",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N05AH03"
+  },
+  {
+    "dcb": "olanzapina",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N05AH03"
+  },
+  {
+    "dcb": "paracetamol",
+    "concentracao": "200 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "N02BE01"
+  },
+  {
+    "dcb": "paracetamol",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N02BE01"
+  },
+  {
+    "dcb": "primidona",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N03AA03"
+  },
+  {
+    "dcb": "primidona",
+    "concentracao": "250 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N03AA03"
+  },
+  {
+    "dcb": "riluzol",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N07XX02"
+  },
+  {
+    "dcb": "risperidona",
+    "concentracao": "1 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Especializado",
+    "codigoAtc": "N05AX08"
+  },
+  {
+    "dcb": "risperidona",
+    "concentracao": "1 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N05AX08"
+  },
+  {
+    "dcb": "risperidona",
+    "concentracao": "2 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N05AX08"
+  },
+  {
+    "dcb": "risperidona",
+    "concentracao": "3 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N05AX08"
+  },
+  {
+    "dcb": "rivastigmina",
+    "concentracao": "1,5 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "N06DA03"
+  },
+  {
+    "dcb": "rivastigmina",
+    "concentracao": "3 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "N06DA03"
+  },
+  {
+    "dcb": "rivastigmina",
+    "concentracao": "4,5 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "N06DA03"
+  },
+  {
+    "dcb": "rivastigmina",
+    "concentracao": "6 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "N06DA03"
+  },
+  {
+    "dcb": "rivastigmina",
+    "concentracao": "2 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Especializado",
+    "codigoAtc": "N06DA03"
+  },
+  {
+    "dcb": "rivastigmina",
+    "concentracao": "9 mg",
+    "formaFarmaceutica": "adesivo transdérmico",
+    "componente": "Especializado",
+    "codigoAtc": "N06DA03"
+  },
+  {
+    "dcb": "rivastigmina",
+    "concentracao": "18 mg",
+    "formaFarmaceutica": "adesivo transdérmico",
+    "componente": "Especializado",
+    "codigoAtc": "N06DA03"
+  },
+  {
+    "dcb": "sulfato de morfina",
+    "concentracao": "10 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "N02AA01"
+  },
+  {
+    "dcb": "sulfato de morfina",
+    "concentracao": "10 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Especializado",
+    "codigoAtc": "N02AA01"
+  },
+  {
+    "dcb": "sulfato de morfina",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N02AA01"
+  },
+  {
+    "dcb": "sulfato de morfina",
+    "concentracao": "30 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N02AA01"
+  },
+  {
+    "dcb": "sulfato de morfina",
+    "concentracao": "30 mg",
+    "formaFarmaceutica": "cápsula de liberação prolongada",
+    "componente": "Especializado",
+    "codigoAtc": "N02AA01"
+  },
+  {
+    "dcb": "sulfato de morfina",
+    "concentracao": "60 mg",
+    "formaFarmaceutica": "cápsula de liberação prolongada",
+    "componente": "Especializado",
+    "codigoAtc": "N02AA01"
+  },
+  {
+    "dcb": "sulfato de morfina",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "cápsula de liberação prolongada",
+    "componente": "Especializado",
+    "codigoAtc": "N02AA01"
+  },
+  {
+    "dcb": "tafamidis",
+    "concentracao": "61 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "N07XX08"
+  },
+  {
+    "dcb": "tafamidis meglumina",
+    "concentracao": "20 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "N07XX08"
+  },
+  {
+    "dcb": "topiramato",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N03AX11"
+  },
+  {
+    "dcb": "topiramato",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N03AX11"
+  },
+  {
+    "dcb": "topiramato",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N03AX11"
+  },
+  {
+    "dcb": "valproato de sódio",
+    "concentracao": "250 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "N03AG01"
+  },
+  {
+    "dcb": "valproato de sódio",
+    "concentracao": "250 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N03AG01"
+  },
+  {
+    "dcb": "valproato de sódio",
+    "concentracao": "50mg/ml",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "N03AG01"
+  },
+  {
+    "dcb": "valproato de sódio",
+    "concentracao": "50 mg/mL",
+    "formaFarmaceutica": "xarope",
+    "componente": "Básico",
+    "codigoAtc": "N03AG01"
+  },
+  {
+    "dcb": "valproato de sódio",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "N03AG01"
+  },
+  {
+    "dcb": "vigabatrina",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "N03AG04"
+  },
+  {
+    "dcb": "conclusão L",
+    "concentracao": "-",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "P02CA03"
+  },
+  {
+    "dcb": "conclusão L",
+    "concentracao": "400 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "P02CA03"
+  },
+  {
+    "dcb": "antimoniato de meglumina",
+    "concentracao": "300 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "P01CB01"
+  },
+  {
+    "dcb": "arteméter + lumefantrina",
+    "concentracao": "20 mg + 120 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "P01BF01"
+  },
+  {
+    "dcb": "artesunato",
+    "concentracao": "60 mg/mL",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "P01BE03"
+  },
+  {
+    "dcb": "artesunato + mefloquina",
+    "concentracao": "25 mg + 50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "P01BF02"
+  },
+  {
+    "dcb": "artesunato + mefloquina",
+    "concentracao": "100 mg + 220 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "P01BF02"
+  },
+  {
+    "dcb": "benznidazol",
+    "concentracao": "12,5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "P01CA02"
+  },
+  {
+    "dcb": "benznidazol",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "P01CA02"
+  },
+  {
+    "dcb": "benzoilmetronidazol",
+    "concentracao": "40 mg/mL",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "P01AB01"
+  },
+  {
+    "dcb": "citrato de dietilcarbamazina",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "P02CB02"
+  },
+  {
+    "dcb": "difosfato de cloroquina",
+    "concentracao": "150 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "P01BA01"
+  },
+  {
+    "dcb": "difosfato de primaquina",
+    "concentracao": "15 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "P01BA03"
+  },
+  {
+    "dcb": "difosfato de primaquina",
+    "concentracao": "5 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "P01BA03"
+  },
+  {
+    "dcb": "isetionato de pentamidina",
+    "concentracao": "300 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "P01CX01"
+  },
+  {
+    "dcb": "miltefosina",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "P01CX04"
+  },
+  {
+    "dcb": "miltefosina",
+    "concentracao": "50 mg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Estratégico",
+    "codigoAtc": "P01CX04"
+  },
+  {
+    "dcb": "ivermectina",
+    "concentracao": "6 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "P02CF01"
+  },
+  {
+    "dcb": "nifurtimox",
+    "concentracao": "120 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "P01CC01"
+  },
+  {
+    "dcb": "permetrina",
+    "concentracao": "10 mg/g (1%) 10 mg/mL (1%) loção",
+    "formaFarmaceutica": "-",
+    "componente": "Básico",
+    "codigoAtc": "P03AC04"
+  },
+  {
+    "dcb": "permetrina",
+    "concentracao": "50 mg/g (5%) 50 mg/mL (5%) loção",
+    "formaFarmaceutica": "-",
+    "componente": "Básico",
+    "codigoAtc": "P03AC04"
+  },
+  {
+    "dcb": "pirimetamina",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "P01BD01"
+  },
+  {
+    "dcb": "praziquantel",
+    "concentracao": "600 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "P02BA01"
+  },
+  {
+    "dcb": "succinato de tafenoquina",
+    "concentracao": "150 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "P01BA07"
+  },
+  {
+    "dcb": "sulfato de hidroxicloroquina",
+    "concentracao": "400 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "P01BA02"
+  },
+  {
+    "dcb": "teclozana",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "P01AC04"
+  },
+  {
+    "dcb": "teclozana",
+    "concentracao": "10 mg/mL",
+    "formaFarmaceutica": "suspensão oral",
+    "componente": "Básico",
+    "codigoAtc": "P01AC04"
+  },
+  {
+    "dcb": "conclusão alfadornase",
+    "concentracao": "1 mg/mL",
+    "formaFarmaceutica": "solução",
+    "componente": "Especializado",
+    "codigoAtc": "R05CB13"
+  },
+  {
+    "dcb": "alfaporactanto (surfactante pulmonar)",
+    "concentracao": "80 mg/mL",
+    "formaFarmaceutica": "suspensão injetável",
+    "componente": "Hospitalar",
+    "codigoAtc": "R03BB01"
+  },
+  {
+    "dcb": "alfaporactanto (surfactante pulmonar)",
+    "concentracao": "20 mcg/dose",
+    "formaFarmaceutica": "solução",
+    "componente": "Básico",
+    "codigoAtc": "R03BB01"
+  },
+  {
+    "dcb": "brometo de tiotrópio monoidratado + cloridrato de olodaterol",
+    "concentracao": "2,5 mcg + 2,5 mcg",
+    "formaFarmaceutica": "solução",
+    "componente": "Especializado",
+    "codigoAtc": "R03AL06"
+  },
+  {
+    "dcb": "brometo de umeclidínio + trifenatato de vilanterol",
+    "concentracao": "62,5 mcg + 25 mcg",
+    "formaFarmaceutica": "pó inalatório",
+    "componente": "Especializado",
+    "codigoAtc": "R03AL03"
+  },
+  {
+    "dcb": "bromidrato de fenoterol",
+    "concentracao": "100 mcg/dose",
+    "formaFarmaceutica": "solução",
+    "componente": "Especializado",
+    "codigoAtc": "R03AC04"
+  },
+  {
+    "dcb": "budesonida",
+    "concentracao": "32 mcg suspensão para inalação nasal",
+    "formaFarmaceutica": "-",
+    "componente": "Básico",
+    "codigoAtc": "R01AD05"
+  },
+  {
+    "dcb": "budesonida",
+    "concentracao": "50 mcg suspensão para inalação nasal",
+    "formaFarmaceutica": "-",
+    "componente": "Básico",
+    "codigoAtc": "R01AD05"
+  },
+  {
+    "dcb": "budesonida",
+    "concentracao": "64 mcg suspensão para inalação nasal",
+    "formaFarmaceutica": "-",
+    "componente": "Básico",
+    "codigoAtc": "R01AD05"
+  },
+  {
+    "dcb": "budesonida",
+    "concentracao": "200 mcg aerossol oral",
+    "formaFarmaceutica": "-",
+    "componente": "Especializado",
+    "codigoAtc": "R03BA02"
+  },
+  {
+    "dcb": "budesonida",
+    "concentracao": "200 mcg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "R03BA02"
+  },
+  {
+    "dcb": "budesonida",
+    "concentracao": "200 mcg",
+    "formaFarmaceutica": "pó inalatório",
+    "componente": "Especializado",
+    "codigoAtc": "R03BA02"
+  },
+  {
+    "dcb": "budesonida",
+    "concentracao": "400 mcg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "R03BA02"
+  },
+  {
+    "dcb": "cloreto de sódio",
+    "concentracao": "9 mg/mL (0,9%)",
+    "formaFarmaceutica": "solução",
+    "componente": "Básico",
+    "codigoAtc": "R01AX10"
+  },
+  {
+    "dcb": "cloridrato de prometazina",
+    "concentracao": "25 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "R06AD02"
+  },
+  {
+    "dcb": "cloridrato de prometazina",
+    "concentracao": "25 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "R06AD02"
+  },
+  {
+    "dcb": "dipropionato de beclometasona",
+    "concentracao": "50 mcg/dose",
+    "formaFarmaceutica": "solução",
+    "componente": "Básico",
+    "codigoAtc": "R03BA01"
+  },
+  {
+    "dcb": "dipropionato de beclometasona",
+    "concentracao": "50 mcg/dose suspensão para inalação nasal",
+    "formaFarmaceutica": "-",
+    "componente": "Básico",
+    "codigoAtc": "R03BA01"
+  },
+  {
+    "dcb": "dipropionato de beclometasona",
+    "concentracao": "200 mcg/dose pó para inalação oral",
+    "formaFarmaceutica": "-",
+    "componente": "Básico",
+    "codigoAtc": "R03BA01"
+  },
+  {
+    "dcb": "dipropionato de beclometasona",
+    "concentracao": "200 mcg/dose",
+    "formaFarmaceutica": "solução",
+    "componente": "Básico",
+    "codigoAtc": "R03BA01"
+  },
+  {
+    "dcb": "dipropionato de beclometasona",
+    "concentracao": "250 mcg/dose",
+    "formaFarmaceutica": "solução",
+    "componente": "Básico",
+    "codigoAtc": "R03BA01"
+  },
+  {
+    "dcb": "dipropionato de beclometasona",
+    "concentracao": "200 mcg/dose",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "R03BA01"
+  },
+  {
+    "dcb": "dipropionato de beclometasona",
+    "concentracao": "400 mcg/dose pó para inalação oral",
+    "formaFarmaceutica": "-",
+    "componente": "Básico",
+    "codigoAtc": "R03BA01"
+  },
+  {
+    "dcb": "dipropionato de beclometasona",
+    "concentracao": "400 mcg/dose",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Básico",
+    "codigoAtc": "R03BA01"
+  },
+  {
+    "dcb": "elexacaftor/tezacaftor/ ivacaftor + ivacaftor",
+    "concentracao": "50 mg/25 mg/37,5 mg + 75 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "R07AX32"
+  },
+  {
+    "dcb": "elexacaftor/tezacaftor/ ivacaftor + ivacaftor",
+    "concentracao": "100 mg/50 mg/75 mg + 150 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "R07AX32"
+  },
+  {
+    "dcb": "fosfato de codeína",
+    "concentracao": "3 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Especializado",
+    "codigoAtc": "R05DA04"
+  },
+  {
+    "dcb": "fosfato de codeína",
+    "concentracao": "30 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "R05DA04"
+  },
+  {
+    "dcb": "fosfato de codeína",
+    "concentracao": "60 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "R05DA04"
+  },
+  {
+    "dcb": "fosfato de codeína",
+    "concentracao": "30 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "R05DA04"
+  },
+  {
+    "dcb": "fumarato de formoterol",
+    "concentracao": "12 mcg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "R03AC13"
+  },
+  {
+    "dcb": "fumarato de formoterol",
+    "concentracao": "12 mcg",
+    "formaFarmaceutica": "pó inalatório",
+    "componente": "Especializado",
+    "codigoAtc": "R03AC13"
+  },
+  {
+    "dcb": "fumarato de formoterol + budesonida",
+    "concentracao": "6 mcg + 200 mcg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "R03AK07"
+  },
+  {
+    "dcb": "fumarato de formoterol + budesonida",
+    "concentracao": "6 mcg + 200 mcg",
+    "formaFarmaceutica": "pó inalatório",
+    "componente": "Especializado",
+    "codigoAtc": "R03AK07"
+  },
+  {
+    "dcb": "fumarato de formoterol + budesonida",
+    "concentracao": "12 mcg + 400 mcg",
+    "formaFarmaceutica": "cápsula",
+    "componente": "Especializado",
+    "codigoAtc": "R03AK07"
+  },
+  {
+    "dcb": "fumarato de formoterol + budesonida",
+    "concentracao": "12 mcg + 400 mcg",
+    "formaFarmaceutica": "pó inalatório",
+    "componente": "Especializado",
+    "codigoAtc": "R03AK07"
+  },
+  {
+    "dcb": "ivacaftor",
+    "concentracao": "150 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "R07AX02"
+  },
+  {
+    "dcb": "loratadina",
+    "concentracao": "1 mg/mL",
+    "formaFarmaceutica": "xarope",
+    "componente": "Básico",
+    "codigoAtc": "R06AX13"
+  },
+  {
+    "dcb": "loratadina",
+    "concentracao": "10 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "R06AX13"
+  },
+  {
+    "dcb": "maleato de dexclorfeniramina",
+    "concentracao": "2 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Básico",
+    "codigoAtc": "R06AB02"
+  },
+  {
+    "dcb": "maleato de dexclorfeniramina",
+    "concentracao": "0,4 mg/mL",
+    "formaFarmaceutica": "solução oral",
+    "componente": "Básico",
+    "codigoAtc": "R06AB02"
+  },
+  {
+    "dcb": "maleato de dexclorfeniramina",
+    "concentracao": "0,4 mg/mL",
+    "formaFarmaceutica": "xarope",
+    "componente": "Básico",
+    "codigoAtc": "R06AB02"
+  },
+  {
+    "dcb": "mepolizumabe",
+    "concentracao": "40 mg/0,4 mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "R03DX09"
+  },
+  {
+    "dcb": "mepolizumabe",
+    "concentracao": "100 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "R03DX09"
+  },
+  {
+    "dcb": "mepolizumabe",
+    "concentracao": "100 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "R03DX09"
+  },
+  {
+    "dcb": "omalizumabe",
+    "concentracao": "150 mg",
+    "formaFarmaceutica": "pó para solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "R03DX05"
+  },
+  {
+    "dcb": "omalizumabe",
+    "concentracao": "150 mg",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Especializado",
+    "codigoAtc": "R03DX05"
+  },
+  {
+    "dcb": "sulfato de salbutamol",
+    "concentracao": "100 mcg/dose suspensão aerossol",
+    "formaFarmaceutica": "-",
+    "componente": "Básico",
+    "codigoAtc": "R03AC02"
+  },
+  {
+    "dcb": "sulfato de salbutamol",
+    "concentracao": "5 mg/mL",
+    "formaFarmaceutica": "solução",
+    "componente": "Básico",
+    "codigoAtc": "R03AC02"
+  },
+  {
+    "dcb": "sulfato de salbutamol",
+    "concentracao": "0,5 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "R03AC02"
+  },
+  {
+    "dcb": "xinafoato de salmeterol",
+    "concentracao": "50 mcg",
+    "formaFarmaceutica": "pó inalatório",
+    "componente": "Especializado",
+    "codigoAtc": "R03AC12"
+  },
+  {
+    "dcb": "conclusão acetazolamida",
+    "concentracao": "250 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "S01EC01"
+  },
+  {
+    "dcb": "bimatoprosta",
+    "concentracao": "0,3 mg/mL (0,03%)",
+    "formaFarmaceutica": "solução oftálmica",
+    "componente": "Especializado",
+    "codigoAtc": "S01EE03"
+  },
+  {
+    "dcb": "brinzolamida",
+    "concentracao": "10 mg/mL (1%) suspensão oftálmica",
+    "formaFarmaceutica": "-",
+    "componente": "Especializado",
+    "codigoAtc": "S01EC04"
+  },
+  {
+    "dcb": "cloridrato de dorzolamida",
+    "concentracao": "20 mg/mL",
+    "formaFarmaceutica": "solução oftálmica",
+    "componente": "Especializado",
+    "codigoAtc": "S01EC03"
+  },
+  {
+    "dcb": "cloridrato de pilocarpina",
+    "concentracao": "20 mg/mL (2%)",
+    "formaFarmaceutica": "solução oftálmica",
+    "componente": "Especializado",
+    "codigoAtc": "S01EB01"
+  },
+  {
+    "dcb": "cloridrato de tetraciclina",
+    "concentracao": "5 mg/g",
+    "formaFarmaceutica": "pomada",
+    "componente": "Básico",
+    "codigoAtc": "S01AA09"
+  },
+  {
+    "dcb": "dexametasona",
+    "concentracao": "1 mg/g (0,1%)",
+    "formaFarmaceutica": "pomada",
+    "componente": "Básico",
+    "codigoAtc": "S01BA01"
+  },
+  {
+    "dcb": "dexametasona",
+    "concentracao": "1 mg/mL (0,1%) suspensão oftálmica",
+    "formaFarmaceutica": "-",
+    "componente": "Básico",
+    "codigoAtc": "S01BA01"
+  },
+  {
+    "dcb": "gentamicina",
+    "concentracao": "5 mg/g",
+    "formaFarmaceutica": "pomada",
+    "componente": "Básico",
+    "codigoAtc": "S01AA11"
+  },
+  {
+    "dcb": "gentamicina",
+    "concentracao": "5 mg/mL",
+    "formaFarmaceutica": "solução oftálmica",
+    "componente": "Básico",
+    "codigoAtc": "S01AA11"
+  },
+  {
+    "dcb": "hipromelose",
+    "concentracao": "3 mg/mL (0,3%)",
+    "formaFarmaceutica": "solução oftálmica",
+    "componente": "Básico",
+    "codigoAtc": "S01KA02"
+  },
+  {
+    "dcb": "hipromelose",
+    "concentracao": "5 mg/mL (0,5%)",
+    "formaFarmaceutica": "solução oftálmica",
+    "componente": "Básico",
+    "codigoAtc": "S01KA02"
+  },
+  {
+    "dcb": "latanoprosta",
+    "concentracao": "0,05 mg/mL (0,005%)",
+    "formaFarmaceutica": "solução oftálmica",
+    "componente": "Especializado",
+    "codigoAtc": "S01EE01"
+  },
+  {
+    "dcb": "maleato de timolol",
+    "concentracao": "2,5 mg/mL (0,25%)",
+    "formaFarmaceutica": "solução oftálmica",
+    "componente": "Básico",
+    "codigoAtc": "S01ED01"
+  },
+  {
+    "dcb": "maleato de timolol",
+    "concentracao": "5 mg/mL (0,5%)",
+    "formaFarmaceutica": "solução oftálmica",
+    "componente": "Especializado",
+    "codigoAtc": "S01ED01"
+  },
+  {
+    "dcb": "tartarato de brimonidina",
+    "concentracao": "2 mg/mL (0,2%)",
+    "formaFarmaceutica": "solução oftálmica",
+    "componente": "Especializado",
+    "codigoAtc": "S01EA05"
+  },
+  {
+    "dcb": "travoprosta",
+    "concentracao": "0,04 mg/mL (0,004%)",
+    "formaFarmaceutica": "solução oftálmica",
+    "componente": "Especializado",
+    "codigoAtc": "S01EE04"
+  },
+  {
+    "dcb": "conclusão ácido folínico",
+    "concentracao": "15 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "V03AF03"
+  },
+  {
+    "dcb": "água para injetáveis -",
+    "concentracao": "-",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Estratégico",
+    "codigoAtc": "V03AB33"
+  },
+  {
+    "dcb": "cloridrato de naloxona",
+    "concentracao": "0,4 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "V03AB15"
+  },
+  {
+    "dcb": "cloridrato de protamina",
+    "concentracao": "10 mg/mL",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "V03AB14"
+  },
+  {
+    "dcb": "cloridrato de sevelâmer",
+    "concentracao": "800 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "V03AE02"
+  },
+  {
+    "dcb": "complemento alimentar para paciente fenilcetonúrico maior de",
+    "concentracao": "1 ano (fórmula de aminoácidos isenta de fenilalanina) - pó Especializado V06CA complemento alimentar para paciente fenilcetonúrico menor de 1 ano (fórmula de aminoácidos isenta de fenilalanina) - pó Especializado V06CA deferasirox 125 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "V03AC03"
+  },
+  {
+    "dcb": "complemento alimentar para paciente fenilcetonúrico maior de",
+    "concentracao": "250 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "V03AC03"
+  },
+  {
+    "dcb": "complemento alimentar para paciente fenilcetonúrico maior de",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "V03AC03"
+  },
+  {
+    "dcb": "deferiprona",
+    "concentracao": "500 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Especializado",
+    "codigoAtc": "V03AC02"
+  },
+  {
+    "dcb": "diafragma",
+    "concentracao": "60 mm de diâmetro - Insumos (Básico) NC 65 mm de diâmetro - Insumos (Básico) NC 70 mm de diâmetro - Insumos (Básico) NC 75 mm de diâmetro - Insumos (Básico) NC 80 mm de diâmetro - Insumos (Básico) NC 85 mm de diâmetro -",
+    "formaFarmaceutica": "-",
+    "componente": "Insumos",
+    "codigoAtc": "V03AB25"
+  },
+  {
+    "dcb": "folinato de cálcio",
+    "concentracao": "15 mg",
+    "formaFarmaceutica": "comprimido",
+    "componente": "Estratégico",
+    "codigoAtc": "V03AF03"
+  },
+  {
+    "dcb": "folinato de cálcio",
+    "concentracao": "-",
+    "formaFarmaceutica": "gel",
+    "componente": "Insumos (Estratégico)",
+    "codigoAtc": "V06DC01"
+  },
+  {
+    "dcb": "folinato de cálcio",
+    "concentracao": "100 mg/mL (10%)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "V06DC01"
+  },
+  {
+    "dcb": "folinato de cálcio",
+    "concentracao": "500 mg/mL (50%)",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "V06DC01"
+  },
+  {
+    "dcb": "glutaral",
+    "concentracao": "0,02",
+    "formaFarmaceutica": "solução",
+    "componente": "Insumos (Estratégico)",
+    "codigoAtc": "V03AB21"
+  },
+  {
+    "dcb": "glutaral",
+    "concentracao": "20 mg/mL",
+    "formaFarmaceutica": "xarope",
+    "componente": "Estratégico",
+    "codigoAtc": "V03AB21"
+  },
+  {
+    "dcb": "metilsulfato de pralidoxima",
+    "concentracao": "200 mg",
+    "formaFarmaceutica": "solução injetável",
+    "componente": "Básico",
+    "codigoAtc": "V03AB04"
+  }
+]
