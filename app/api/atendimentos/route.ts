@@ -54,12 +54,15 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'tipo de atendimento é obrigatório' }, { status: 400 })
     }
 
-    // Verificar que paciente pertence ao usuário
-    const paciente = await prisma.paciente.findFirst({
-      where: { id: body.pacienteId, usuarioId: session.user.id },
+    // Verificar que paciente existe e o usuário tem acesso (dono ou admin)
+    const paciente = await prisma.paciente.findUnique({
+      where: { id: body.pacienteId },
     })
     if (!paciente) {
       return NextResponse.json({ error: 'Paciente não encontrado' }, { status: 404 })
+    }
+    if (paciente.usuarioId !== session.user.id && session.user.role !== 'ADMIN') {
+      return NextResponse.json({ error: 'Acesso negado' }, { status: 403 })
     }
 
     const atendimento = await prisma.atendimento.create({
