@@ -54,9 +54,10 @@ export async function GET(request: NextRequest) {
       },
     })
   } catch (error) {
-    console.error('Medicamentos GET error:', error)
+    const msg = error instanceof Error ? error.message : String(error)
+    console.error('Medicamentos GET error:', msg)
     return NextResponse.json(
-      { error: 'Erro ao buscar medicamentos' },
+      { error: msg || 'Erro ao buscar medicamentos' },
       { status: 500 }
     )
   }
