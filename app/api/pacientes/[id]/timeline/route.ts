@@ -74,7 +74,7 @@ export async function GET(_req: NextRequest, { params }: { params: { id: string 
   const eventos: Evento[] = []
 
   const TIPO_ATEND: Record<string, string> = {
-    CONSULTA_UBS: 'Consulta UBS', CONSULTORIO_FARMACEUTICO: 'Consultório', VISITA_DOMICILIAR: 'Visita Domiciliar', TELEATENDIMENTO: 'Teleatendimento',
+    CONSULTORIO_FARMACEUTICO: 'Consultório', ORIENTACAO_FARMACIA: 'Orientação', ATIVIDADE_COLETIVA: 'At. Coletiva', VISITA_DOMICILIAR: 'Visita Domiciliar', OUTRO: 'Outro',
   }
 
   for (const a of atendimentos) {

@@ -16,10 +16,11 @@ interface Plano {
 }
 
 const TIPOS_ATENDIMENTO: Record<string, string> = {
-  CONSULTA_UBS: 'Consulta UBS',
   CONSULTORIO_FARMACEUTICO: 'Consultório Farmacêutico',
+  ORIENTACAO_FARMACIA: 'Orientação na Farmácia',
+  ATIVIDADE_COLETIVA: 'Atividade Coletiva',
   VISITA_DOMICILIAR: 'Visita Domiciliar',
-  TELEATENDIMENTO: 'Teleatendimento',
+  OUTRO: 'Outro',
 }
 
 const EMPTY_MON: Monitoramento = { exame: '', periodicidade: '', proximaVerificacao: '' }

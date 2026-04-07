@@ -81,10 +81,11 @@ interface HistoricoClinico {
 }
 
 const TIPO_LABELS: Record<string, string> = {
-  CONSULTA_UBS: 'Consulta UBS',
   CONSULTORIO_FARMACEUTICO: 'Consultório Farmacêutico',
+  ORIENTACAO_FARMACIA: 'Orientação na Farmácia',
+  ATIVIDADE_COLETIVA: 'Atividade Coletiva',
   VISITA_DOMICILIAR: 'Visita Domiciliar',
-  TELEATENDIMENTO: 'Teleatendimento',
+  OUTRO: 'Outro',
 }
 
 function calcularIdade(dataNascimento: string): number {

@@ -6,10 +6,11 @@ import Link from 'next/link'
 import { Loader2, CheckCircle, AlertCircle } from 'lucide-react'
 
 const TIPOS_ATENDIMENTO = [
-  { value: 'CONSULTA_UBS', label: 'Consulta na UBS' },
   { value: 'CONSULTORIO_FARMACEUTICO', label: 'Consultório Farmacêutico' },
+  { value: 'ORIENTACAO_FARMACIA', label: 'Orientação na Farmácia' },
+  { value: 'ATIVIDADE_COLETIVA', label: 'Atividade Coletiva' },
   { value: 'VISITA_DOMICILIAR', label: 'Visita Domiciliar' },
-  { value: 'TELEATENDIMENTO', label: 'Teleatendimento' },
+  { value: 'OUTRO', label: 'Outro' },
 ]
 
 const MOTIVOS_CONSULTA = [

@@ -144,7 +144,27 @@ export default function MedicamentosPage() {
           <h1 className="text-2xl font-bold mt-1">Medicamentos em Uso</h1>
         </div>
         <button
-          onClick={() => setMostrarForm(!mostrarForm)}
+          onClick={() => {
+            if (!mostrarForm) {
+              setForm({
+                medicamentoId: '',
+                nomeCustom: '',
+                dose: '',
+                formaFarmaceutica: '',
+                viaAdministracao: '',
+                frequencia: '',
+                quantidadePorDose: '1',
+                indicacao: '',
+                origem: 'PRESCRICAO_MEDICA',
+                dataInicio: new Date().toISOString().split('T')[0],
+                dataTermino: '',
+                status: 'EM_USO',
+              })
+              setBuscaCatalogo('')
+              setCatalogo([])
+            }
+            setMostrarForm(!mostrarForm)
+          }}
           className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
         >
           {mostrarForm ? 'Cancelar' : '+ Adicionar Medicamento'}

@@ -39,10 +39,11 @@ enum InterventionStatus {
 
 // Story 1.2 + 1.3
 enum TipoAtendimento {
-  CONSULTA_UBS
   CONSULTORIO_FARMACEUTICO
+  ORIENTACAO_FARMACIA
+  ATIVIDADE_COLETIVA
   VISITA_DOMICILIAR
-  TELEATENDIMENTO
+  OUTRO
 }
 
 enum MotivoConsulta {

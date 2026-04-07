@@ -33,10 +33,11 @@ interface HistoricoAdesao {
 }
 
 const TIPO_LABEL: Record<string, string> = {
-  CONSULTA_UBS: 'UBS',
   CONSULTORIO_FARMACEUTICO: 'Consultório',
+  ORIENTACAO_FARMACIA: 'Orientação',
+  ATIVIDADE_COLETIVA: 'At. Coletiva',
   VISITA_DOMICILIAR: 'Domiciliar',
-  TELEATENDIMENTO: 'Teleatend.',
+  OUTRO: 'Outro',
 }
 
 const CLASS_CONFIG: Record<string, { label: string; bg: string; text: string }> = {
