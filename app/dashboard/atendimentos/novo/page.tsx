@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useSearchParams } from 'next/navigation'
-import { AlertCircle, Loader2, CheckCircle, ChevronRight, ChevronLeft } from 'lucide-react'
+import { AlertCircle, Loader2, CheckCircle, ChevronRight, ChevronLeft, Camera } from 'lucide-react'
 import Link from 'next/link'
 
 const TIPOS_ATENDIMENTO = [
@@ -75,6 +75,7 @@ export default function NovoAtendimentoPage() {
   // Passo 3 — Medicamentos em uso para contagem de adesão
   const [medsEmUso, setMedsEmUso] = useState<MedEmUso[]>([])
   const [contagens, setContagens] = useState<Record<string, { qtdEsperada: string; qtdContada: string; obs: string; qtdDispensada: string }>>({})
+  const [contandoFoto, setContandoFoto] = useState<Record<string, boolean>>({})
   const [loadingMeds, setLoadingMeds] = useState(false)
 
   // Passo 1 — Consulta
@@ -297,6 +298,23 @@ export default function NovoAtendimentoPage() {
         </div>
       </div>
     )
+  }
+
+  async function contarPorFoto(medId: string, arquivo: File) {
+    setContandoFoto((prev) => ({ ...prev, [medId]: true }))
+    try {
+      const fd = new FormData()
+      fd.append('imagem', arquivo)
+      const res = await fetch('/api/contar-comprimidos', { method: 'POST', body: fd })
+      const data = await res.json()
+      if (res.ok && data.quantidade != null) {
+        setContagens((prev) => ({
+          ...prev,
+          [medId]: { ...(prev[medId] ?? { qtdEsperada: '', obs: '', qtdDispensada: '' }), qtdContada: String(data.quantidade) },
+        }))
+      }
+    } catch { /* silently continue */ }
+    finally { setContandoFoto((prev) => ({ ...prev, [medId]: false })) }
   }
 
   return (
@@ -549,14 +567,30 @@ export default function NovoAtendimentoPage() {
                       </div>
                       <div>
                         <label className="label-base text-xs">Qtd. Contada</label>
-                        <input
-                          type="number"
-                          min="0"
-                          value={c.qtdContada}
-                          onChange={(e) => setContagens((prev) => ({ ...prev, [med.id]: { ...c, qtdContada: e.target.value } }))}
-                          placeholder="ex: 25"
-                          className="input-base"
-                        />
+                        <div className="flex gap-2">
+                          <input
+                            type="number"
+                            min="0"
+                            value={c.qtdContada}
+                            onChange={(e) => setContagens((prev) => ({ ...prev, [med.id]: { ...c, qtdContada: e.target.value } }))}
+                            placeholder="ex: 25"
+                            className="input-base flex-1"
+                          />
+                          <label className={`flex items-center justify-center w-10 h-10 rounded-lg border cursor-pointer shrink-0 ${contandoFoto[med.id] ? 'bg-gray-100 border-gray-200' : 'bg-primary-50 border-primary-200 hover:bg-primary-100'}`} title="Contar por foto">
+                            {contandoFoto[med.id]
+                              ? <Loader2 className="h-4 w-4 animate-spin text-gray-400" />
+                              : <Camera className="h-4 w-4 text-primary-600" />
+                            }
+                            <input
+                              type="file"
+                              accept="image/*"
+                              capture="environment"
+                              className="sr-only"
+                              disabled={contandoFoto[med.id]}
+                              onChange={(e) => { const f = e.target.files?.[0]; if (f) contarPorFoto(med.id, f); e.target.value = '' }}
+                            />
+                          </label>
+                        </div>
                       </div>
                     </div>
                     <div>
