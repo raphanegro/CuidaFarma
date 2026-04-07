@@ -12,6 +12,8 @@ export default function RegisterPage() {
     sobrenome: '',
     email: '',
     cpf: '',
+    crf: '',
+    crfEstado: '',
     senha: '',
     confirmaSenha: '',
   })
@@ -51,6 +53,8 @@ export default function RegisterPage() {
           sobrenome: formData.sobrenome,
           email: formData.email,
           cpf: formData.cpf,
+          crf: formData.crf,
+          crfEstado: formData.crfEstado,
           senha: formData.senha,
         }),
       })
@@ -144,6 +148,36 @@ export default function RegisterPage() {
                 placeholder="000.000.000-00"
                 disabled={loading}
               />
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="label-base">CRF</label>
+                <input
+                  type="text"
+                  name="crf"
+                  value={formData.crf}
+                  onChange={handleChange}
+                  className="input-base"
+                  placeholder="ex: 12345"
+                  disabled={loading}
+                />
+              </div>
+              <div>
+                <label className="label-base">Estado do CRF</label>
+                <select
+                  name="crfEstado"
+                  value={formData.crfEstado}
+                  onChange={(e) => setFormData({ ...formData, crfEstado: e.target.value })}
+                  className="input-base"
+                  disabled={loading}
+                >
+                  <option value="">Selecione...</option>
+                  {['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'].map(uf => (
+                    <option key={uf} value={uf}>{uf}</option>
+                  ))}
+                </select>
+              </div>
             </div>
 
             <div>

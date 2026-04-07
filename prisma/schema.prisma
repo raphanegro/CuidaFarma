@@ -142,6 +142,8 @@ model Usuario {
   nome            String
   sobrenome       String
   cpf             String   @unique
+  crf             String?
+  crfEstado       String?
   role            UserRole @default(PHARMACIST)
   ativo           Boolean  @default(true)
   criadoEm        DateTime @default(now())

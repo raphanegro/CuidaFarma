@@ -6,7 +6,7 @@ import { NextRequest, NextResponse } from 'next/server'
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { nome, sobrenome, email, cpf, senha } = body
+    const { nome, sobrenome, email, cpf, senha, crf, crfEstado } = body
 
     // Validações
     if (!nome || !sobrenome || !email || !cpf || !senha) {
@@ -65,6 +65,8 @@ export async function POST(request: NextRequest) {
         email,
         cpf: cpfLimpo,
         senha: hashedPassword,
+        crf: crf || null,
+        crfEstado: crfEstado || null,
         role: 'PHARMACIST',
       },
     })
