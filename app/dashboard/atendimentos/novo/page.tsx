@@ -29,6 +29,15 @@ interface MedEmUso {
   dose?: string | null
   frequencia?: string | null
   qtdAnterior?: number | null
+  qtdDispensadaAnterior?: number | null
+  dataUltimaAvaliacao?: string | null
+}
+
+function diasAtras(isoDate: string): string {
+  const dias = Math.floor((Date.now() - new Date(isoDate).getTime()) / (1000 * 60 * 60 * 24))
+  if (dias === 0) return 'hoje'
+  if (dias === 1) return '1 dia atrás'
+  return `${dias} dias atrás`
 }
 
 const PASSOS = [
@@ -65,7 +74,7 @@ export default function NovoAtendimentoPage() {
 
   // Passo 3 — Medicamentos em uso para contagem de adesão
   const [medsEmUso, setMedsEmUso] = useState<MedEmUso[]>([])
-  const [contagens, setContagens] = useState<Record<string, { qtdEsperada: string; qtdContada: string; obs: string }>>({})
+  const [contagens, setContagens] = useState<Record<string, { qtdEsperada: string; qtdContada: string; obs: string; qtdDispensada: string }>>({})
   const [loadingMeds, setLoadingMeds] = useState(false)
 
   // Passo 1 — Consulta
@@ -162,19 +171,21 @@ export default function NovoAtendimentoPage() {
         fetch(`/api/avaliacao-adesao/resumo?pacienteId=${pacienteId}`),
       ])
       const meds = resMeds.ok ? await resMeds.json() : []
-      const anterioresArr: { medicamentoEmUsoId: string; qtdContada: number }[] = resAnteriores.ok ? await resAnteriores.json() : []
-      const anteriores: Record<string, number> = {}
-      anterioresArr.forEach((a) => { anteriores[a.medicamentoEmUsoId] = a.qtdContada })
+      const anterioresArr: { medicamentoEmUsoId: string; qtdContada: number; qtdDispensada: number | null; criadoEm: string }[] = resAnteriores.ok ? await resAnteriores.json() : []
+      const anteriores: Record<string, { qtdContada: number; qtdDispensada: number | null; criadoEm: string }> = {}
+      anterioresArr.forEach((a) => { anteriores[a.medicamentoEmUsoId] = { qtdContada: a.qtdContada, qtdDispensada: a.qtdDispensada ?? null, criadoEm: a.criadoEm } })
       const lista: MedEmUso[] = meds.map((m: { id: string; nomeCustom?: string; dose?: string; frequencia?: string; medicamento?: { nome: string } }) => ({
         id: m.id,
         nome: m.medicamento?.nome ?? m.nomeCustom ?? 'Medicamento',
         dose: m.dose,
         frequencia: m.frequencia,
-        qtdAnterior: anteriores[m.id] ?? null,
+        qtdAnterior: anteriores[m.id]?.qtdContada ?? null,
+        qtdDispensadaAnterior: anteriores[m.id]?.qtdDispensada ?? null,
+        dataUltimaAvaliacao: anteriores[m.id]?.criadoEm ?? null,
       }))
       setMedsEmUso(lista)
-      const init: Record<string, { qtdEsperada: string; qtdContada: string; obs: string }> = {}
-      lista.forEach((m) => { init[m.id] = { qtdEsperada: '', qtdContada: '', obs: '' } })
+      const init: Record<string, { qtdEsperada: string; qtdContada: string; obs: string; qtdDispensada: string }> = {}
+      lista.forEach((m) => { init[m.id] = { qtdEsperada: m.qtdDispensadaAnterior != null ? String(m.qtdDispensadaAnterior) : '', qtdContada: '', obs: '', qtdDispensada: '' } })
       setContagens(init)
     } catch { /* silently continue */ }
     finally { setLoadingMeds(false) }
@@ -200,6 +211,7 @@ export default function NovoAtendimentoPage() {
                   medicamentoEmUsoId: medId,
                   qtdEsperada: Number(v.qtdEsperada),
                   qtdContada: Number(v.qtdContada),
+                  qtdDispensada: v.qtdDispensada ? Number(v.qtdDispensada) : undefined,
                   observacao: v.obs || undefined,
                 }),
               })
@@ -491,7 +503,7 @@ export default function NovoAtendimentoPage() {
                 Para cada medicamento, informe a quantidade esperada (desde a última visita) e a quantidade contada. Deixe em branco para pular.
               </p>
               {medsEmUso.map((med) => {
-                const c = contagens[med.id] ?? { qtdEsperada: '', qtdContada: '', obs: '' }
+                const c = contagens[med.id] ?? { qtdEsperada: '', qtdContada: '', obs: '', qtdDispensada: '' }
                 const preenchido = c.qtdEsperada && c.qtdContada
                 const taxa = preenchido
                   ? Math.min(Math.round((Number(c.qtdContada) / Number(c.qtdEsperada)) * 100), 100)
@@ -505,8 +517,12 @@ export default function NovoAtendimentoPage() {
                         {(med.dose || med.frequencia) && (
                           <p className="text-xs text-gray-500">{[med.dose, med.frequencia].filter(Boolean).join(' — ')}</p>
                         )}
-                        {med.qtdAnterior !== null && (
-                          <p className="text-xs text-blue-600 mt-0.5">Última visita: {med.qtdAnterior} comprimidos contados</p>
+                        {med.dataUltimaAvaliacao && (
+                          <p className="text-xs text-blue-600 mt-0.5">
+                            Última visita ({diasAtras(med.dataUltimaAvaliacao)}):
+                            {med.qtdDispensadaAnterior != null && ` dispensadas ${med.qtdDispensadaAnterior} unid.`}
+                            {med.qtdAnterior != null && ` · contadas ${med.qtdAnterior} unid.`}
+                          </p>
                         )}
                       </div>
                       {taxa !== null && (
@@ -542,6 +558,17 @@ export default function NovoAtendimentoPage() {
                           className="input-base"
                         />
                       </div>
+                    </div>
+                    <div>
+                      <label className="label-base text-xs">Qtd. a dispensar hoje</label>
+                      <input
+                        type="number"
+                        min="0"
+                        value={c.qtdDispensada}
+                        onChange={(e) => setContagens((prev) => ({ ...prev, [med.id]: { ...c, qtdDispensada: e.target.value } }))}
+                        placeholder="ex: 30"
+                        className="input-base"
+                      />
                     </div>
                     {preenchido && (
                       <div>

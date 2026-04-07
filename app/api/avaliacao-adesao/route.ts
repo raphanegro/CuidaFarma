@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
   }
 
   const body = await request.json()
-  const { atendimentoId, pacienteId, medicamentoEmUsoId, qtdEsperada, qtdContada, observacao } = body
+  const { atendimentoId, pacienteId, medicamentoEmUsoId, qtdEsperada, qtdContada, qtdDispensada, observacao } = body
 
   if (!atendimentoId || !pacienteId || !medicamentoEmUsoId || qtdEsperada === undefined || qtdContada === undefined) {
     return NextResponse.json(
@@ -83,6 +83,7 @@ export async function POST(request: NextRequest) {
       medicamentoEmUsoId,
       qtdEsperada: Number(qtdEsperada),
       qtdContada: Number(qtdContada),
+      qtdDispensada: qtdDispensada != null ? Number(qtdDispensada) : null,
       taxaAdesao,
       classificacao,
       observacao: observacao ?? null,

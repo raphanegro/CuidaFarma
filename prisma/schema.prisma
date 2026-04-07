@@ -498,6 +498,7 @@ model AvaliacaoAdesao {
   medicamentoEmUso   MedicamentoEmUso    @relation(fields: [medicamentoEmUsoId], references: [id])
   qtdEsperada        Int
   qtdContada         Int
+  qtdDispensada      Int?
   taxaAdesao         Decimal             @db.Decimal(5, 2)
   classificacao      ClassificacaoAdesao
   observacao         String?             @db.Text
