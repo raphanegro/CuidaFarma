@@ -87,7 +87,10 @@ export default function MedicamentosPage() {
     if (!buscaCatalogo) { setCatalogo([]); return }
     const timer = setTimeout(async () => {
       const res = await fetch(`/api/medicamentos?search=${encodeURIComponent(buscaCatalogo)}&limit=10`)
-      if (res.ok) setCatalogo(await res.json())
+      if (res.ok) {
+        const data = await res.json()
+        setCatalogo(data.medicamentos ?? data)
+      }
     }, 300)
     return () => clearTimeout(timer)
   }, [buscaCatalogo])
