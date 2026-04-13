@@ -141,6 +141,7 @@ model MedicamentoUso {
   frequencia       String
   indicacao        String?
   origem           String?
+  fotografia       String?
   ativo            Boolean  @default(true)
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { formatarCPF, calcularIdade } from '@/lib/utils'
 import Link from 'next/link'
+import { CapturafotoMedicamento } from './captura-foto-medicamento'
 
 export function FichaPaciente({ paciente }: { paciente: any }) {
   const [activeTab, setActiveTab] = useState('dados')
@@ -51,23 +52,45 @@ export function FichaPaciente({ paciente }: { paciente: any }) {
           )}
 
           {activeTab === 'medicamentos' && (
-            <div>
+            <div className="space-y-4">
               {paciente.medicamentos?.length === 0 ? (
                 <p className="text-gray-400 text-sm text-center py-8">Nenhum medicamento cadastrado</p>
               ) : (
-                <table className="w-full text-sm">
-                  <thead><tr className="border-b"><th className="text-left py-2">Medicamento</th><th className="text-left py-2">Dose</th><th className="text-left py-2">Frequência</th><th className="text-left py-2">Indicação</th></tr></thead>
-                  <tbody>
-                    {paciente.medicamentos?.map((m: any) => (
-                      <tr key={m.id} className="border-b border-gray-50">
-                        <td className="py-2 font-medium">{m.nomeGenerico}</td>
-                        <td className="py-2 text-gray-600">{m.dose}</td>
-                        <td className="py-2 text-gray-600">{m.frequencia}</td>
-                        <td className="py-2 text-gray-600">{m.indicacao || '—'}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <div className="space-y-4">
+                  {paciente.medicamentos?.map((m: any) => (
+                    <div key={m.id} className="border border-gray-200 rounded-lg p-4">
+                      <div className="flex gap-4">
+                        {m.fotografia && (
+                          <div className="w-24 h-24 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
+                            <img src={m.fotografia} alt={m.nomeGenerico} className="w-full h-full object-cover" />
+                          </div>
+                        )}
+                        <div className="flex-1">
+                          <h4 className="font-semibold">{m.nomeGenerico}</h4>
+                          <div className="grid grid-cols-2 gap-2 text-sm mt-2 text-gray-600">
+                            <div><span className="text-gray-500">Dose:</span> {m.dose}</div>
+                            <div><span className="text-gray-500">Frequência:</span> {m.frequencia}</div>
+                            {m.formaFarmaceutica && (
+                              <div><span className="text-gray-500">Forma:</span> {m.formaFarmaceutica}</div>
+                            )}
+                            {m.viaAdministracao && (
+                              <div><span className="text-gray-500">Via:</span> {m.viaAdministracao}</div>
+                            )}
+                            {m.indicacao && (
+                              <div className="col-span-2"><span className="text-gray-500">Indicação:</span> {m.indicacao}</div>
+                            )}
+                          </div>
+                          <div className="mt-3">
+                            <CapturafotoMedicamento
+                              medicamentoId={m.id}
+                              fotoAtual={m.fotografia}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               )}
             </div>
           )}
