@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { formatarCPF, calcularIdade } from '@/lib/utils'
 import Link from 'next/link'
-import { CapturafotoMedicamento } from './captura-foto-medicamento'
 
 export function FichaPaciente({ paciente }: { paciente: any }) {
   const [activeTab, setActiveTab] = useState('dados')
@@ -81,10 +80,12 @@ export function FichaPaciente({ paciente }: { paciente: any }) {
                             )}
                           </div>
                           <div className="mt-3">
-                            <CapturafotoMedicamento
-                              medicamentoId={m.id}
-                              fotoAtual={m.fotografia}
-                            />
+                            <Link
+                              href={`/pacientes/${paciente.id}/medicamentos/${m.id}`}
+                              className="inline-flex items-center gap-2 px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors"
+                            >
+                              📸 Editar e Fotografar
+                            </Link>
                           </div>
                         </div>
                       </div>
